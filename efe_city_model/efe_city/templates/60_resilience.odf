@@ -1,0 +1,39 @@
+@H1 8. RESILIENCE: RIGIDITY, TREMOR, STORM, FLOOD, FIRE, DROUGHT, HEAT
+@H2 8.1 Hazard-profile adapter (same design, any hazard regime)
+@P The design is not tuned to one place. A hazard profile (50-yr gust, PGA, tornado class, rain intensity, surge, fire class, drought) selects the structural system, shelter need, plinth height and defensible space automatically. Stress profiles cover cyclone coast (typhoon / hurricane), tornado plains and high seismicity. Pressures use q = 0.5 rho v2 with net wall coefficient 1.3 and roof uplift 1.2 q minus dead load; seismic ordinates use the EC8-style plateau Sd = a_g S 2.5 / q (planning values; local codes govern).
+{{table:hazards}}
+@H2 8.2 Shelters and refuges (tornado, hurricane, storm, heat, smoke)
+@L Every cell node is a multi-hazard RESILIENCE HUB: hardened shelter area {{res.shelter.area_m2|,.0f}} m2 = {{res.shelter.capacity_ratio|.2f}} x the cell population at {{cfg.resilience.shelter_m2_pp}} m2/person, reached in {{res.shelter.walk_min|.1f}} min (P95): inside the typical tornado warning lead time.
+@L Where tornado class >= EF3 the hub is built as a safe room for 112 m/s winds (q = {{res.structure.profiles.stress_tornado.shelter_q_kpa|.1f}} kPa) with debris-impact walls; elsewhere it is a hardened hall. Same hub is the flood high-ground refuge, cooled heat refuge, filtered smoke refuge, and holds water, battery and comms for islanded operation.
+@L Hurricane/typhoon profiles: <= 2 storeys outside hubs, hip or mono-pitch roofs 25-35 deg, continuous tie-down from roof to footing, shuttered openings, PV rated for the design gust, plinth above surge.
+@H2 8.3 Flood, drought, fire, heat, wind
+@L FLOOD: streets are the major drainage system; peak runoff coefficient {{res.flood.c_peak|.2f}} (sponge) so one overland route can drain {{res.flood.max_catchment_ha|.0f}} ha at the 1:100 storm with depth x velocity <= 0.4 m2/s; no building below the 1:100 level + 0.5 m.
+@L DROUGHT: potable reserve in MAR, restrictions protocol, reclaimed loop, ponds with floating PV; design drought unmet {{res.water.drought.unmet_pot_pct|.1f}}%.
+@L FIRE (wildland-urban interface): non-combustible roofs and walls, ember screens, defensible ring {{res.structure.current.defensible_m}} m of low-fuel planting (succulents, indigenous, irrigated), ring-main hydrants plus ponds as fire water, wedge farms as fuel breaks, regulated invasive trees excluded.
+@L HEAT: shade {{res.thermal.shade_fraction|.0%}} of walkable surface, canopy {{res.thermal.canopy_cover|.0%}}, cool roofs, cooled refuge hubs, drinking points every 200 m.
+@L WIND + FORESTATION: shelterbelts, short regular building forms, tethered street furniture, underground lines.
+@H2 8.4 FMEA (safety first: design out > guard > warn)
+{{table:fmea}}
+@P Gate: every post-mitigation RPN <= 100 and every S >= 9 item has a recorded mitigation. Result: max RPN {{res.fmea.max_rpn_pre}} before, {{res.fmea.max_rpn_post}} after.
+@H2 8.5 Risk register (non-technical)
+{{table:risks}}
+@H2 8.6 Stress tests (adversarial envelope)
+@P Each row perturbs one assumption and re-runs all 18 gates. Failures define the OPERATING ENVELOPE of the reference design, not hidden defects: outside it, the site adapter or a design lever (pond size, density, storage) must be applied.
+{{table:stress}}
+@H1 9. EFE ECONOMICS LAYER (illustrative model; not financial advice)
+@P STRUCTURE. External cost per member per year is the sum of what the city cannot yet make or supply itself: imported food, outer-grid and bulk-water top-ups, maintenance parts, compliance + IT, and the annualised share of imported capital goods. Enterprise contribution (bounded 0-5% of enterprise revenue) must cover it. The design objective is therefore to MINIMISE external cost per member and to raise revenue per member through local value-added enterprise.
+{{table:economics}}
+@P READING THE RESULT. At planning-grade inputs the city needs about USD {{res.economics.required_revenue_pp|,.0f}} of enterprise revenue per member per year to stay inside the 5% cap. The largest external cost is {{d.top_ext}}: internalising PV, storage, paving and steel production (the ALL-PURPOSE MANUFACTORY + material loops) is the first economic task, followed by the bioregional staple supply chain. A site with far lower revenue per member exceeds the cap unless capital goods are produced locally; this is a design finding, not an assumption. Capex is {{res.economics.vs_ever|.2f}} x the EVER per-resident figure; the gap is mainly that soil / tunnel agriculture and shared manufacturing are priced instead of vertical-farm and electronics halls (not like-for-like; unit costs are planning-grade, L-03).
+@BLOCK APPLICATION LAYER (AequChain / AequApp) - what is on-chain
+ON-CHAIN: member registry (pseudonymous), per-member equal shares of canopy energy and water allowances, meter attestations (energy + water + waste), enterprise contributions, pledges, internalization-priority ledger. OFF-CHAIN (local-first): all control loops, sensor data, personal data, repair logs. Every actuator keeps a manual override; the ledger never gates safety functions.
+@END
+@H1 10. SUPPLY, CONSTRUCTION, DISTRIBUTION, IMPLEMENTATION
+@L SUPPLY (local-first, Tier order 1.1 grown > 1.2 waste streams > 1.3 recycled > 1.4 certified natural): earth blocks from site cut + stabiliser; geopolymer from fly-ash and slag; reclaimed stone and recycled aggregate; certified timber and bamboo; recycled steel and aluminium; glass cullet for beads; PV, batteries and pavers start imported (priority I-1) and move to the manufactory at T2.
+@L CONSTRUCTION SEQUENCE per cell: (1) survey + levels; (2) ponds, swales, MAR first (water before buildings); (3) seam trough + wet strip + sleeves; (4) base courses + paving; (5) node hub + hygiene hub; (6) courts + dwellings by hand-erectable bolted kits; (7) PV + HEN commissioning; (8) planting + irrigation; (9) pilot acceptance tests.
+@L DISTRIBUTION: e-cargo trikes + shuttles on the seam loop; node markets; cold chain (AEQUCHILL); freight corridor reserved on the colonnade line for pole-rail (MRCCS, T2).
+@L QUALITY POINTS: compaction + infiltration test of every base; pressure + disinfection test of water; air test of vacuum sewer; insulation resistance of power; OTDR on fibre; flood-route level survey; PTV pendulum test; islanding test; commissioning audit signed by two crew.
+@H2 10.1 Phasing
+{{table:phasing}}
+@H1 11. LIFECYCLE
+@L REPAIR: lift-out pavers and lids; common tools only; spare-part library; open repair manuals per component. UPGRADE: same interfaces from T1 to T3, ducts spare, bolted frames. RECYCLING at end of life: pavers re-laid or crushed to base; steel/aluminium re-melted; timber re-used or composted; batteries by take-back; earth blocks re-slaked. Residual {{res.waste.residual_kg_pp|.1f}} kg/p/yr.
+@L MAINTENANCE: see 7.8: the total is about {{res.land.pop_cell|.0f}}-person-cell crews of a few FTE.

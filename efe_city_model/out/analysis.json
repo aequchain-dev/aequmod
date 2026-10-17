@@ -1,0 +1,1313 @@
+{
+ "ladder": [
+  {
+   "id": "I0",
+   "name": "AequCity v1.0 concept, re-evaluated under this model (no perpetual-motion source)",
+   "k": {
+    "access_cov400": 0.103,
+    "ward_p95_min": 38.128886459199045,
+    "potable_ssr": 0.24525761107019306,
+    "irrigation_ssr": 0.0,
+    "energy_ssr": 0.7510517307915638,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 3.6291358024691354,
+    "excavation_m3_pp": 25.705769174170943,
+    "capex_pp": 56196.85739194362,
+    "external_cost_pp": 1534.5441075503115,
+    "recovery": 0.961,
+    "runoff_c": 0.5066165430692878,
+    "flood_catch_ha": 21.86827549525007,
+    "shelter_min": 38.128886459199045,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 39.50617283950617,
+    "lold": 365.0,
+    "canopy_cover": 0.29812300163986455,
+    "growth_step_pop": 12000,
+    "complexity": 15.0,
+    "inspectable": 0.024999999999999998,
+    "synergy_pairs": 121.0,
+    "elegance": 0.020794829364419804
+   },
+   "s": {
+    "access_cov400": 0.0035294117647058695,
+    "ward_p95_min": 0.22903711802669852,
+    "potable_ssr": 0.24525761107019306,
+    "irrigation_ssr": 0.0,
+    "energy_ssr": 0.7510517307915638,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 0.21815541031227328,
+    "excavation_m3_pp": 0.1717692330331623,
+    "capex_pp": 0.5289587246234752,
+    "external_cost_pp": 0.6106066218540369,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.5245112759076163,
+    "flood_catch_ha": 0.3536995846652554,
+    "shelter_min": 0.17618239848207579,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 0.015432098765432167,
+    "lold": 0.0,
+    "canopy_cover": 0.9937433387995486,
+    "growth_step_pop": 0.5855855855855856,
+    "complexity": 0.0,
+    "inspectable": 0.031249999999999997,
+    "synergy_pairs": 0.7,
+    "elegance": 0.05681489139168318
+   },
+   "composite": 0.32548330444419266,
+   "dims": {
+    "functional": 0.3307221341009905,
+    "efficiency": 0.5124913897895632,
+    "robustness": 0.23639831806588454,
+    "scalability": 0.5855855855855856,
+    "maintainability": 0.012499999999999999,
+    "innovation": 0.7,
+    "elegance": 0.056814891391683185
+   },
+   "gates_ok": 9,
+   "gates_n": 18,
+   "delta": null
+  },
+  {
+   "id": "I1",
+   "name": "+ hex cellular layout (Cell / Ward / City)",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 0.24525761107019306,
+    "irrigation_ssr": 0.0,
+    "energy_ssr": 0.7510517307915638,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 25.705769174170943,
+    "capex_pp": 56196.85739194362,
+    "external_cost_pp": 1534.5441075503115,
+    "recovery": 0.961,
+    "runoff_c": 0.5066165430692878,
+    "flood_catch_ha": 21.86827549525007,
+    "shelter_min": 13.485839784753228,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 365.0,
+    "canopy_cover": 0.29812300163986455,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 13.0,
+    "inspectable": 0.024999999999999998,
+    "synergy_pairs": 121.0,
+    "elegance": 0.046653437346235616
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 0.24525761107019306,
+    "irrigation_ssr": 0.0,
+    "energy_ssr": 0.7510517307915638,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.1717692330331623,
+    "capex_pp": 0.5289587246234752,
+    "external_cost_pp": 0.6106066218540369,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.5245112759076163,
+    "flood_catch_ha": 0.3536995846652554,
+    "shelter_min": 0.8080553901345326,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.0,
+    "canopy_cover": 0.9937433387995486,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 0.2,
+    "inspectable": 0.031249999999999997,
+    "synergy_pairs": 0.7,
+    "elegance": 0.19291282813808217
+   },
+   "composite": 0.5557921302048269,
+   "dims": {
+    "functional": 0.6456606840440445,
+    "efficiency": 0.6383670564234699,
+    "robustness": 0.5015443036277151,
+    "scalability": 0.9997332293575864,
+    "maintainability": 0.1325,
+    "innovation": 0.7,
+    "elegance": 0.19291282813808217
+   },
+   "gates_ok": 12,
+   "gates_n": 18,
+   "delta": 0.23030882576063422
+  },
+  {
+   "id": "I2",
+   "name": "+ prosumer energy: home nodes, canopies, agri-PV, storage, biogas CHP",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 0.24525761107019306,
+    "irrigation_ssr": 0.0,
+    "energy_ssr": 0.9761740505473129,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 25.705769174170943,
+    "capex_pp": 58029.51016972139,
+    "external_cost_pp": 1502.2386164348163,
+    "recovery": 0.961,
+    "runoff_c": 0.5066165430692878,
+    "flood_catch_ha": 21.86827549525007,
+    "shelter_min": 13.485839784753228,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 30.0,
+    "canopy_cover": 0.3147896683065312,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 13.0,
+    "inspectable": 0.024999999999999998,
+    "synergy_pairs": 121.0,
+    "elegance": 0.04953962093284778
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 0.24525761107019306,
+    "irrigation_ssr": 0.0,
+    "energy_ssr": 0.9761740505473129,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.1717692330331623,
+    "capex_pp": 0.48823310733952463,
+    "external_cost_pp": 0.6240672431521599,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.5245112759076163,
+    "flood_catch_ha": 0.3536995846652554,
+    "shelter_min": 0.8080553901345326,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.5,
+    "canopy_cover": 1.0,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 0.2,
+    "inspectable": 0.031249999999999997,
+    "synergy_pairs": 0.7,
+    "elegance": 0.20810326806761986
+   },
+   "composite": 0.5880425142057678,
+   "dims": {
+    "functional": 0.6906851479951943,
+    "efficiency": 0.631550807427013,
+    "robustness": 0.5734197794277474,
+    "scalability": 0.9997332293575864,
+    "maintainability": 0.1325,
+    "innovation": 0.7,
+    "elegance": 0.2081032680676199
+   },
+   "gates_ok": 14,
+   "gates_n": 18,
+   "delta": 0.032250384000940935
+  },
+  {
+   "id": "I3",
+   "name": "+ sponge drainage: tanks, ponds, MAR, greywater + effluent reuse",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.7701123647873742,
+    "energy_ssr": 0.9801190609961292,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 25.705769174170943,
+    "capex_pp": 58600.41616972139,
+    "external_cost_pp": 1459.2354371054837,
+    "recovery": 0.961,
+    "runoff_c": 0.17240888246558408,
+    "flood_catch_ha": 64.25904498570102,
+    "shelter_min": 13.485839784753228,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 25.0,
+    "canopy_cover": 0.3147896683065312,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 13.0,
+    "inspectable": 0.024999999999999998,
+    "synergy_pairs": 121.0,
+    "elegance": 0.06913961790933493
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.7701123647873742,
+    "energy_ssr": 0.9801190609961292,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.1717692330331623,
+    "capex_pp": 0.4755463073395246,
+    "external_cost_pp": 0.6419852345393818,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.970121490045888,
+    "flood_catch_ha": 1.0,
+    "shelter_min": 0.8080553901345326,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.5833333333333334,
+    "canopy_cover": 1.0,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 0.2,
+    "inspectable": 0.031249999999999997,
+    "synergy_pairs": 0.7,
+    "elegance": 0.31126114689123646
+   },
+   "composite": 0.7130533670218793,
+   "dims": {
+    "functional": 0.9194338643496565,
+    "efficiency": 0.6328586052738184,
+    "robustness": 0.7413117741143687,
+    "scalability": 0.9997332293575864,
+    "maintainability": 0.1325,
+    "innovation": 0.7,
+    "elegance": 0.31126114689123646
+   },
+   "gates_ok": 16,
+   "gates_n": 18,
+   "delta": 0.12501085281611146
+  },
+  {
+   "id": "I4",
+   "name": "+ AEQUSPINE unified corridors (trough + wet strip), no deep tunnels",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.7701123647873742,
+    "energy_ssr": 0.9801190609961292,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 7.598460969082653,
+    "capex_pp": 43652.19848563367,
+    "external_cost_pp": 1175.2193011078168,
+    "recovery": 0.961,
+    "runoff_c": 0.17240888246558408,
+    "flood_catch_ha": 64.25904498570102,
+    "shelter_min": 13.485839784753228,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 25.0,
+    "canopy_cover": 0.3147896683065312,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 5.0,
+    "inspectable": 0.7999999999999999,
+    "synergy_pairs": 128.0,
+    "elegance": 0.17976300656427083
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.7701123647873742,
+    "energy_ssr": 0.9801190609961292,
+    "fresh_ssr": 0.6426587711446211,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.8960615612366939,
+    "capex_pp": 0.807728922541474,
+    "external_cost_pp": 0.7603252912050763,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.970121490045888,
+    "flood_catch_ha": 1.0,
+    "shelter_min": 0.8080553901345326,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.5833333333333334,
+    "canopy_cover": 1.0,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 1.0,
+    "inspectable": 0.9999999999999999,
+    "synergy_pairs": 0.9333333333333333,
+    "elegance": 0.8934895082330043
+   },
+   "composite": 0.8742775812063959,
+   "dims": {
+    "functional": 0.9194338643496565,
+    "efficiency": 0.8662046612746513,
+    "robustness": 0.7413117741143687,
+    "scalability": 0.9997332293575864,
+    "maintainability": 1.0,
+    "innovation": 0.9333333333333333,
+    "elegance": 0.8934895082330043
+   },
+   "gates_ok": 16,
+   "gates_n": 18,
+   "delta": 0.1612242141845166
+  },
+  {
+   "id": "I5",
+   "name": "+ agriculture integrated into the public realm",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6240426516490503,
+    "energy_ssr": 0.9789369770711298,
+    "fresh_ssr": 1.0,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 7.598460969082653,
+    "capex_pp": 43697.61709674478,
+    "external_cost_pp": 1152.189104529987,
+    "recovery": 0.961,
+    "runoff_c": 0.17240888246558408,
+    "flood_catch_ha": 64.25904498570102,
+    "shelter_min": 13.485839784753228,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 26.0,
+    "canopy_cover": 0.3147896683065312,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 5.0,
+    "inspectable": 0.7999999999999999,
+    "synergy_pairs": 128.0,
+    "elegance": 0.186765987624006
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6240426516490503,
+    "energy_ssr": 0.9789369770711298,
+    "fresh_ssr": 1.0,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.8960615612366939,
+    "capex_pp": 0.8067196200723381,
+    "external_cost_pp": 0.7699212064458387,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.970121490045888,
+    "flood_catch_ha": 1.0,
+    "shelter_min": 0.8080553901345326,
+    "shelter_cap": 0.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.5666666666666667,
+    "canopy_cover": 1.0,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 1.0,
+    "inspectable": 0.9999999999999999,
+    "synergy_pairs": 0.9333333333333333,
+    "elegance": 0.9303473032842421
+   },
+   "composite": 0.8894181987016502,
+   "dims": {
+    "functional": 0.958191660579131,
+    "efficiency": 0.868351314467558,
+    "robustness": 0.7389308217334163,
+    "scalability": 0.9997332293575864,
+    "maintainability": 1.0,
+    "innovation": 0.9333333333333333,
+    "elegance": 0.9303473032842421
+   },
+   "gates_ok": 17,
+   "gates_n": 18,
+   "delta": 0.015140617495254305
+  },
+  {
+   "id": "I6",
+   "name": "+ multi-hazard resilience layer (hardened shelters, flood routes)",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6240426516490503,
+    "energy_ssr": 0.9789369770711298,
+    "fresh_ssr": 1.0,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 7.598460969082653,
+    "capex_pp": 43697.61709674478,
+    "external_cost_pp": 1152.189104529987,
+    "recovery": 0.961,
+    "runoff_c": 0.17240888246558408,
+    "flood_catch_ha": 64.25904498570102,
+    "shelter_min": 4.87483379208337,
+    "shelter_cap": 1.5000000000000002,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 26.0,
+    "canopy_cover": 0.3147896683065312,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 5.0,
+    "inspectable": 0.7999999999999999,
+    "synergy_pairs": 128.0,
+    "elegance": 0.186765987624006
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6240426516490503,
+    "energy_ssr": 0.9789369770711298,
+    "fresh_ssr": 1.0,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.8960615612366939,
+    "capex_pp": 0.8067196200723381,
+    "external_cost_pp": 0.7699212064458387,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.970121490045888,
+    "flood_catch_ha": 1.0,
+    "shelter_min": 1.0,
+    "shelter_cap": 1.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.5666666666666667,
+    "canopy_cover": 1.0,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 1.0,
+    "inspectable": 0.9999999999999999,
+    "synergy_pairs": 0.9333333333333333,
+    "elegance": 0.9303473032842421
+   },
+   "composite": 0.9338291267981399,
+   "dims": {
+    "functional": 0.958191660579131,
+    "efficiency": 0.868351314467558,
+    "robustness": 0.9229189524188736,
+    "scalability": 0.9997332293575864,
+    "maintainability": 1.0,
+    "innovation": 0.9333333333333333,
+    "elegance": 0.9303473032842421
+   },
+   "gates_ok": 18,
+   "gates_n": 18,
+   "delta": 0.04441092809648972
+  },
+  {
+   "id": "I7",
+   "name": "+ parameter optimisation (search over density, cell size, storage, ponds, canopy)",
+   "k": {
+    "access_cov400": 0.974,
+    "ward_p95_min": 13.485839784753228,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9968571110312995,
+    "fresh_ssr": 1.0,
+    "corridor_m_pp": 2.3452040028032877,
+    "excavation_m3_pp": 7.598460969082653,
+    "capex_pp": 45234.64193007811,
+    "external_cost_pp": 1175.2788138729118,
+    "recovery": 0.961,
+    "runoff_c": 0.17240888246558408,
+    "flood_catch_ha": 64.25904498570102,
+    "shelter_min": 4.87483379208337,
+    "shelter_cap": 1.5000000000000002,
+    "conflict_pts_ha": 10.443375672974064,
+    "lold": 4.0,
+    "canopy_cover": 0.3147896683065312,
+    "growth_step_pop": 2805.9223082615817,
+    "complexity": 5.0,
+    "inspectable": 0.7999999999999999,
+    "synergy_pairs": 128.0,
+    "elegance": 0.18730233476091013
+   },
+   "s": {
+    "access_cov400": 1.0,
+    "ward_p95_min": 1.0,
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9968571110312995,
+    "fresh_ssr": 1.0,
+    "corridor_m_pp": 0.973409410115713,
+    "excavation_m3_pp": 0.8960615612366939,
+    "capex_pp": 0.7725635126649308,
+    "external_cost_pp": 0.7603004942196201,
+    "recovery": 0.9756756756756757,
+    "runoff_c": 0.970121490045888,
+    "flood_catch_ha": 1.0,
+    "shelter_min": 1.0,
+    "shelter_cap": 1.0,
+    "conflict_pts_ha": 0.9236445102195605,
+    "lold": 0.9333333333333333,
+    "canopy_cover": 1.0,
+    "growth_step_pop": 0.9997332293575864,
+    "complexity": 1.0,
+    "inspectable": 0.9999999999999999,
+    "synergy_pairs": 0.9333333333333333,
+    "elegance": 0.9331701829521585
+   },
+   "composite": 0.9455272752390156,
+   "dims": {
+    "functional": 0.9615927153858603,
+    "efficiency": 0.8574071095591514,
+    "robustness": 0.975299904799826,
+    "scalability": 0.9997332293575864,
+    "maintainability": 1.0,
+    "innovation": 0.9333333333333333,
+    "elegance": 0.9331701829521585
+   },
+   "gates_ok": 18,
+   "gates_n": 18,
+   "delta": 0.011698148440875689
+  }
+ ],
+ "plateau": {
+  "baseline": 0.9455272752390156,
+  "attempts": [
+   {
+    "name": "coordinate +-5/10% moves",
+    "best": 0.9470215194639395,
+    "gain": 0.0014942442249239463,
+    "evals": 120,
+    "vec": {
+     "geometry.gross_density_p_ha": 82.0,
+     "geometry.cell_apothem_m": 307.0,
+     "water.tank_m3_pp": 1.0,
+     "water.pond_m3_pp": 4.25,
+     "energy.storage_kwh_pp": 10.1,
+     "energy.canopy_width_m": 3.4,
+     "energy.roof_usable": 0.6,
+     "energy.agri_pv_fraction": 0.07,
+     "geometry.plot_productive_fraction": 0.7,
+     "thermal.tree_cover_green": 0.55
+    }
+   },
+   {
+    "name": "global random search",
+    "best": 0.9455272752390156,
+    "gain": 0.0,
+    "evals": 160,
+    "vec": {
+     "geometry.gross_density_p_ha": 90,
+     "geometry.cell_apothem_m": 300,
+     "water.tank_m3_pp": 1.5,
+     "water.pond_m3_pp": 5.0,
+     "energy.storage_kwh_pp": 9.5,
+     "energy.canopy_width_m": 5.0,
+     "energy.roof_usable": 0.6,
+     "energy.agri_pv_fraction": 0.07,
+     "geometry.plot_productive_fraction": 0.6,
+     "thermal.tree_cover_green": 0.55
+    }
+   },
+   {
+    "name": "local search sigma 6%",
+    "best": 0.9463928438295196,
+    "gain": 0.0008655685905040178,
+    "evals": 160,
+    "vec": {
+     "geometry.gross_density_p_ha": 89.31269994068816,
+     "geometry.cell_apothem_m": 307.19642630707375,
+     "water.tank_m3_pp": 1.5838822988164656,
+     "water.pond_m3_pp": 4.919310639340127,
+     "energy.storage_kwh_pp": 10.276046281116733,
+     "energy.canopy_width_m": 4.824565867437656,
+     "energy.roof_usable": 0.5828651002934611,
+     "energy.agri_pv_fraction": 0.07282642715130035,
+     "geometry.plot_productive_fraction": 0.6149765118233034,
+     "thermal.tree_cover_green": 0.5464086702386384
+    }
+   },
+   {
+    "name": "local search sigma 15%",
+    "best": 0.9460922046726318,
+    "gain": 0.0005649294336161903,
+    "evals": 160,
+    "vec": {
+     "geometry.gross_density_p_ha": 91.403307681534,
+     "geometry.cell_apothem_m": 307.6975587008928,
+     "water.tank_m3_pp": 1.6940241333108876,
+     "water.pond_m3_pp": 2.5881667254545975,
+     "energy.storage_kwh_pp": 9.20522296528884,
+     "energy.canopy_width_m": 4.435177305682813,
+     "energy.roof_usable": 0.7,
+     "energy.agri_pv_fraction": 0.0643310331379119,
+     "geometry.plot_productive_fraction": 0.5974561465280779,
+     "thermal.tree_cover_green": 0.5498511717048447
+    }
+   }
+  ],
+  "plateau": true
+ },
+ "sweep": {
+  "dens": [
+   70,
+   80,
+   90,
+   100,
+   110
+  ],
+  "aps": [
+   260,
+   280,
+   300,
+   320,
+   340
+  ],
+  "rows": [
+   [
+    {
+     "comp": 0.9397636056138764,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9411569621826162,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9413390415916547,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9400464648832986,
+     "ok": false,
+     "fails": [
+      "G10",
+      "G18"
+     ]
+    },
+    {
+     "comp": 0.9283823179317615,
+     "ok": false,
+     "fails": [
+      "G05",
+      "G09",
+      "G10",
+      "G18"
+     ]
+    }
+   ],
+   [
+    {
+     "comp": 0.9425747278416082,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.943657036111802,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9435951202238868,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9417866301634031,
+     "ok": false,
+     "fails": [
+      "G10",
+      "G18"
+     ]
+    },
+    {
+     "comp": 0.9301414186112588,
+     "ok": false,
+     "fails": [
+      "G05",
+      "G09",
+      "G10",
+      "G18"
+     ]
+    }
+   ],
+   [
+    {
+     "comp": 0.9447577020528632,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9452377537621418,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.9455272752390156,
+     "ok": true,
+     "fails": []
+    },
+    {
+     "comp": 0.942148546398218,
+     "ok": false,
+     "fails": [
+      "G18"
+     ]
+    },
+    {
+     "comp": 0.9309726256158526,
+     "ok": false,
+     "fails": [
+      "G05",
+      "G09",
+      "G10",
+      "G18"
+     ]
+    }
+   ],
+   [
+    {
+     "comp": 0.9409528826470488,
+     "ok": false,
+     "fails": [
+      "G01"
+     ]
+    },
+    {
+     "comp": 0.9414538376851976,
+     "ok": false,
+     "fails": [
+      "G01"
+     ]
+    },
+    {
+     "comp": 0.940649641349787,
+     "ok": false,
+     "fails": [
+      "G01"
+     ]
+    },
+    {
+     "comp": 0.9362689318737144,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G18"
+     ]
+    },
+    {
+     "comp": 0.9259317091875435,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G05",
+      "G09",
+      "G10",
+      "G18"
+     ]
+    }
+   ],
+   [
+    {
+     "comp": 0.9324986741419651,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G02"
+     ]
+    },
+    {
+     "comp": 0.9319508726313177,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G02"
+     ]
+    },
+    {
+     "comp": 0.9292040813811109,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G02"
+     ]
+    },
+    {
+     "comp": 0.9253105818315679,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G02",
+      "G18"
+     ]
+    },
+    {
+     "comp": 0.9151070362733219,
+     "ok": false,
+     "fails": [
+      "G01",
+      "G02",
+      "G05",
+      "G09",
+      "G10",
+      "G18"
+     ]
+    }
+   ]
+  ]
+ },
+ "stress": [
+  {
+   "name": "rain -20%",
+   "comp": 0.9353555442741194,
+   "fails": [
+    "G18"
+   ],
+   "k": {
+    "potable_ssr": 0.9991423751847304,
+    "irrigation_ssr": 0.39516836071856987,
+    "energy_ssr": 0.9968506070203422,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 4.0
+   }
+  },
+  {
+   "name": "solar -10%",
+   "comp": 0.9435274892177866,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9935971823973259,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 7.0
+   }
+  },
+  {
+   "name": "energy demand +20%",
+   "comp": 0.9366676470415004,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.987428308312276,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 18.0
+   }
+  },
+  {
+   "name": "potable use +30% (72 L/p/d)",
+   "comp": 0.9365697404654275,
+   "fails": [],
+   "k": {
+    "potable_ssr": 0.9920247809243348,
+    "irrigation_ssr": 0.43462835495251073,
+    "energy_ssr": 0.9968099079373635,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 4.0
+   }
+  },
+  {
+   "name": "density +20% (108 p/ha)",
+   "comp": 0.9331470648718212,
+   "fails": [
+    "G05",
+    "G09",
+    "G10",
+    "G18"
+   ],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.49830263545197806,
+    "energy_ssr": 0.9962632949245651,
+    "fresh_ssr": 0.9153212133022637,
+    "flood_catch_ha": 59.167204088056145,
+    "lold": 5.0
+   }
+  },
+  {
+   "name": "density -20% (72 p/ha)",
+   "comp": 0.9452126632635287,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.8012517459777652,
+    "energy_ssr": 0.9974981880551431,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 70.30980107863124,
+    "lold": 3.0
+   }
+  },
+  {
+   "name": "cloud variability +50%",
+   "comp": 0.9314086603482259,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9726171074901124,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 25.0
+   }
+  },
+  {
+   "name": "storage -33% (6.3 kWh/p)",
+   "comp": 0.942301565501807,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9913600375281245,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 11.0
+   }
+  },
+  {
+   "name": "slope 8% (walk speed penalty)",
+   "comp": 0.9455272752390156,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9968571110312995,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 64.25904498570102,
+    "lold": 4.0
+   }
+  },
+  {
+   "name": "hazard: cyclone coast",
+   "comp": 0.9301771867629741,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9968571110312995,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 33.73599861749304,
+    "lold": 4.0
+   }
+  },
+  {
+   "name": "hazard: tornado plains",
+   "comp": 0.9351064676831221,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9968571110312995,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 42.1699982718663,
+    "lold": 4.0
+   }
+  },
+  {
+   "name": "hazard: high seismicity",
+   "comp": 0.938627382626085,
+   "fails": [],
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6222129317960041,
+    "energy_ssr": 0.9968571110312995,
+    "fresh_ssr": 1.0,
+    "flood_catch_ha": 48.19428373927577,
+    "lold": 4.0
+   }
+  }
+ ],
+ "adapter": [
+  {
+   "site": "cape_town",
+   "label": "Cape Town (Mediterranean, winter rainfall)",
+   "comp0": 0.9455272752390156,
+   "fails0": [],
+   "comp1": 0.9470215194639395,
+   "fails1": [],
+   "tuned": {
+    "gross_density_p_ha": 82.0,
+    "cell_apothem_m": 307.0,
+    "tank_m3_pp": 1.0,
+    "pond_m3_pp": 4.25,
+    "storage_kwh_pp": 10.1,
+    "canopy_width_m": 3.4,
+    "roof_usable": 0.6,
+    "agri_pv_fraction": 0.07,
+    "plot_productive_fraction": 0.7,
+    "tree_cover_green": 0.55
+   },
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 0.6941671797535323,
+    "energy_ssr": 0.9969322063328117,
+    "fresh_ssr": 1.0
+   },
+   "opt_tilt": 25,
+   "lat": -33.9
+  },
+  {
+   "site": "johannesburg",
+   "label": "Johannesburg (subtropical highland, summer rainfall)",
+   "comp0": 0.9554868175413185,
+   "fails0": [],
+   "comp1": 0.9567657421176958,
+   "fails1": [],
+   "tuned": {
+    "gross_density_p_ha": 90.0,
+    "cell_apothem_m": 307.0,
+    "tank_m3_pp": 1.0,
+    "pond_m3_pp": 3.5,
+    "storage_kwh_pp": 10.7,
+    "canopy_width_m": 3.8,
+    "roof_usable": 0.6,
+    "agri_pv_fraction": 0.06,
+    "plot_productive_fraction": 0.7,
+    "tree_cover_green": 0.55
+   },
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 1.0,
+    "energy_ssr": 1.0,
+    "fresh_ssr": 1.0
+   },
+   "opt_tilt": 25,
+   "lat": -26.2
+  },
+  {
+   "site": "durban",
+   "label": "Durban (humid subtropical coast)",
+   "comp0": 0.9544386763750649,
+   "fails0": [],
+   "comp1": 0.9553966319659154,
+   "fails1": [],
+   "tuned": {
+    "gross_density_p_ha": 90.0,
+    "cell_apothem_m": 307.0,
+    "tank_m3_pp": 1.0,
+    "pond_m3_pp": 3.5,
+    "storage_kwh_pp": 9.5,
+    "canopy_width_m": 4.6,
+    "roof_usable": 0.6,
+    "agri_pv_fraction": 0.07,
+    "plot_productive_fraction": 0.7,
+    "tree_cover_green": 0.55
+   },
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 1.0,
+    "energy_ssr": 1.0,
+    "fresh_ssr": 1.0
+   },
+   "opt_tilt": 30,
+   "lat": -29.9
+  },
+  {
+   "site": "lisbon",
+   "label": "Lisbon (Mediterranean, northern hemisphere)",
+   "comp0": 0.9617558759274978,
+   "fails0": [
+    "G16"
+   ],
+   "comp1": 0.9648714989406243,
+   "fails1": [
+    "G16"
+   ],
+   "tuned": {
+    "gross_density_p_ha": 94.0,
+    "cell_apothem_m": 307.0,
+    "tank_m3_pp": 1.0,
+    "pond_m3_pp": 5.0,
+    "storage_kwh_pp": 10.7,
+    "canopy_width_m": 5.8,
+    "roof_usable": 0.66,
+    "agri_pv_fraction": 0.06,
+    "plot_productive_fraction": 0.7,
+    "tree_cover_green": 0.55
+   },
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 1.0,
+    "energy_ssr": 1.0,
+    "fresh_ssr": 1.0
+   },
+   "opt_tilt": 30,
+   "lat": 38.7
+  },
+  {
+   "site": "nairobi",
+   "label": "Nairobi (equatorial highland, bimodal rain)",
+   "comp0": 0.9567573188257154,
+   "fails0": [],
+   "comp1": 0.9579625568905984,
+   "fails1": [],
+   "tuned": {
+    "gross_density_p_ha": 90.0,
+    "cell_apothem_m": 307.0,
+    "tank_m3_pp": 1.0,
+    "pond_m3_pp": 3.5,
+    "storage_kwh_pp": 9.5,
+    "canopy_width_m": 3.8,
+    "roof_usable": 0.6,
+    "agri_pv_fraction": 0.06,
+    "plot_productive_fraction": 0.7,
+    "tree_cover_green": 0.55
+   },
+   "k": {
+    "potable_ssr": 1.0,
+    "irrigation_ssr": 1.0,
+    "energy_ssr": 0.998999072938361,
+    "fresh_ssr": 1.0
+   },
+   "opt_tilt": 0,
+   "lat": -1.3
+  }
+ ],
+ "baseline": {
+  "composite": 0.9455272752390156,
+  "dims": {
+   "functional": 0.9615927153858603,
+   "efficiency": 0.8574071095591514,
+   "robustness": 0.975299904799826,
+   "scalability": 0.9997332293575864,
+   "maintainability": 1.0,
+   "innovation": 0.9333333333333333,
+   "elegance": 0.9331701829521585
+  },
+  "k": {
+   "access_cov400": 0.974,
+   "ward_p95_min": 13.485839784753228,
+   "potable_ssr": 1.0,
+   "irrigation_ssr": 0.6222129317960041,
+   "energy_ssr": 0.9968571110312995,
+   "fresh_ssr": 1.0,
+   "corridor_m_pp": 2.3452040028032877,
+   "excavation_m3_pp": 7.598460969082653,
+   "capex_pp": 45234.64193007811,
+   "external_cost_pp": 1175.2788138729118,
+   "recovery": 0.961,
+   "runoff_c": 0.17240888246558408,
+   "flood_catch_ha": 64.25904498570102,
+   "shelter_min": 4.87483379208337,
+   "shelter_cap": 1.5000000000000002,
+   "conflict_pts_ha": 10.443375672974064,
+   "lold": 4.0,
+   "canopy_cover": 0.3147896683065312,
+   "growth_step_pop": 2805.9223082615817,
+   "complexity": 5.0,
+   "inspectable": 0.7999999999999999,
+   "synergy_pairs": 128.0,
+   "elegance": 0.18730233476091013
+  },
+  "gates": [
+   {
+    "id": "G01",
+    "text": "walk access: >=95% of residents within 400 m of a daily node",
+    "ok": true,
+    "value": 0.974
+   },
+   {
+    "id": "G02",
+    "text": "ward services within 15 min walk (P95)",
+    "ok": true,
+    "value": 13.485839784753228
+   },
+   {
+    "id": "G03",
+    "text": "potable self-supply >= 95%",
+    "ok": true,
+    "value": 1.0
+   },
+   {
+    "id": "G04",
+    "text": "electricity self-supply >= 95%",
+    "ok": true,
+    "value": 0.9968571110312995
+   },
+   {
+    "id": "G05",
+    "text": "fresh produce self-supply >= 95%",
+    "ok": true,
+    "value": 1.0
+   },
+   {
+    "id": "G06",
+    "text": "material recovery >= 95%",
+    "ok": true,
+    "value": 0.961
+   },
+   {
+    "id": "G07",
+    "text": "hardened shelter <= 6 min walk, capacity >= 1.0",
+    "ok": true,
+    "value": 4.87483379208337
+   },
+   {
+    "id": "G08",
+    "text": "1:100 overland route catchment >= 20 ha at DV <= 0.4",
+    "ok": true,
+    "value": 64.25904498570102
+   },
+   {
+    "id": "G09",
+    "text": "vehicle conflict points <= 12 per ha",
+    "ok": true,
+    "value": 10.443375672974064
+   },
+   {
+    "id": "G10",
+    "text": "canopy cover >= 30%",
+    "ok": true,
+    "value": 0.3147896683065312
+   },
+   {
+    "id": "G11",
+    "text": "emergency clear width >= 3.7 m on all drivable classes",
+    "ok": true,
+    "value": 4.0
+   },
+   {
+    "id": "G12",
+    "text": "hose reach <= 45 m from a drivable street",
+    "ok": true,
+    "value": 31.042719949269046
+   },
+   {
+    "id": "G13",
+    "text": "FMEA closed: post-mitigation RPN <= 100, all S>=9 mitigated",
+    "ok": true,
+    "value": 54
+   },
+   {
+    "id": "G14",
+    "text": "water mass balance closes (|rel| < 1e-9)",
+    "ok": true,
+    "value": 1.9158631621536538e-16
+   },
+   {
+    "id": "G15",
+    "text": "energy balance closes (|kWh/p| < 1e-6)",
+    "ok": true,
+    "value": -2.7284841053187847e-12
+   },
+   {
+    "id": "G16",
+    "text": ">=3 storeys admissible on lanes (winter solar access)",
+    "ok": true,
+    "value": 3
+   },
+   {
+    "id": "G17",
+    "text": "seam facade noise <= WHO L_den 53 dB (indicative)",
+    "ok": true,
+    "value": 46.95821048761893
+   },
+   {
+    "id": "G18",
+    "text": "drought (design profile): unmet potable <= 5% under restrictions",
+    "ok": true,
+    "value": 3.2408442713580254
+   }
+  ],
+  "scores": {
+   "access_cov400": 1.0,
+   "ward_p95_min": 1.0,
+   "potable_ssr": 1.0,
+   "irrigation_ssr": 0.6222129317960041,
+   "energy_ssr": 0.9968571110312995,
+   "fresh_ssr": 1.0,
+   "corridor_m_pp": 0.973409410115713,
+   "excavation_m3_pp": 0.8960615612366939,
+   "capex_pp": 0.7725635126649308,
+   "external_cost_pp": 0.7603004942196201,
+   "recovery": 0.9756756756756757,
+   "runoff_c": 0.970121490045888,
+   "flood_catch_ha": 1.0,
+   "shelter_min": 1.0,
+   "shelter_cap": 1.0,
+   "conflict_pts_ha": 0.9236445102195605,
+   "lold": 0.9333333333333333,
+   "canopy_cover": 1.0,
+   "growth_step_pop": 0.9997332293575864,
+   "complexity": 1.0,
+   "inspectable": 0.9999999999999999,
+   "synergy_pairs": 0.9333333333333333,
+   "elegance": 0.9331701829521585
+  }
+ },
+ "seconds": 36.955000162124634
+}

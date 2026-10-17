@@ -1,0 +1,2146 @@
+═══════════════════════════════════════════════════════════════════════════════
+AEQUCITY v2.0 - SYNERGETIC EFE CITY BLUEPRINT
+Waterways | drainage | electricity | internet | agriculture as ONE system
+───────────────────────────────────────────────────────────────────────────────
+Document                           : AEQUCITY v2.0 - Synergetic EFE City
+                                     Blueprint
+Version / date                     : 2.0.0 / 2026-10-16
+Agent                              : EFE OPTIBEST ENGINEER v2.0 (ODF v1.0, SI
+                                     units)
+Supersedes                         : AequCity v1.0 framework
+                                     (ttx89-dev/resources/aequcity.md)
+Scale / rigor                      : MACRO x GLOBAL/INFRASTRUCTURE -> ULTRA
+Reference site                     : Cape Town (Mediterranean, winter rainfall)
+Status                             : DESIGN-BASIS PLATEAU (model-verified), 10
+                                     field gates open
+Reproduce                          : python -m efe_city build --out out   (all
+                                     numbers + drawings regenerate)
+═══════════════════════════════════════════════════════════════════════════════
+
+CONTENTS: 0 Summary | 1 Study | 2 Purpose | 3 Requirements | 4 Concept | 5 Plan
+6 AEQUSPINE | 7 Subsystems | 8 Resilience | 9 Economics | 10 Delivery
+11 Lifecycle | 12 Scale + global | 13 Verification | 14 Dev | 15 Certification
+16 Photo prompt
+SCHEMATICS: S-01 ward plan | S-02 corridor sections | S-03 cell metabolism
+
+
+───────────────────────────────────────────────────────────────────────────────
+0. EXECUTIVE SUMMARY
+───────────────────────────────────────────────────────────────────────────────
+
+PURPOSE. Design a city any community can build, repair and extend, in which
+roads, paving, signage, water, drainage, waterways, electricity, internet,
+lighting, thermals, sound, agriculture, fauna, waste, ablutions, public
+facilities, transport, bridges, machinery and maintenance work as ONE
+synergetic system; stays safe under quake, storm, flood, fire and drought; and
+passes the Equidistributed Free Economy (EFE) filter on every decision.
+
+METHOD. Receive > evaluate > study > absorb > conceptualise > ideate > evaluate
+> calculate > conclude > plan > exact > enhance > refine to plateau > generate.
+Every number here is computed by the accompanying scripted model (stdlib
+Python, unit-tested). Tables, schematics and the photo prompt are generated
+from one configuration file, so text, drawings and prompt agree by
+construction.
+
+╔═ HEADLINE SPECIFICATIONS ════════════════════════════════════════════════════
+║
+║  Cell (AEQUCELL) : hexagon, apothem 300 m (600 m flat-to-flat), 31.2 ha,
+║  2,806 residents at 90 p/ha
+║  Ward / City     : 7 cells = 19,641 p ; 7 wards = 137,490 p on 38.2 km2 (R
+║  3.5 km, incl. wedge + nature)
+║  Access          : 97% within 400 m of a daily node (P95 4.9 min); ward
+║  services P95 13.5 min
+║  AEQUSPINE       : seam 28 m / lane 12 m / path 6 m ; 2 trenches (trough +
+║  wet strip) replace 6
+║  Water           : potable 100% self-supplied; irrigation 62%; drought 3 yr:
+║  unmet 3.2%
+║  Energy          : 3.86 kWp/p, 100% self-supply, export 3,317 kWh/p/yr,
+║  storage 9.5 kWh/p
+║  Food            : fresh produce 100% in-city + ward belt; 13% of kcal;
+║  foodshed R 7.1 km
+║  Circularity     : material recovery 96% (target), residual 6.4 kg/p/yr
+║  Safety          : 18/18 gates pass; max FMEA RPN 180 -> 54
+║  Economics       : capex ~USD 45,235/p ; external cost USD 1,175/p/yr
+║  (planning-grade)
+║
+╚══════════════════════════════════════════════════════════════════════════════
+
+CORE IDEA. The unit of the city is the AEQUCELL, a hexagon 600 m flat-to-flat.
+Cells meet along 28 m AEQUSPINE seams: one shared corridor carrying the blue
+(swale, pond, flood route), green (forest verge, food forest), amber (power,
+storage, PV colonnade) and data (fibre, mesh, sensors) networks together with
+the slow streets and walks. Inside a cell, lanes and paths serve courts of
+about 90 people. Every dwelling is a small power plant that feeds excess
+outward; every roof harvests water; every verge is a garden; every trench is
+shared and inspectable.
+
+
+EFE filter (7 principles; any NO means redesign)
+
+EFE principle   │ evidence (this model)                              │ result
+────────────────┼────────────────────────────────────────────────────┼─────────
+1 SUSTAINABLE   │ recovery 96%; nature 25% of city; MAR recharge;    │ PASS
+                │ compost loop                                       │
+2 RENEWABLE     │ PV + biogas; self-supply 100%; no fossil source    │ PASS
+                │ (grid = outward-feed partner)                      │
+3 ACCESSIBLE    │ 97% within 400 m; step-free routes; hygiene hubs;  │ PASS
+                │ universal design                                   │
+4 OPEN          │ open standards, open model + tests, patent-free    │ PASS
+                │ materials (stone, geopolymer, timber, earth)       │
+5 LOCAL-FIRST   │ local waste-stream materials; cell-level           │ PASS
+                │ production; internalization priority ranked        │
+6 CIRCULAR      │ P-loop closure 91% of diet; water reuse; recovery  │ PASS
+                │ 96%                                                │ (design)
+7 DURABLE       │ stone/geopolymer paving 50+ y; liftable +          │ PASS
+                │ repairable; spare ducts; design life >= 20 y       │
+
+7 verification pillars crosswalk
+
+7 verification pillar │ where evidenced                              │ section
+──────────────────────┼──────────────────────────────────────────────┼─────────
+Material              │ Tier 1-2 hierarchy; surfaces + structure     │ 7.3, 7.6
+Energy                │ PV + biogas + storage; no perpetual source   │ 6.4
+Waste                 │ recovery, residual mass, digestion           │ 7.5
+Water                 │ sponge, reuse, MAR, drought                  │ 6.3
+Social                │ equidistributed access, universal design,    │ 5, 7.5
+                      │ hygiene hubs                                 │
+Economic              │ external cost + contribution bound           │ 9
+Temporal              │ repairable, upgradable, horizons T1-T3       │ 11, 12
+
+
+───────────────────────────────────────────────────────────────────────────────
+1. STUDY ABSORPTION (RECEIVE > EVALUATE > STUDY > ABSORB)
+───────────────────────────────────────────────────────────────────────────────
+
+
+1.1 Source map
+
+source                   │ read depth               │ contribution
+─────────────────────────┼──────────────────────────┼──────────────────────────
+aequchain.github.io (EFE │ repo cloned; chapter     │ equality invariant, EFE
+Guide)                   │ list + EVER model read   │ chapters, EVER module: 50
+                         │                          │ ha / 500 residents
+github.com/aequchain     │ README, models/,         │ equidistribution engine,
+                         │ resources/ read in part  │ 0-5% enterprise
+                         │                          │ contribution,
+                         │                          │ internalization priority
+github.com/aequchain-dev │ NOT ACCESSED this        │ re-run study when
+                         │ session                  │ reachable (open item
+                         │                          │ O-09)
+aequchainportal.web.app  │ landing page read        │ 14-sector framing,
+                         │                          │ contribution +
+                         │                          │ equidistribution summary
+aequchainportal.web.app/ │ portfolio page read      │ 27 projects in 6 waves ->
+nextgen                  │                          │ component bindings
+                         │                          │ (section 7)
+resources/aequcity.md    │ read in full             │ AequCity v1.0 = baseline
+(ttx89-dev)              │                          │ audited in section 1.3
+resources/SA Flora of    │ preamble, riparian,      │ planting zones,
+Cleanse.md               │ zones A-D, conservation  │ cultivation-not-wild-
+                         │                          │ harvest rule
+resources/12|12 ...      │ outline + bioregional    │ Cape crop/fruit/herb
+NutriAir eco grow.md     │ map sampled              │ palette; conifer/eucalypt
+                         │                          │ entries flagged
+                         │                          │ (invasive, fuel)
+resources/longevity      │ read in full             │ ingredient demand list
+sa.md                    │                          │ (functional fungi etc.)
+                         │                          │ -> cultivation capacity
+                         │                          │ only; no efficacy claims
+                         │                          │ assessed
+freetransport.md, Free   │ headings only            │ future deep-dives (open
+Water, arid>grove        │                          │ item O-10)
+
+1.2 EFE economics extracted (drives design constraints)
+
+EQUALITY INVARIANT: Member_Value = Total_Treasury / Total_Members. Design
+translation: per-capita service levels (access, water, energy share, public
+space) are gated, so no member's entitlement depends on location. P95 walk to a
+daily node is 4.9 min, maximum 5.3 min, node-distance Gini 0.20.
+
+ENTERPRISE CONTRIBUTION (0-5% bound) is the funding channel, PLEDGES fund
+capital, and the INTERNALIZATION PRIORITY ranks external costs so the largest
+dependency is internalised first. Section 9 computes external cost per member,
+the revenue per member needed to stay inside the 5% bound, and the ranking from
+this city's own flows.
+
+EVER MODULE (50 ha, 500 residents; vertical agriculture 10 ha, residential 15,
+manufacturing + research 15, energy 5, commons 5) is the EFE precedent for a
+self-contained site. AEQUCELL generalises it into a tileable hexagon of 2,806
+residents on 31.2 ha. Vertical farming costs about 0.8 kWh per kg blended here
+(aeroponics 12 kWh/kg), so soil, tunnel and agri-PV carry the load and
+aeroponic towers stay a 5% niche.
+
+PORTFOLIO BINDINGS (NextGen): AEQUBLOCK + AEQUBOND (earth walls, paving), FRAME
+CONSTRUCTIO (canopies, bridges), AEQUAQUA + AEQUAFLOW (house water,
+sanitation), AEQUIGROW + AEQUICROP + SALADIFRY (food), AEQUENERGY (community
+energy DAO), AEQUCHILL (cold chain), ALL-PURPOSE MANUFACTORY (fabrication
+node), AequMobi trikes + CARGO (mobility), MRCCS (freight, horizon T2), 3P-SRF
+fasteners, UNIVERSAL MAGNETIC CONNECT (charging). Personal-flight devices are
+NOT relied on; only landing reservations (T3).
+
+PHYSICS GUARD. Machines described as generators are modelled as motor/generator
+CONVERTERS with efficiency below 1. Energy sources are sun, wind, biomass and
+partnership with the outer grid only (L-13).
+
+
+1.3 AequCity v1.0 audit (the baseline)
+
+topic       │ v1.0 states         │ model evidence       │ v2.0 treatment
+            │ (paraphrased)       │                      │
+────────────┼─────────────────────┼──────────────────────┼─────────────────────
+layout      │ concentric core;    │ I0: 10% within 400   │ hex: 97%; ward P95
+            │ claims <15 min to   │ m; district P95 38   │ 13.5 min
+            │ everything          │ min                  │
+energy      │ perpetual-motion    │ violates energy      │ PV + storage + CHP:
+            │ generator as        │ conservation; PV-    │ 100%; converters
+            │ primary source      │ only I0 self-supply  │ only (eta<1)
+            │                     │ 75%                  │
+underground │ 4 underground       │ assumed 21 km bore:  │ shallow trough: 7.6
+            │ levels + radial     │ excavation 25.7      │ m3/p
+            │ tunnels             │ m3/p; capex +~USD    │
+            │                     │ 12.6k/p (assumed 60  │
+            │                     │ M/km)                │
+drainage    │ 'sponge' stated,    │ piped I0: potable    │ sponge + MAR: 100%
+            │ not sized           │ self-supply 25%      │
+orientation │ fixed N nature / S  │ hemisphere + wind-   │ parametric site
+            │ industry zoning     │ rose dependent       │ adapter (section 12)
+recycling   │ 99.7% claimed       │ uncorroborated; no   │ target >= 95%,
+            │                     │ commissioning audit  │ verified by audit
+            │                     │                      │ (L-14)
+hazards     │ no hazard layer     │ tornado, seismic,    │ hazard-profile
+            │                     │ fire, flood absent   │ adapter + shelters
+            │                     │                      │ (section 8)
+economics   │ free everything, no │ no capex / external  │ capex + external
+            │ cost accounting     │ cost                 │ cost + contribution
+            │                     │                      │ bound (section 9)
+
+RETAINED from v1.0: equidistribution as organising principle, civic commons at
+each node, three-horizon material logic, circular loops, local-first
+production, open documentation.
+
+
+1.4 SA resource documents -> design inputs
+
+SA Flora of Cleanse gives four Western Cape planting zones (fynbos garden,
+transition shrubland, succulent karoo garden, forest garden) and the rule to
+cultivate, never wild-harvest, threatened species: they map to wedge habitat
+strips, seam verges, court gardens and riparian ponds (6.6). The 12|12 NutriAir
+bioregional map supplies the Cape crop, fruit and herb palette; its pine and
+eucalyptus entries are excluded as regulated invasives and fire fuel. longevity
+sa.md is used only as an ingredient demand list (functional fungi, botanicals,
+proteins, minerals): the city provides growing capacity (6,875 m2 mushroom-
+house floor city-wide at 2 kg per person per year). No efficacy claim is
+assessed.
+
+
+
+───────────────────────────────────────────────────────────────────────────────
+2. CALIBRATION AND PURPOSE (PHASE 0-1)
+───────────────────────────────────────────────────────────────────────────────
+
+
+2.1 Purpose statement
+
+┌─ PURPOSE ────────────────────────────────────────────────────────────────────
+│
+│  Deliver a buildable, repairable, extensible city design in which ALL
+│  physical networks and the productive landscape form one synergetic system,
+│  adaptable to any site by editing a configuration file, and meeting the 18
+│  binary gates below.
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+2.2 Success criteria = binary gates (python -m efe_city check)
+
+gate  │ requirement (binary)                                 │ value    │ resul
+      │                                                      │          │ t
+──────┼──────────────────────────────────────────────────────┼──────────┼──────
+G01   │ walk access: >=95% of residents within 400 m of a    │ 0.974    │ PASS
+      │ daily node                                           │          │
+G02   │ ward services within 15 min walk (P95)               │ 13.5     │ PASS
+G03   │ potable self-supply >= 95%                           │ 1        │ PASS
+G04   │ electricity self-supply >= 95%                       │ 0.997    │ PASS
+G05   │ fresh produce self-supply >= 95%                     │ 1        │ PASS
+G06   │ material recovery >= 95%                             │ 0.961    │ PASS
+G07   │ hardened shelter <= 6 min walk, capacity >= 1.0      │ 4.87     │ PASS
+G08   │ 1:100 overland route catchment >= 20 ha at DV <= 0.4 │ 64.3     │ PASS
+G09   │ vehicle conflict points <= 12 per ha                 │ 10.4     │ PASS
+G10   │ canopy cover >= 30%                                  │ 0.315    │ PASS
+G11   │ emergency clear width >= 3.7 m on all drivable       │ 4        │ PASS
+      │ classes                                              │          │
+G12   │ hose reach <= 45 m from a drivable street            │ 31       │ PASS
+G13   │ FMEA closed: post-mitigation RPN <= 100, all S>=9    │ 54       │ PASS
+      │ mitigated                                            │          │
+G14   │ water mass balance closes (|rel| < 1e-9)             │ 1.92e-16 │ PASS
+G15   │ energy balance closes (|kWh/p| < 1e-6)               │ -2.73e-  │ PASS
+      │                                                      │ 12       │
+G16   │ >=3 storeys admissible on lanes (winter solar        │ 3        │ PASS
+      │ access)                                              │          │
+G17   │ seam facade noise <= WHO L_den 53 dB (indicative)    │ 47       │ PASS
+G18   │ drought (design profile): unmet potable <= 5% under  │ 3.24     │ PASS
+      │ restrictions                                         │          │
+
+2.3 Rigor calibration
+
+Task magnitude MACRO; deployment scale GLOBAL/INFRASTRUCTURE; rigor ULTRA: all
+nine phases, five-method plateau verification, adversarial stress, theoretical-
+limit analysis. Dimension weights follow purpose-relevance and set iteration
+priority only; they never lower the certification bar.
+
+
+2.4 KPI definitions and weights
+
+KPI               │ dimension    │ meaning                                │ w
+──────────────────┼──────────────┼────────────────────────────────────────┼────
+access_cov400     │ functional   │ residents within 400 m of a daily-     │ 4
+                  │              │ needs node                             │
+ward_p95_min      │ functional   │ P95 walk time to ward-level services   │ 3
+potable_ssr       │ functional   │ potable water self-supply              │ 4
+irrigation_ssr    │ functional   │ irrigation water self-supply           │ 2
+energy_ssr        │ functional   │ electricity self-supply (annual,       │ 4
+                  │              │ daily-resolved)                        │
+fresh_ssr         │ functional   │ fresh produce self-supply (in-city +   │ 3
+                  │              │ ward belt)                             │
+corridor_m_pp     │ efficiency   │ street + utility corridor length per   │ 2
+                  │              │ capita                                 │
+excavation_m3_pp  │ efficiency   │ excavation per capita (trenches +      │ 2
+                  │              │ tunnels)                               │
+capex_pp          │ efficiency   │ capex per capita (planning-grade)      │ 3
+external_cost_pp  │ efficiency   │ external cost per member per year      │ 3
+recovery          │ efficiency   │ material recovery rate                 │ 2
+runoff_c          │ robustness   │ peak runoff coefficient (area-         │ 2
+                  │              │ weighted, attenuated)                  │
+flood_catch_ha    │ robustness   │ max catchment per overland route       │ 2
+                  │              │ (1:100, DV<=0.4)                       │
+shelter_min       │ robustness   │ P95 walk time to hardened shelter      │ 3
+shelter_cap       │ robustness   │ hardened shelter capacity ratio        │ 2
+conflict_pts_ha   │ robustness   │ vehicle conflict points per hectare    │ 2
+lold              │ robustness   │ days per year with energy import       │ 2
+                  │              │ (loss-of-load days)                    │
+canopy_cover      │ robustness   │ tree + PV canopy cover of cell         │ 1
+growth_step_pop   │ scalability  │ population added per growth step       │ 2
+complexity        │ maintainabil │ distinct trench + section + tunnel     │ 3
+                  │ ity          │ systems                                │
+inspectable       │ maintainabil │ utility length inspectable without     │ 2
+                  │ ity          │ breaking surface                       │
+synergy_pairs     │ innovation   │ subsystem pairs with shared space or   │ 2
+                  │              │ flow                                   │
+elegance          │ elegance     │ purpose achievement / complexity       │ 3
+
+2.5 Constraint inventory (5-tier; assumed conventions challenged)
+
+type             │ constraint                        │ handling
+─────────────────┼───────────────────────────────────┼─────────────────────────
+IMMUTABLE        │ conservation of energy and mass;  │ all balances closed to
+                 │ every converter has efficiency <  │ <1e-9 (tests)
+                 │ 1; no perpetual source            │
+IMMUTABLE        │ solar geometry, Manning           │ computed, not assumed
+                 │ hydraulics, Tobler walking        │
+                 │ physics, honeycomb perimeter      │
+                 │ bound                             │
+IMMUTABLE        │ recycling and re-melting cost     │ food ladder section 6.6;
+                 │ energy; land per kcal bounds in-  │ limits L-08, L-15
+                 │ city staples                      │
+REGULATORY       │ building, structural, fire,       │ profile adapter; verify
+                 │ electrical, embedded-generation   │ local edition (section
+                 │ and water-use codes               │ 12)
+REGULATORY       │ invasive-species lists,           │ exclusion list;
+                 │ conservation permits, riparian    │ cultivate, never wild-
+                 │ setbacks                          │ harvest threatened
+                 │                                   │ species
+PRACTICAL        │ PV, battery and paver supply      │ section 9-10;
+                 │ chain; skills; capex; local       │ internalization priority
+                 │ material availability             │
+PREFERENTIAL     │ vernacular look, colour language, │ surface language,
+                 │ public art                        │ section 7.2
+NEGOTIABLE       │ cell size +-10% (cap 300 m by     │ parameters in config
+                 │ G01), lane widths, species list,  │ JSON
+                 │ phasing                           │
+ASSUMED          │ grid streets are cheapest; roads  │ I-ladder: layout,
+(challenged)     │ must be asphalt; one trench per   │ paving, corridors, nodes
+                 │ utility; a city needs one CBD     │
+ASSUMED          │ deep tunnels are needed; free     │ shallow trough;
+(challenged)     │ means no cost accounting          │ external-cost accounting
+                 │                                   │ (section 9)
+
+2.6 Interpretation log
+
+┌─ ASSUMPTIONS A-01..A-08 ─────────────────────────────────────────────────────
+│
+│  A-01 'application' = the application layer (digital services via
+│  AequChain/AequApp) AND application of surfaces and materials.
+│  A-02 'value unto earth' = (a) load path to ground (foundations) and (b) net-
+│  positive return to the land: recharge, soil carbon, habitat, nutrient return
+│  (7.6).
+│  A-03 'ECT' = all further related items; handled by the interaction engine
+│  (6.8).
+│  A-04 'github.come/aequchain-dev' read as github.com/aequchain-dev; not
+│  accessible this session (O-09).
+│  A-05 'longevity sa.md' = ingredient demand list; cultivation capacity only.
+│  A-06 Reference site = Cape Town region (user context + SA resources); every
+│  value is a parameter.
+│  A-07 'public water' = drinking points, hygiene hubs, reclaimed-water
+│  network, shared water commons.
+│  A-08 tornado / typhoon / hurricane: hazard profiles + hardened shelters, not
+│  worst-case design of every building.
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+
+───────────────────────────────────────────────────────────────────────────────
+3. REQUIREMENTS AND TRACEABILITY (PHASE 1)
+───────────────────────────────────────────────────────────────────────────────
+
+Every clause of the brief became a shall-statement with a verification route.
+All 45 are designed; those citing a gate or test are model-verified; field
+items are listed in 13.7.
+
+id   │ requirement (from the brief)          │ section  │ verification
+─────┼───────────────────────────────────────┼──────────┼──────────────────────
+R01  │ roadways: vehicle traffic surface     │ 7.1      │ G11 G12 G09; tests
+     │                                       │          │ streets
+R02  │ demarcation: signage, visible         │ 7.2      │ street code;
+     │ indication, rules + regulations       │          │ jurisdiction map
+R03  │ paving: walkways, materials,          │ 7.3      │ surface catalogue;
+     │ surfacing                             │          │ G08 G10
+R04  │ shape + design processes: supply,     │ 5, 10    │ sequence + QC points
+     │ construction, distribution,           │          │
+     │ implementation                        │          │
+R05  │ electricity: smart grid, home         │ 6.4      │ G04 G15; standards
+     │ generation feeding outward,           │          │ table
+     │ interoperable                         │          │
+R06  │ plumbing / water supply               │ 6.3      │ G03 G14 G18
+R07  │ internet: same outward-feeding,       │ 6.5      │ dig-once; standards
+     │ interoperable model                   │          │ table
+R08  │ lighting                              │ 7.4      │ dark-sky classes;
+     │                                       │          │ energy split
+R09  │ thermals                              │ 7.4      │ G10; albedo, shade,
+     │                                       │          │ ET cooling
+R10  │ traction + textures                   │ 7.3      │ PTV targets; ribbons
+R11  │ sound                                 │ 7.4      │ G17
+R12  │ application layer (digital services,  │ 9, 6.5   │ on-chain vs off-chain
+     │ AequChain/AequApp)                    │          │ map
+R13  │ machinery                             │ 7.8      │ fleet + maintenance
+     │                                       │          │ schedule
+R14  │ bridges                               │ 7.7      │ clear-span, flood
+     │                                       │          │ freeboard rules
+R15  │ terrain types                         │ 5.3      │ slope bands; Tobler
+R16  │ heights                               │ 5.3      │ G16 solar access
+R17  │ angles (sun, slope, junction, roof)   │ 5.3      │ tilt optimum; 3-leg
+     │                                       │          │ junctions
+R18  │ interactions, broad + best            │ 6.8      │ 23x23 matrix;
+     │                                       │          │ conflicts
+R19  │ waste                                 │ 7.5      │ G06
+R20  │ drainage                              │ 6.3      │ G08; sponge ladder I3
+R21  │ cleaning                              │ 7.5, 7.8 │ maintenance hours
+R22  │ maintenance                           │ 7.8, 11  │ schedule + FTE
+R23  │ scaling                               │ 12       │ growth step; sweeps
+R24  │ enhancing                             │ 13       │ ladder I0-I7; plateau
+R25  │ adaptability                          │ 12       │ site adapter; hazard
+     │                                       │          │ profiles
+R26  │ weather                               │ 8        │ hazard table; stress
+     │                                       │          │ tests
+R27  │ agriculture integration: fruit, veg,  │ 6.6      │ G05; palette
+     │ flowers, foliage, flora, fauna        │          │
+R28  │ food + materials + medicinal +        │ 6.6      │ palette; chains
+     │ cleansing supply                      │          │
+R29  │ further enhancements                  │ 13       │ I-ladder; gaps closed
+R30  │ global compatibility                  │ 12       │ adapter: 5 sites, 8
+     │                                       │          │ hazard profiles
+R31  │ future-proofing                       │ 12       │ spare ducts,
+     │                                       │          │ reservations,
+     │                                       │          │ horizons
+R32  │ synergy of waterways + drainage +     │ 6        │ AEQUSPINE; I4
+     │ electricity + internet + agriculture  │          │
+R33  │ structural integrity; value unto      │ 7.6      │ structure doctrine;
+     │ earth                                 │          │ earth ledger
+R34  │ solar placement                       │ 6.4      │ placement table;
+     │                                       │          │ optimum tilt
+R35  │ agri + public water integration       │ 6.3, 7.5 │ water points;
+     │                                       │          │ reclaimed loop
+R36  │ waste removal, disposal, ablutions    │ 7.5      │ hub spec; residual
+     │                                       │          │ mass
+R37  │ public facilities                     │ 7.5      │ program table
+R38  │ public transport                      │ 7.1      │ fleet sizing; stop
+     │                                       │          │ coverage
+R39  │ energy generation                     │ 6.4      │ SSR, export
+R40  │ safety                                │ 8        │ FMEA G13; conflict
+     │                                       │          │ points
+R41  │ rigidity, robustness, tremor +        │ 7.6, 8   │ hazard adapter; G07
+     │ weather resistance, foundations,      │          │
+     │ forestation                           │          │
+R42  │ water/electricity means: above land,  │ 6.7      │ MCA + stability
+     │ below land, maintenance, other        │          │
+R43  │ DEV POLICY: modular, scriptable,      │ 14       │ tests; CLI
+     │ testable, replicable code             │          │
+R44  │ hand-off with photo prompt + tech     │ 16       │ generated from config
+     │ specs                                 │          │
+R45  │ study > ... > refine to plateau >     │ 1, 13    │ this document
+     │ generate                              │          │
+
+
+───────────────────────────────────────────────────────────────────────────────
+4. CONCEPT (PHASE 2)
+───────────────────────────────────────────────────────────────────────────────
+
+
+4.1 Alternatives compared (computed)
+
+metric (computed)                 │ concentric-radial    │ hex cellular (v2.0)
+                                  │ (v1.0)               │
+──────────────────────────────────┼──────────────────────┼─────────────────────
+residents within 400 m of daily   │ 10%                  │ 97%
+node                              │                      │
+P95 walk to ward-level services   │ 38.1                 │ 13.5
+(min)                             │                      │
+vehicle conflict points per ha    │ 39.5                 │ 10.4
+population added per growth step  │ 12,000               │ 2,806
+shared edge per cell vs equal-    │ 1117 (square)        │ 1039 (hex, -6.9%)
+area square (m)                   │                      │
+
+Orthogonal grid: 4-leg junctions give ~4x the conflict points; linear ribbon:
+walk time grows with length (qualitative). Hexagon minimises perimeter for
+equal area (honeycomb theorem), so the cell is at the theoretical edge-length
+minimum.
+
+4.2 Selected concept: AEQUCELL + AEQUSPINE (schematic S-01)
+
+┌─ WARD FLOWER (flat-top cells, north up) ─────────────────────────────────────
+│
+│                   ______
+│                  /      \
+│           ______/   C2   \______        CELL  hexagon, apothem 300 m
+│          /      \        /      \       SEAM  28 m AEQUSPINE on every shared
+│  edge
+│         /   C6   \______/   C3   \      NODE  1.5 ha: market, school, hygiene
+│  hub,
+│         \        /      \        /            hardened shelter, workshop
+│          \______/  WARD  \______/       WARD  7 cells, 19,641 people
+│          /      \  NODE  /      \       CITY  7 wards in a ring, wedges
+│  between
+│         /   C5   \______/   C4   \      WEDGE agri-commons, ponds + PV,
+│         \        /      \        /            habitat, shelterbelts
+│          \______/   C7   \______/
+│                 \        /
+│                  \______/
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+4.3 Hierarchy
+
+level  │ people   │ ha      │ anchor facilities                    │ walk
+───────┼──────────┼─────────┼──────────────────────────────────────┼───────────
+Court  │ ~90      │ -       │ kiosk, compost point, play lot, tool │ 30 m
+       │          │         │ library                              │
+Cell   │ 2,806    │ 31.2    │ school, market, hygiene hub,         │ <= 5.4 min
+       │          │         │ shelter, workshop, RRP               │
+Ward   │ 19,641   │ 218     │ secondary school, clinic, fire       │ <= 14 min
+       │          │         │ station, digester + wetland          │
+City   │ 137,490  │ 3,819   │ hospital, college, manufactory,      │ shuttle
+       │          │         │ transit interchange                  │
+
+4.4 Three material horizons (T1 baseline, T2/T3 upgrade paths)
+
+Every component is specified at three horizons with the same interface so a
+part can be upgraded in place. The baseline city depends ONLY on T1; T2 and T3
+are unvalidated projections (L-10).
+
+component    │ T1 Proto             │ T2 Advanced          │ T3 Apex
+             │                      │                      │ (projection)
+─────────────┼──────────────────────┼──────────────────────┼───────────────────
+paving       │ geopolymer pavers,   │ basalt-fibre         │ diamond-composite
+             │ reclaimed stone,     │ reinforced pavers    │ wear layer
+             │ recycled aggregate   │                      │
+walls        │ AEQUBLOCK stabilised │ mycelium-hemp        │ CNT-polymer
+             │ earth +              │ insulation, basalt-  │ reinforced matrix
+             │ timber/bamboo ring   │ fibre mesh           │
+             │ beams                │                      │
+frames,      │ recycled steel + FSC │ steel-timber-basalt  │ diamond / CNT
+canopies,    │ timber, bolted       │ hybrids              │ composite members,
+bridges      │ (FRAME CONSTRUCTIO)  │                      │ same bolted
+             │                      │                      │ interface
+storage      │ NiFe (AequPack),     │ advanced NiFe        │ internalised
+             │ sodium-ion, LFP      │ electrodes           │ carbon-electrode
+             │                      │                      │ cells
+PV           │ mono-Si modules,     │ tandem modules,      │ internalised
+             │ local mounting       │ local assembly       │ carbon-based PV
+             │                      │                      │ (projection)
+pipes +      │ PE100 / ductile      │ basalt-fibre         │ carbon-lined pipe
+ducts        │ iron, HDPE microduct │ reinforced pipe      │ (projection)
+signs +      │ recycled aluminium,  │ photoluminescent     │ diamond-composite
+markings     │ glass-bead           │ inlays               │ wear coating
+             │ retroreflection,     │                      │
+             │ mineral paint +      │                      │
+             │ inlays               │                      │
+mobility     │ e-trikes +           │ MRCCS pole-rail      │ aerial
+             │ e-shuttles,          │ freight corridors    │ reservations
+             │ swappable packs      │                      │ (AVIS-class), pads
+             │                      │                      │ only
+conversion   │ motor/generator AFPM │ regenerative drives  │ no change:
+devices      │ (AEQUIGEN-class) as  │                      │ converters never
+             │ converters, eta<1    │                      │ sources
+
+
+───────────────────────────────────────────────────────────────────────────────
+5. MASTER PLAN AND GEOMETRY (PHASE 3)
+───────────────────────────────────────────────────────────────────────────────
+
+
+5.1 Land budget (per cell and city)
+
+component                │ m2 per cell │ % of cell │ m2 / person
+─────────────────────────┼─────────────┼───────────┼────────────
+buildings (footprint)    │      60,795 │      19.5 │        21.7
+seams (S-class)          │      29,098 │       9.3 │        10.4
+lanes (L-class)          │      47,789 │      15.3 │        17.0
+paths (P-class)          │      18,706 │       6.0 │         6.7
+node plaza + civic green │      15,000 │       4.8 │         5.3
+plots / court gardens    │     140,381 │      45.0 │        50.0
+TOTAL cell               │     311,769 │     100.0 │       111.1
+
+surface class    │ m2 per cell │ % of cell
+─────────────────┼─────────────┼──────────
+green            │     168,992 │      54.2
+permeable_walk   │      51,071 │      16.4
+permeable_street │      28,313 │       9.1
+ribbon           │       2,598 │       0.8
+roof             │      60,795 │      19.5
+
+productive landscape in cell       : 85,379 m2 = 30.4 m2/p
+city: built / wedge / nature       : 15.3 / 13.4 / 9.5 km2
+city gross density (all land)      : 36 p/ha
+
+5.2 Terrain types, heights, angles
+
+TERRAIN. Walking speed follows Tobler's function; at the site slope of 3% it is
+5.01 km/h (99% of flat). Cell apothem is scaled by the same ratio on steeper
+ground, streets follow contours, seams become keyline swales, and slopes above
+12% carry agroforestry terraces, not cells.
+
+slope │ walk km/h (Tobler) │ relative │ eff. apothem m
+──────┼────────────────────┼──────────┼───────────────
+0%    │               5.04 │     100% │            300
+2%    │               5.02 │     100% │            299
+5%    │               4.96 │      98% │            295
+8%    │               4.47 │      89% │            266
+10%   │               4.16 │      83% │            248
+15%   │               3.50 │      69% │            208
+20%   │               2.93 │      58% │            175
+
+slope    │ use
+band     │
+─────────┼───────────────────────────────────────────────────────────────────
+0-2%     │ floodplain edge, wetlands, agri; no buildings below 1:100 line
+2-5%     │ prime urban: all classes, step-free everywhere
+5-8%     │ urban with terraces; contour lanes; ramps <= 8.33%
+8-12%    │ contour streets, stepped paths + e-assist; road <= 10%
+12-25%   │ agroforestry terraces, switchbacks (road <= 10%), no cells
+>25%     │ protected forest / fynbos; erosion + fire control
+
+HEIGHTS + SUN ANGLES. Equator-facing facades need winter noon sun. At latitude
+-33.9 deg the winter noon sun stands 32.7 deg high; lanes keep 16 m between
+facades, which admits 3 storeys. Rule: <= 3 storeys on lanes; 4-5 storeys only
+at nodes or seams with stepped north faces; at higher latitudes widen lanes or
+drop to 2 storeys (L-15).
+
+latitude                           : -33.9 deg
+noon sun elevation winter / summer : 32.7 / 79.5 deg
+optimum PV tilt (equator-facing)   : 25 deg
+
+storeys │ height m │ spacing req m │ lane spacing m │ winter sun
+────────┼──────────┼───────────────┼────────────────┼───────────
+2       │      6.9 │           9.2 │           16.0 │ PASS
+3       │     10.1 │          14.2 │           16.0 │ PASS
+4       │     13.3 │          19.2 │           16.0 │ FAIL
+5       │     16.5 │          24.2 │           16.0 │ FAIL
+
+ANGLES. Optimum PV tilt 25 deg equator-facing; roofs are mono-pitch, ridge
+east-west, high side to the equator. Junctions are 3-leg at 120 deg (hex) or 90
+deg (lanes): 10.4 conflict points per ha against 39.5 for a 4-leg grid. Walk
+ramps <= 8.33%, walks <= 5%, roads <= 10%.
+
+ORIENTATION. The sun side, wind rose and hemisphere are inputs: the plan never
+hard-codes north. Swapping latitude flips the sun side, PV tilt and winter-sun
+spacing automatically (tested for hemisphere symmetry within 0.5%).
+
+
+
+───────────────────────────────────────────────────────────────────────────────
+6. AEQUSPINE - ONE SYNERGETIC CORRIDOR SYSTEM
+───────────────────────────────────────────────────────────────────────────────
+
+DIRECTIVE. Waterways, drainage, electricity (smart grid; each home an
+independent generator feeding excess outward; interoperable and adaptable),
+internet (same model) and agriculture are designed together with every other
+surround. RULE OF SYNERGY: no network gets a private corridor if it can share
+one without breaking a separation rule, and every output of one network is
+checked as an input of another (6.7).
+
+
+6.1 Cross-sections (schematic S-02) and layer stack
+
+SEAM class, total 28 m
+element                │  width m │ surface class
+───────────────────────┼──────────┼─────────────────────
+forest verge           │      2.5 │ green
+walk                   │      2.5 │ permeable_walk
+slow street            │        5 │ permeable_street
+swale                  │        3 │ green
+cycle track            │      2.5 │ ribbon
+colonnade zone         │      2.5 │ green
+slow street            │        5 │ permeable_street
+walk                   │      2.5 │ permeable_walk
+forest verge           │      2.5 │ green
+
+LANE class, total 12 m
+element                │  width m │ surface class
+───────────────────────┼──────────┼─────────────────────
+verge swale            │      2.5 │ green
+carriageway            │      4.5 │ permeable_street
+verge swale            │      2.5 │ green
+footpath               │        2 │ permeable_walk
+frontage               │      0.5 │ green
+
+PATH class, total 6 m
+element                │  width m │ surface class
+───────────────────────┼──────────┼─────────────────────
+verge                  │      1.5 │ green
+path                   │        3 │ permeable_walk
+verge                  │      1.5 │ green
+
+LAYER STACK, top to bottom: canopy (PV colonnade + luminaire, 4.5 m) | surface
+(permeable pavers, ribbons, swales) | TROUGH 0.9 m deep (LV power + fibre
+microducts, 100% spare ducts, lockable lids) | WET STRIP 1.8 m deep (potable,
+non-potable, sewer under liftable pavers) | storm water runs in the surface
+swale: no storm pipe.
+
+pair               │ rule                                  │ note
+───────────────────┼───────────────────────────────────────┼───────────────────
+potable vs sewer   │ >= 1.0 m horizontal; >= 0.3 m         │ local code may be
+                   │ vertical, potable above               │ stricter
+power vs any water │ separate dry trough and wet strip; no │ LV only in trough
+                   │ shared lids                           │
+fibre vs power     │ separate microducts, 100% spare       │ dig-once; future
+                   │ capacity                              │ thermal loop in
+                   │                                       │ wet strip
+trees vs wet strip │ no trees above wet strip; root        │ structural soil
+                   │ barrier; trees on verges + median     │ under pavers
+PV canopy vs trees │ canopy footprint kept free of tree    │ colonnade-first
+                   │ crowns                                │ siting
+digester vs        │ >= 50 m siting buffer; enclosed; gas  │ odour, H2S,
+dwellings          │ detection                             │ methane
+
+6.2 Waterways, drainage and water: the sponge system
+
+• SLOW, SPREAD, SINK, STORE, CLEAN, REUSE. Street surfaces infiltrate 78-80% of
+  rain; roofs feed tanks; kerbless edges shed the rest to verge swales and
+  bioretention; wedge ponds store the surplus; infiltrated water is banked as
+  managed aquifer recharge (MAR).
+• POTABLE FIRST. Irrigation may never draw MAR below a reserve of 3 months of
+  potable use. Result: potable self-supply 100%, and a 3-year drought at 65% of
+  normal rain with potable restricted to 50 L/p/d leaves 3.2% unmet.
+• RECLAIMED LOOP. Greywater (55 L/p/d, 90% treated) serves toilets, laundry and
+  then irrigation; blackwater (toilet + kitchen) goes to the ward digester,
+  effluent is polished in constructed wetlands (reed, bulrush, palmiet) and
+  applied by drip. Solids become compost / biochar / struvite.
+• PONDS + FLOATING PV. Ponds hold 5 m3 per person (27 ha city-wide); 80% PV
+  cover cuts open-water evaporation by about 64% and adds PV yield.
+• WATERWAYS. Natural streams stay as the blue spine: no building in the 1:100
+  floodplain; >= 32 m buffer each side as a minimum (urban EIA trigger
+  distance; verify local rule); wedge ponds sit on-line as flood storage;
+  crossings clear-span (7.7).
+• PUBLIC WATER. Drinking points every <= 200 m along seams, at every court and
+  node (1,880 city-wide); hygiene hubs (7.5) discharge to the reclaimed loop.
+• WINTER-RAIN TRUTH. Irrigation is the binding water load (32 m3/p/yr vs
+  potable 20). 62% is self-supplied; the Dec-Mar top-up (12.1 m3/p/yr) is
+  external until ponds grow or crops shift to the rain-fed winter calendar
+  (L-16).
+month │ rain mm │ potable │ irrigation │ ext irr │ tank │ pond │   MAR
+──────┼─────────┼─────────┼────────────┼─────────┼──────┼──────┼──────
+Jan   │      14 │    1.71 │       6.26 │    4.97 │ 0.00 │ 0.00 │  3.80
+Feb   │      16 │    1.54 │       4.94 │    3.73 │ 0.00 │ 0.00 │  2.89
+Mar   │      19 │    1.71 │       3.93 │    2.54 │ 0.00 │ 0.00 │  1.94
+Apr   │      40 │    1.65 │       1.26 │    0.00 │ 0.00 │ 0.35 │  1.90
+May   │      67 │    1.71 │       0.00 │    0.00 │ 0.00 │ 1.03 │  3.80
+Jun   │      96 │    1.65 │       0.00 │    0.00 │ 0.00 │ 1.97 │  7.81
+Jul   │      80 │    1.71 │       0.00 │    0.00 │ 0.00 │ 2.64 │ 10.77
+Aug   │      75 │    1.71 │       0.00 │    0.00 │ 0.00 │ 3.17 │ 13.29
+Sep   │      39 │    1.65 │       1.48 │    0.00 │ 0.00 │ 2.97 │ 13.44
+Oct   │      30 │    1.71 │       3.28 │    0.00 │ 0.00 │ 0.91 │ 13.16
+Nov   │      23 │    1.65 │       4.81 │    0.00 │ 0.00 │ 0.00 │  9.87
+Dec   │      16 │    1.71 │       6.00 │    0.83 │ 0.00 │ 0.00 │  4.95
+
+annual per capita (m3)             : potable 20.1 | non-potable 9.1 |
+                                     irrigation 32.0
+external top-up (m3)               : potable 0.00 | irrigation 12.1
+self-supply                        : potable 100% | irrigation 62% | total 80%
+peak storage (m3/p)                : pond 3.2 | MAR 13.4
+mass balance closure (rel.)        : 1.9e-16
+drought design                     : 3 yr at 65% rain, potable restricted:
+                                     unmet 3.2%
+event  │ i mm/h │ Q 1 ha m3/s │ depth cm │   d*v │ max catchment ha
+───────┼────────┼─────────────┼──────────┼───────┼─────────────────
+1in10  │     65 │       0.031 │      4.7 │ 0.022 │            103.8
+1in100 │    105 │       0.050 │      5.7 │ 0.030 │             64.3
+
+peak runoff coefficient            : area 0.34 -> attenuated 0.17
+limits                             : d*v <= 0.4 m2/s and depth <= 0.3 m on
+                                     overland routes
+
+6.3 Electricity: smart grid with every home a generator feeding outward
+
+• HOME ENERGY NODE (HEN). Each dwelling: 8.7 kWp PV on a north-facing mono-
+  pitch roof, 12.2 kWh battery, 7.3 kW grid-forming hybrid inverter, islanding
+  switch, smart meter, local controller. It can run alone, and exports any
+  excess to the cell.
+• CELL MICROGRID. LV 400/230 V in the trough; 16.0 MWh cell battery (N+1 grid-
+  forming, black start); adaptive protection (inverter fault currents are
+  small). Ward ties and one outer-grid interconnect per ward let the city feed
+  excess outward (3,317 kWh/p/yr surplus) and draw only 8 kWh/p/yr.
+• EQUIDISTRIBUTION. Pooled canopy output is allocated per capita, so a flat-
+  dweller and a house-dweller have equal shares; roofs alone cover demand up to
+  4 storeys (table below).
+• ADAPTABLE + INTEROPERABLE. Only open standards at every interface (table);
+  the controller is open firmware; a DC bus (T2) can be added without re-
+  trenching because ducts are spare.
+• SOLAR PLACEMENT, ranked: (1) roofs: optimum tilt 25 deg, no extra land, 1580
+  kWh/kWp; (2) seam colonnade over the cycle track: shade + 1530 kWh/kWp; (3)
+  floating PV on ponds: +4% yield, less evaporation; (4) agri-PV on wedge
+  farms: GCR 0.35, clearance 3.5 m, 78% yield, shade-tolerant crops; (5)
+  vertical facades last: 62% of optimum.
+• SEASON. June PV is 50% of December: storage covers nights and cloud runs; CHP
+  biogas (32 kWh/p/yr) and outer-grid partnership cover rare long dull spells
+  (4 days/yr with any import, longest run 2 d).
+month │ PV kWh/p │ demand │ import │ export
+──────┼──────────┼────────┼────────┼───────
+Jan   │      630 │    205 │    0.0 │    415
+Feb   │      551 │    185 │    0.0 │    358
+Mar   │      538 │    205 │    0.0 │    324
+Apr   │      431 │    201 │    0.0 │    222
+May   │      378 │    218 │    0.0 │    151
+Jun   │      321 │    219 │    3.3 │     97
+Jul   │      367 │    229 │    4.4 │    133
+Aug   │      426 │    227 │    0.2 │    190
+Sep   │      483 │    215 │    0.0 │    259
+Oct   │      571 │    213 │    0.0 │    349
+Nov   │      595 │    199 │    0.0 │    388
+Dec   │      644 │    205 │    0.0 │    430
+
+placement │  m2/p │ kWp/p │ kWh/kWp │ kWh/p/yr
+──────────┼───────┼───────┼─────────┼─────────
+roof      │ 13.00 │  2.73 │   1,580 │    4,313
+canopy    │  1.85 │  0.39 │   1,530 │      595
+agri_pv   │  1.91 │  0.40 │   1,232 │      493
+floating  │  1.60 │  0.34 │   1,591 │      535
+
+demand end-use      │ kWh/p/yr
+────────────────────┼─────────
+appliances lighting │      600
+cooking             │      150
+hot water           │      250
+space cond          │      200
+commerce civic      │      300
+ict                 │      100
+street light        │       40
+manufacturing       │      600
+agri processing     │      166
+mobility            │       86
+water systems       │       27
+
+storeys │ roof PV kWh/p │ share of demand
+────────┼───────────────┼────────────────
+1       │        12,939 │            513%
+2       │         6,469 │            257%
+3       │         4,313 │            171%
+4       │         3,235 │            128%
+5       │         2,588 │            103%
+
+self-supply / import / export      : 100% / 7.9 / 3,317 kWh/p/yr
+loss-of-load days / longest run    : 4 / 2 d
+closure                            : -2.7e-12 kWh/p
+home node (per dwelling)           : 8.7 kWp PV, 12.2 kWh battery, 7.3 kW
+                                     hybrid inverter
+cell battery                       : 16.0 MWh per cell (grid-forming, N+1)
+domain           │ open reference (verify edition)         │ use
+─────────────────┼─────────────────────────────────────────┼───────────────────
+DER interconnect │ IEEE 1547-2018; IEC 62109; SA: NRS      │ home node to LV
+                 │ 097-2-1, SANS 10142-1-2                 │ grid
+DER + grid data  │ IEC 61850-7-420; IEEE 2030.5; OpenADR;  │ telemetry,
+                 │ MQTT/Sparkplug B                        │ dispatch, demand
+                 │                                         │ response
+Metering         │ IEC 62056 (DLMS/COSEM); open API to     │ energy accounting
+                 │ AequChain ledger                        │ per member
+EV + swap        │ ISO 15118; OCPP 2.0.1; AequPack         │ trikes, shuttles,
+battery          │ interface (AequMobi)                    │ V2G
+Home devices     │ Matter; SunSpec/Modbus for inverters    │ interoperable
+                 │                                         │ appliances
+Fibre + mesh     │ ITU-T G.9807.1 (XGS-PON); IEEE          │ open-access FTTH,
+                 │ 802.11s/ax; LoRaWAN; IPv6               │ mesh, sensors
+Drinking water   │ SANS 241; ISO 4427 (PE pipe); purple    │ supply, reuse,
+                 │ pipe = non-potable                      │ cross-connection
+                 │                                         │ control
+Drainage         │ SuDS principles: quantity, quality,     │ sponge system
+                 │ amenity, biodiversity; local stormwater │
+                 │ policy                                  │
+Signs + markings │ SARTSM / SADC RTSM; Vienna 1968 (EU);   │ jurisdiction sign
+                 │ MUTCD (US); TSRGD (UK)                  │ grammar
+Tactile + access │ ISO 23599; ISO 21542; UN CRPD           │ universal design
+Structures       │ SANS 10160 series (SA loads); EC1/EC8   │ wind + seismic
+                 │ used for planning ordinates             │
+Fire             │ SANS 10400-T; SANS 10090                │ access, hydrants,
+                 │                                         │ WUI
+Lighting + noise │ EN 13201 / CIE 115; IDA dark-sky; WHO   │ street lighting
+                 │ ENG 2018                                │ classes, L_den 53
+                 │                                         │ dB
+
+6.4 Internet and data (same outward-feeding, interoperable model)
+
+• DIG ONCE. Fibre microducts share the trough with power: 100% spare ducts, one
+  opening, one inspection.
+• EVERY BUILDING A NODE. Fibre to each home (open-access, any provider) plus a
+  community mesh access point per building that relays neighbours, so the
+  network grows from the edges and survives a trunk cut.
+• EDGE HUB PER CELL. Micro data room at the node, powered from the cell
+  microgrid, waste heat to tunnel houses or hygiene-hub hot water; local-first
+  routing keeps services working offline.
+• SENSOR LAYER (LoRaWAN): pond and swale level, flow, soil moisture, air, PV,
+  battery, structure, waste bins. Sensors feed irrigation, flood routing,
+  dimming, maintenance.
+• SECURITY. Zero-trust segmentation, open auditable firmware, signed updates,
+  manual local override for every actuator. Ledger (AequChain) records
+  energy/water accounting; personal data stays local.
+
+6.5 Agriculture and fauna integrated with every network
+
+• WATER: reclaimed drip, pond + swale sources, sensor scheduling. NUTRIENTS:
+  digestate, compost, biochar, struvite close the phosphorus loop to 91% of the
+  plant diet. ENERGY: agri-PV, pump timing to the solar peak (water is the
+  cheapest battery), cold chain. HEAT: CHP + data heat to tunnel houses.
+• PUBLIC REALM IS PRODUCTIVE: forest-garden verges, food-forest swales, court
+  gardens, roof gardens, market hall. FAUNA: honeybees, black soldier fly
+  (organics to protein), vermicompost, poultry, permitted freshwater fish,
+  amphibian ponds, dark wildlife corridors.
+food group │ diet kg/p/y │ need m2/p │ in-city m2/p │ local kg/p
+───────────┼─────────────┼───────────┼──────────────┼───────────
+vegetables │       110.0 │      24.4 │         24.4 │      110.0
+fruit      │        73.0 │      24.3 │         24.3 │       73.0
+eggs       │         4.7 │      11.8 │         11.8 │        4.7
+tubers     │        18.0 │       5.1 │          5.1 │       18.0
+legumes    │        27.0 │     135.0 │         42.6 │        8.5
+nuts       │        18.0 │      60.0 │          0.0 │        0.0
+cereals    │        85.0 │     212.5 │          0.0 │        0.0
+poultry    │        10.6 │      75.7 │          0.0 │        0.0
+fish       │        10.0 │      50.0 │          0.0 │        0.0
+dairy      │        91.0 │     151.7 │          0.0 │        0.0
+red_meat   │         5.0 │     125.0 │          0.0 │        0.0
+fats_sugar │        29.0 │     116.0 │          0.0 │        0.0
+
+fresh produce self-supply          : 100%
+kcal produced in-city              : 13% (311 of 2371 kcal/p/d)
+land for full diet                 : 992 m2/p ; remote 883 m2/p
+foodshed radius (staples)          : 7.1 km from city centre
+agri electricity                   : 166 kWh/p/yr
+mushroom house floor (city-wide)   : 6,875 m2 growing floor, city-wide
+nutrient │ recovered kg/p/y │ in-city crops │         whole diet │ diet closure
+         │                  │               │           (plants) │
+─────────┼──────────────────┼───────────────┼────────────────────┼─────────────
+N        │             3.82 │          0.79 │               3.59 │         107%
+P        │             0.51 │          0.12 │               0.56 │          91%
+K        │             1.10 │          0.78 │               1.51 │          73%
+zone / function        │ indicative species                  │ note
+───────────────────────┼─────────────────────────────────────┼─────────────────
+Orchard + trellis      │ fig, olive, pomegranate, citrus,    │ reclaimed-water
+(deficit-irrigated)    │ grape, loquat; apple/pear in cooler │ drip only
+                       │ sites                               │
+Indigenous structure   │ wild olive, white stinkwood, karee, │ fire-smart
+trees                  │ safsaf willow (riparian),           │ spacing, outside
+                       │ yellowwood (forest patches), sweet  │ PV footprint
+                       │ thorn (N-fixer)                     │
+Succulent firebreak +  │ spekboom (Portulacaria afra),       │ retain water;
+slope                  │ bitter aloe, Crassula, Carpobrotus  │ low fuel
+                       │ (native range only)                 │
+Cleansing / medicinal  │ buchu, Pelargonium sidoides, wild   │ cultivate; never
+(cultivated)           │ dagga, wilde als (Artemisia afra),  │ wild-harvest
+                       │ Helichrysum, rooibos, honeybush     │ threatened
+                       │                                     │ species
+Constructed wetland +  │ common reed, bulrush (Typha         │ polishing,
+riparian               │ capensis), palmiet, arum lily,      │ habitat, biomass
+                       │ sedges                              │ for mulch
+Pollinator + flower    │ Leonotis, Salvia africana-lutea,    │ continuous bloom
+                       │ Watsonia, Agapanthus, Gazania,      │ calendar
+                       │ Arctotis, Osteospermum, proteas     │
+                       │ (fynbos zone)                       │
+Vegetables (winter-    │ brassicas, leafy greens, alliums,   │ rain-fed winter
+rain calendar)         │ peas/broad beans, roots; summer     │ share lowers
+                       │ crops on drip only                  │ irrigation
+Fauna services         │ honeybees, black soldier fly        │ check species
+                       │ (organics -> protein),              │ regulation
+                       │ vermicompost, poultry (eggs),       │
+                       │ regionally permitted freshwater     │
+                       │ fish, amphibian ponds               │
+EXCLUDE                │ pines, eucalypts, Port Jackson /    │ invasive + high
+                       │ other regulated invasive acacias,   │ fuel; some
+                       │ regulated invasive poplars          │ source docs list
+                       │                                     │ them as
+                       │                                     │ phytoncide
+                       │                                     │ sources
+
+6.6 Delivery means: above land, below land, maintenance, other
+
+Options for power, water and data were scored on 9 criteria (capex, wind,
+flood, fire, seismic, repair speed, inspectability, adaptability, safety).
+Safety is a hard constraint: options scoring below 3 are excluded. Weights
+follow the hazard profile; stability = share of 1000 random perturbations
+(+-50% weights, +-1 score) in which each option wins. Result for the reference
+site: POWER = accessible_trough, WATER = liftable_wet_strip, DATA =
+accessible_trough.
+
+POWER delivery means (criteria: capex, wind, flood, fire, seismic, repair,
+inspect, adapt, safety)
+option               │  score │   wins │
+─────────────────────┼────────┼────────┼───────────────────────
+accessible_trough    │   4.52 │    99% │ BEST
+buried_ducted        │   3.70 │     1% │
+utility_gallery      │   3.52 │     0% │
+overhead_bundled     │   3.37 │     0% │
+in_structure         │   3.37 │     0% │
+buried_direct        │   3.15 │     0% │
+overhead_bare        │      - │      - │ excluded: safety < 3
+
+WATER delivery means (criteria: capex, wind, flood, fire, seismic, repair,
+inspect, adapt, safety)
+option               │  score │   wins │
+─────────────────────┼────────┼────────┼───────────────────────
+liftable_wet_strip   │   4.15 │    94% │ BEST
+buried_direct        │   3.52 │     2% │
+utility_gallery      │   3.52 │     4% │
+shared_trough        │      - │      - │ excluded: safety < 3
+surface_temporary    │      - │      - │ excluded: safety < 3
+
+DATA delivery means (criteria: capex, wind, flood, fire, seismic, repair,
+inspect, adapt, safety)
+option               │  score │   wins │
+─────────────────────┼────────┼────────┼───────────────────────
+accessible_trough    │   4.70 │    94% │ BEST
+wireless_mesh        │   4.15 │     6% │
+buried_microduct     │   3.63 │     0% │
+aerial               │   3.11 │     0% │
+
+hazard profile │ power              │ water               │ data
+───────────────┼────────────────────┼─────────────────────┼────────────────────
+cape_town      │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+johannesburg   │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+durban         │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+lisbon         │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+nairobi        │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+stress_cyclone │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+stress_tornado │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+stress_seismic │ accessible_trough  │ liftable_wet_strip  │ accessible_trough
+
+ABOVE LAND (overhead lines) loses on wind, fire and safety in every profile; it
+remains only as temporary restoration (surface_temporary). BELOW LAND buried
+direct is robust but slow to repair and impossible to inspect. UTILITY
+GALLERIES score best on maintenance but cost most and flood badly. The
+ACCESSIBLE TROUGH (dry, LV) plus LIFTABLE WET STRIP gives below-land protection
+with above-land maintainability. OTHER: in-structure routing through colonnade
+columns, wireless mesh for data, and hilltop reservoirs as gravity buffers.
+
+
+6.7 Interaction engine and co-location benefits
+
+23 subsystems are encoded with zones, outputs, inputs and data links
+(efe_city/synergy.py). Pairs are classed automatically; extend the table to add
+a subsystem and the matrix, counts and conflicts update.
+
+metric                             │ separate       │ AEQUSPINE      │ change
+                                   │ trenches       │ unified        │
+───────────────────────────────────┼────────────────┼────────────────┼─────────
+trench types per street            │ 6              │ 2              │ -67%
+excavation m3 per m of street      │ 6.46           │ 3.24           │ -50%
+excavation m3 per person           │ 15.15          │ 7.60           │ -50%
+corridor cost USD/p (planning)     │ 1,507          │ 1,109          │ -26%
+utility length inspectable w/o     │ 3%             │ 80%            │ x27
+cutting surface                    │                │                │
+subsystem pairs with shared space  │ 121            │ 128            │ +7
+or flow                            │                │                │
+shared     │ subsystems co-located
+zone       │
+───────────┼─────────────────────────────────────────────────────────────────
+street     │ ROAD SIGN PAVE LITE TRAN BRDG MACH TERR HAZD
+swale      │ DRAN FAUN FORE BRDG SOUN TERR HAZD
+verge      │ DRAN AGRI FAUN FORE SOUN HAZD
+plot       │ GREY AGRI PUBL BLDG TERR HAZD
+node       │ PAVE DATA WAST PUBL BLDG
+roof       │ POWR THRM AGRI BLDG HAZD
+field      │ AGRI FAUN FORE TERR HAZD
+pole       │ SIGN POWR DATA LITE
+walk       │ SIGN PAVE LITE MACH
+wet        │ WATR SEWR GREY MACH
+trough     │ POWR THRM DATA MACH
+pond       │ DRAN FAUN
+canopy     │ POWR LITE
+      RD SG PV WT DR SW GW PW TH DT LT AG FA WS PB TR BL FO BG MC SN TE HZ
+ROAD   .  S  S  .  X  .  .  F  .  i  S  .  X  F  .  S  .  .  B  S  X  S  B
+SIGN   S  .  S  .  .  .  .  B  .  S  S  .  .  F  .  S  .  .  S  S  .  S  S
+PAVE   S  S  .  .  F  .  .  .  .  S  S  .  .  B  S  S  B  X  S  S  .  S  S
+WATR   .  .  .  .  F  X  B  X  .  i  .  .  .  .  F  .  F  X  .  S  .  .  .
+DRAN   X  .  F  F  .  .  .  .  F  i  .  B  B  .  .  .  X  B  X  .  B  S  S
+SEWR   .  .  .  X  .  .  B  .  .  i  .  X  .  F  F  .  F  .  .  S  .  .  .
+GREY   .  .  .  B  .  B  .  F  X  .  .  B  .  .  B  .  B  F  .  S  .  S  S
+POWR   F  B  .  X  .  .  F  .  B  B  B  X  .  F  F  F  B  X  .  X  .  .  S
+THRM   .  .  .  .  F  .  X  B  .  S  .  B  .  F  F  .  B  F  .  S  .  .  S
+DATA   i  S  S  i  i  i  .  B  S  .  S  i  .  S  B  i  B  .  .  S  .  .  F
+LITE   S  S  S  .  .  .  .  B  .  S  .  .  X  .  .  S  i  .  S  S  .  S  S
+AGRI   .  .  .  .  B  X  B  X  B  i  .  .  B  X  B  .  B  S  .  .  B  S  S
+FAUN   X  .  .  .  B  .  .  .  .  .  X  B  .  .  .  .  .  B  S  .  S  S  S
+WAST   F  F  B  .  .  F  .  F  F  S  .  X  .  .  B  .  B  F  F  .  .  .  .
+PUBL   .  .  S  F  .  F  B  F  F  B  .  B  .  B  .  .  S  .  .  .  .  S  B
+TRAN   S  S  S  .  .  .  .  F  .  i  S  .  .  .  .  .  .  .  S  S  .  S  S
+BLDG   .  .  B  F  X  F  B  B  B  B  i  B  .  B  S  .  .  F  .  .  .  S  S
+FORE   .  .  X  X  B  .  F  X  F  .  .  S  B  F  .  .  F  .  S  .  B  S  X
+BRDG   B  S  S  .  X  .  .  .  .  .  S  .  S  F  .  S  .  S  .  S  S  S  S
+MACH   S  S  S  S  .  S  S  X  S  S  S  .  .  .  .  S  .  .  S  .  .  S  S
+SOUN   X  .  .  .  B  .  .  .  .  .  .  B  S  .  .  .  .  B  S  .  .  S  S
+TERR   S  S  S  .  S  .  S  .  .  .  S  S  S  .  S  S  S  S  S  S  S  .  S
+HAZD   B  S  S  .  S  .  S  S  S  F  S  S  S  .  B  S  S  X  S  S  S  S  .
+
+legend: B shared space + flow | F flow (output feeds input) | S shared space |
+i information link | X conflict (managed) | . none
+
+top synergy pairs    │    F │    S │    I │  score
+─────────────────────┼──────┼──────┼──────┼───────
+DRAN-FAUN            │    2 │    3 │    0 │     12
+WAST-BLDG            │    3 │    1 │    0 │     11
+FAUN-FORE            │    1 │    3 │    0 │      9
+PAVE-WAST            │    2 │    1 │    0 │      8
+POWR-DATA            │    1 │    2 │    1 │      8
+POWR-LITE            │    1 │    2 │    1 │      8
+THRM-AGRI            │    2 │    1 │    0 │      8
+AGRI-HAZD            │    0 │    4 │    0 │      8
+TERR-HAZD            │    0 │    4 │    0 │      8
+DRAN-FORE            │    1 │    2 │    0 │      7
+DRAN-SOUN            │    1 │    2 │    0 │      7
+POWR-THRM            │    1 │    2 │    0 │      7
+
+conflict    │ reason                   │ managed by
+pair        │                          │
+────────────┼──────────────────────────┼───────────────────────────────────────
+WATR-SEWR   │ cross-contamination      │ potable above sewer, >=0.3 m vertical
+            │                          │ and >=1.0 m horizontal separation
+WATR-POWR   │ leak vs electrocution    │ separate dry TROUGH and wet strip; LV
+            │                          │ only in trough
+SEWR-AGRI   │ pathogens                │ only aged/treated digestate and
+            │                          │ effluent; drip, no raw application on
+            │                          │ edibles
+FORE-WATR   │ root intrusion           │ tree-free wet strip, root barriers
+FORE-POWR   │ shading of PV, limb      │ colonnade-first siting; underground
+            │ failure                  │ lines; trees outside canopy footprint
+POWR-AGRI   │ PV shading of crops      │ agri-PV spec: GCR <= 0.35, clearance
+            │                          │ >= 3.5 m, shade-tolerant crops
+ROAD-FAUN   │ wildlife strike, noise   │ <=30 km/h, crossings, dark corridors
+LITE-FAUN   │ light pollution          │ amber <= 2200 K, full cut-off,
+            │                          │ dimming, dark waterway corridors
+FORE-HAZD   │ fuel load                │ fire-smart palette, ring spacing,
+            │                          │ ember screens
+DRAN-BLDG   │ flood damage             │ plinth >= 1:100 + 0.5 m, setbacks,
+            │                          │ flood-route DV limit
+DRAN-ROAD   │ street flow depth x      │ catchment limit per overland route (DV
+            │ velocity                 │ <= 0.4 m2/s)
+THRM-GREY   │ Legionella               │ temperature control, no aerosolising
+            │                          │ reuse
+AGRI-WAST   │ odour, pests             │ enclosed digestion, siting, buffers
+BRDG-DRAN   │ flow obstruction         │ clear-span over floodway, no in-stream
+            │                          │ piers, freeboard
+SOUN-ROAD   │ traffic noise            │ <=30 km/h, soft surfaces, setbacks,
+            │                          │ planted buffers
+PAVE-FORE   │ root heave               │ structural soil / root cells, species
+            │                          │ selection
+MACH-POWR   │ maintenance access vs    │ lockable lids, isolation, trained
+            │ live parts               │ crews
+
+
+───────────────────────────────────────────────────────────────────────────────
+7. SUBSYSTEM SPECIFICATIONS
+───────────────────────────────────────────────────────────────────────────────
+
+
+7.1 Roadways, mobility and public transport
+
+• HIERARCHY: S-class seam (30 km/h; two 5 m slow streets), L-class lane (20
+  km/h shared surface), P-class path. Priority: pedestrian > wheelchair/cycle >
+  trike + cargo > shuttle > service > emergency (override).
+• SURFACE: permeable pavers on structural open-graded base (no asphalt), smooth
+  ribbons on the cycle track; kerbless, flush edges; traffic calming by
+  geometry (3-leg junctions, short sight lines), not humps.
+• EMERGENCY: >= 3.7 m clear on every drivable class (lanes give 4.0 m); every
+  dwelling within 31 m of a drivable street (hose reach 45 m); fire and rescue
+  station per ward, about 2-3 min by emergency vehicle from any dwelling in the
+  ward.
+class │ km/h │ SSD m │ SSD -8% │ clear m │ emergency
+──────┼──────┼───────┼─────────┼─────────┼───────────
+seam  │   30 │  31.0 │    34.1 │    4.50 │ yes
+lane  │   20 │  18.4 │    19.8 │    4.00 │ yes
+path  │   10 │   8.1 │     8.4 │    0.00 │ n/a (path)
+
+design   │ use                          │ width m  │ length m
+vehicle  │                              │          │
+─────────┼──────────────────────────────┼──────────┼─────────
+DV1      │ trike / bike / wheelchair    │ 1.0      │ 2.5
+DV2      │ cargo / utility              │ 1.6      │ 4.0
+DV3      │ shuttle                      │ 2.1      │ 7.0
+DV4      │ fire / ambulance             │ 2.5      │ 10.0
+
+junction conflict points / ha      : hex 10.4 vs 4-leg grid 39.5
+max distance dwelling -> drivable street : 31 m (hose reach 45 m)
+grade limits                       : road 10% | walk 5% | ramp 8.33%
+
+• PUBLIC TRANSPORT: shuttle loops on seams, stops at junctions and mid-edge,
+  regional interchange at city node. Walking to a stop is within 288 m for 95%
+  of residents.
+shuttle fleet (12 seat)            : 211 (1.53 per 1000 people), peak 6,600
+                                     trips/h
+shuttle route length               : 51 km (seams)
+stop distance                      : P95 288 m ; 100% within 400 m
+mobility energy                    : 86 kWh/p/yr (shuttle 51 + trike 35)
+
+7.2 Demarcation, signage and street code
+
+• SELF-EXPLAINING STREETS: surface colour and texture encode class: terracotta-
+  ochre pavers with continuous stone edge bands = seam street; sand-grey with a
+  dark-sett centre line = lane; pale stone = path; grey smooth ribbons = cycle
+  track; inlaid star pattern = shared plaza.
+• MARKINGS: inlaid stone/aggregate (permanent) and mineral paint with recycled-
+  glass beads; no thermoplastic (fossil). T2: photoluminescent inlays.
+• SIGNS: recycled aluminium, glass-bead retroreflection, pictograms,
+  tactile/Braille at nodes, max 1 sign per 25 m, mounted on colonnade columns
+  and multi-function poles (light + sensor + mesh + sign).
+
+┌─ STREET CODE (10 rules, shown at every node) ────────────────────────────────
+│
+│  1 Walkers and wheelchairs first. 2 Seam 30 km/h, lane 20, path 10, plaza
+│  walking pace. 3 Give way to the right on lanes; seam streets have priority
+│  over lanes. 4 Cargo and shuttles use loading windows 06-10 and 15-18. 5 No
+│  private parking in seams; shared fleet bays at nodes. 6 Cyclists use
+│  ribbons; trikes may use ribbons when empty of pedestrians. 7 Emergency
+│  vehicles: everyone clears the centre. 8 Dim-sky: luminaires amber, shielded,
+│  dimmed by occupancy. 9 Wildlife crossings have priority at night. 10 Report
+│  faults on the node app or any QR tag: repair within the published time.
+│
+└──────────────────────────────────────────────────────────────────────────────
+profile       │ signs          │ embedded gen   │ loads          │ stormwater
+──────────────┼────────────────┼────────────────┼────────────────┼─────────────
+South Africa  │ SARTSM + SADC  │ NRS 097-2-1,   │ SANS 10160     │ municipal
+/ SADC        │ RTSM           │ SANS 10142-1-2 │ series         │ stormwater
+              │                │                │                │ policy +
+              │                │                │                │ SuDS
+EU / Portugal │ Vienna 1968    │ EN 50549,      │ Eurocodes      │ SuDS / water
+              │ grammar        │ national grid  │ EC1/EC8        │ directives
+              │                │ codes          │                │
+UK            │ TSRGD          │ G98/G99        │ Eurocodes + NA │ SuDS (CIRIA
+              │                │                │                │ C753)
+USA           │ MUTCD          │ IEEE 1547, NEC │ ASCE 7, ICC    │ state MS4 +
+              │                │                │ 500 (shelters) │ LID
+Generic /     │ Vienna 1968    │ IEC 62109 +    │ ISO 2394 +     │ SuDS
+other         │ default        │ IEEE 1547      │ local          │ principles
+
+7.3 Paving, walkways, traction and textures
+
+class            │ specification                            │ C peak │ EFE tier
+─────────────────┼──────────────────────────────────────────┼────────┼─────────
+permeable_street │ interlocking permeable pavers            │ 0.35   │ 1.2-1.3
+                 │ (geopolymer from fly-ash/slag, or        │        │
+                 │ reclaimed stone setts) on open-graded    │        │
+                 │ structural base; emergency-axle design   │        │
+permeable_walk   │ liftable permeable pavers; tactile       │ 0.3    │ 1.2-1.4
+                 │ guidance strip (ISO 23599); no steps on  │        │
+                 │ principal routes                         │        │
+ribbon           │ smooth stone / geopolymer wheel ribbons  │ 0.85   │ 1.3-1.4
+                 │ 2 x 0.9 m: low rolling resistance for    │        │
+                 │ e-trikes + wheelchairs; textured         │        │
+                 │ permeable infill; drains to swale        │        │
+green            │ bioretention swale, food forest, forest  │ 0.15   │ 1.1
+                 │ verge, fynbos garden                     │        │
+roof             │ cool roof (albedo >= 0.55) or north-     │ 0.9    │ 1.3-1.5
+                 │ facing mono-pitch PV roof; non-          │        │
+                 │ combustible                              │        │
+• TRACTION targets (verify by pendulum test): wet PTV >= 50 streets, >= 55
+  walks, >= 60 on ramps; texture depth 0.6-1.0 mm. TACTILE: guidance strip +
+  attention domes per ISO 23599; contrast 30 LRV points.
+• RIBBONS: two smooth 0.9 m wheel tracks give low rolling resistance for
+  e-trikes and wheelchairs; textured permeable infill gives grip and
+  infiltration; ribbons drain to the swale.
+• UPKEEP: vacuum-sweep permeable joints twice a year; liftable pavers allow
+  repairs without cutting; mean albedo 0.31.
+
+7.4 Lighting, thermals and sound
+
+• LIGHTING: EN 13201 classes seam P3 (7.5 lx), lane P4 (5 lx), path P5 (3 lx);
+  amber <= 2200 K, full cut-off, dimming to 30% unoccupied; DC from canopy PV;
+  street lighting 40 kWh/p/yr; dark corridors along waterways and habitat.
+• THERMALS: canopy cover 31% (target 30%), 71% of walkable surface shaded,
+  green ET cooling about 46 W/m2 of ground; envelopes use earth mass,
+  insulation and night ventilation; solar thermal for hot water; greywater heat
+  recovery; ambient thermal loop is a T2 option in the spare wet-strip
+  capacity.
+• SOUND: WHO targets L_den 53 dB / L_night 45 dB. Indicative facade levels:
+  seam 47 dB (shuttle pass-bys), lane 35 dB (trikes); measures: <= 30 km/h,
+  soft permeable surfaces, 14 m facade setback from seam centre line, planted
+  buffers, water features as masking.
+
+7.5 Public facilities, ablutions, waste removal and disposal, cleaning
+
+facility                                       │   count (city)
+───────────────────────────────────────────────┼───────────────
+primary school                                 │             49
+creche                                         │             98
+market hall                                    │             49
+hygiene hub                                    │             49
+resilience hub / shelter                       │             49
+workshop node (AEQUFAB)                        │             49
+resource recovery point                        │             49
+health post                                    │             49
+library / learning                             │             49
+sports field                                   │             49
+shuttle stop pairs                             │            294
+secondary school                               │              7
+primary health clinic                          │              7
+fire & rescue station                          │              7
+ward digester + wetland                        │              7
+mushroom house                                 │              7
+community kitchen                              │             14
+major hygiene hub                              │              7
+hospital                                       │              1
+college                                        │              1
+manufactory campus                             │              1
+regional transit interchange                   │              1
+memorial forest                                │              1
+flood-basin park                               │              1
+water kiosk (per court)                        │          1,528
+compost point (per court)                      │          1,528
+play lot (per court)                           │          1,528
+tool library (per court)                       │          1,528
+
+drinking-water points              : 1,880 (<= 200 m along seams, every court,
+                                     every node)
+hygiene hub per cell               : 9 WC (2 accessible), 12 basins, 4 showers,
+                                     29 washers; 14 m3/day
+hub design                         : peak users 224; urine-diverting option;
+                                     greywater -> wetland; blackwater ->
+                                     digester
+• ABLUTIONS: universal-design hygiene hubs (step-free, baby change, accessible
+  cubicle, CPTED sight lines, daylight, vandal-resistant open-source fittings);
+  urine-diverting option for nutrient recovery; hand-wash + drinking water free
+  at point of use.
+• WASTE REMOVAL: source separation into 8 streams; e-cargo trikes collect to a
+  resource recovery point (RRP) per cell; organics to ward digester + black
+  soldier fly; dry streams to the manufactory; hazardous by take-back.
+• DISPOSAL: material recovery 96.1% (target); residual 6.4 kg/p/yr = 881 t/yr
+  city-wide (881 m3), held in a sealed inert cell; biogas 15.4 m3/p/yr.
+• CLEANING: electric micro-sweepers, small vacuum units for paver joints, leaf
+  litter to compost, daily hub cleaning, graffiti-tolerant stone and mineral
+  paint.
+
+7.6 Structural integrity, value unto earth, foundations, forestation
+
+• DOCTRINE: compact regular forms, continuous load path roof-wall-footing,
+  redundancy, ductile joints, low centre of mass, light roofs on heavy walls
+  only where seismic demand allows; bolted tool-free connections so parts can
+  be replaced.
+• SYSTEM SELECTOR (by design PGA): unreinforced earth <= 0.05 g; earth with
+  ring beams + confinement <= 0.15 g; timber/bamboo frames <= 0.40 g; steel-
+  timber hybrids above. Reference site: AEQUBLOCK earth walls + ring
+  beams/ties/confinement.
+• FOUNDATIONS (soil class C): stiffened raft or ground-beam grid on geopolymer
+  precast pads; screw piles as alternative. Preference order: reversible (screw
+  piles, stone trench) over concrete; expansive clay: stiffened raft with void
+  formers; floodplain edge: raised plinth on piles.
+• VALUE UNTO EARTH ledger: groundwater recharge above pre-development; soil
+  carbon rising through compost + biochar; >= 25% nature and corridors; native
+  planting >= 40% of green; nutrient return 91% P; no wild-harvest of
+  threatened species. Carbon-negative status is NOT claimed until an LCA is
+  done (L-09, O-05).
+• FORESTATION: about 2,338 trees per cell (0.83 per person); shelterbelts 12 m
+  high along seams and wedge edges (wind speed cut ~50% at 5 h, ~20% at 20 h
+  downwind); fire-smart species and spacing; deep-rooted cover on slopes.
+  Indicative sequestration 23-58 t CO2 per cell per year (unverified).
+
+7.7 Bridges and crossings
+
+┌─ BRIDGE RULES ───────────────────────────────────────────────────────────────
+│
+│  Spans <= 6 m: box culvert or arch with a dry ledge for wildlife. 6-20 m:
+│  clear-span glulam / recycled-steel beam or truss, geopolymer abutments.
+│  20-40 m: bowstring or truss on FRAME CONSTRUCTIO members. Deck clear of the
+│  1:100 flood plus 0.5 m freeboard; abutments outside the floodway; NO in-
+│  stream piers; scour protection; design load 5 kN/m2 crowd + 3.5 t service +
+│  20 t emergency (design assumption); tactile edges, lighting, dark corridor
+│  beneath.
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+7.8 Machinery, maintenance and cleaning schedule
+
+Fleet per ward: electric micro-sweeper, small vacuum unit, tracked mini-
+excavator, PV-washing robot, inspection drones, hand-tool library; fabrication
+at the ALL-PURPOSE MANUFACTORY node; spare-part library keyed to common tools
+only.
+
+task                             │ per yr │ quantity │     rate │ h / cell / yr
+─────────────────────────────────┼────────┼──────────┼──────────┼──────────────
+vacuum-sweep permeable paving    │      2 │   79,384 │ 800 m2/h │           198
+swale + bioretention clean,      │      4 │   23,030 │ 500 m2/h │           184
+replant                          │        │          │          │
+PV washing (dry season)          │      3 │   51,509 │ 400 m2/h │           386
+trough inspection + lid service  │      1 │    5,022 │  400 m/h │            13
+wet-strip valve + leak survey    │      1 │    5,022 │  300 m/h │            17
+pond / wetland desilt + harvest  │      1 │      115 │  60 m2/h │             2
+street-tree structural pruning   │   0.33 │    2,338 │ 6 tree/h │           130
+(3-yearly)                       │        │          │          │
+
+total hours per cell per year      : 930 h  = 0.5 FTE per cell = 0.2 FTE per
+                                     1000 people
+basis                              : planning-grade productivity rates;
+                                     excludes food production labour
+
+
+───────────────────────────────────────────────────────────────────────────────
+8. RESILIENCE: RIGIDITY, TREMOR, STORM, FLOOD, FIRE, DROUGHT, HEAT
+───────────────────────────────────────────────────────────────────────────────
+
+
+8.1 Hazard-profile adapter (same design, any hazard regime)
+
+The design is not tuned to one place. A hazard profile (50-yr gust, PGA,
+tornado class, rain intensity, surge, fire class, drought) selects the
+structural system, shelter need, plinth height and defensible space
+automatically. Stress profiles cover cyclone coast (typhoon / hurricane),
+tornado plains and high seismicity. Pressures use q = 0.5 rho v2 with net wall
+coefficient 1.3 and roof uplift 1.2 q minus dead load; seismic ordinates use
+the EC8-style plateau Sd = a_g S 2.5 / q (planning values; local codes govern).
+
+profile      │ gust │ q kPa │   PGA │ system         │ safe │ plinth │ fire
+─────────────┼──────┼───────┼───────┼────────────────┼──────┼────────┼─────
+cape_town    │   42 │  1.10 │  0.10 │ confined earth │ no   │    0.5 │   30
+johannesburg │   38 │  0.90 │  0.10 │ confined earth │ no   │    0.5 │   15
+durban       │   45 │  1.27 │  0.05 │ unreinf. earth │ yes  │    1.8 │   15
+lisbon       │   38 │  0.90 │  0.15 │ confined earth │ no   │    1.5 │   30
+nairobi      │   30 │  0.56 │  0.10 │ confined earth │ no   │    0.5 │   10
+S:cyclone    │   70 │  3.06 │  0.15 │ confined earth │ yes  │    3.8 │   10
+S:tornado    │   50 │  1.56 │  0.05 │ unreinf. earth │ yes  │    0.5 │   15
+S:seismic    │   45 │  1.27 │  0.40 │ timber/bamboo  │ no   │    1.0 │   15
+
+wall / roof uplift (ref. profile)  : 1.43 / 0.92 kPa (edge 1.81); eave tension
+                                     3.7 kN/m
+seismic Cs by system (reference)   : unreinforced 0.192, confined 0.144, timber
+                                     0.096, steel 0.072
+foundation (soil class C)          : stiffened raft or ground-beam grid on
+                                     geopolymer precast pads; screw piles as
+                                     alternative
+
+gust m/s; safe = community safe rooms; plinth m above the 1:100 level; fire =
+defensible ring in m
+
+8.2 Shelters and refuges (tornado, hurricane, storm, heat, smoke)
+
+• Every cell node is a multi-hazard RESILIENCE HUB: hardened shelter area 4,209
+  m2 = 1.50 x the cell population at 1 m2/person, reached in 4.9 min (P95):
+  inside the typical tornado warning lead time.
+• Where tornado class >= EF3 the hub is built as a safe room for 112 m/s winds
+  (q = 7.8 kPa) with debris-impact walls; elsewhere it is a hardened hall. Same
+  hub is the flood high-ground refuge, cooled heat refuge, filtered smoke
+  refuge, and holds water, battery and comms for islanded operation.
+• Hurricane/typhoon profiles: <= 2 storeys outside hubs, hip or mono-pitch
+  roofs 25-35 deg, continuous tie-down from roof to footing, shuttered
+  openings, PV rated for the design gust, plinth above surge.
+
+8.3 Flood, drought, fire, heat, wind
+
+• FLOOD: streets are the major drainage system; peak runoff coefficient 0.17
+  (sponge) so one overland route can drain 64 ha at the 1:100 storm with depth
+  x velocity <= 0.4 m2/s; no building below the 1:100 level + 0.5 m.
+• DROUGHT: potable reserve in MAR, restrictions protocol, reclaimed loop, ponds
+  with floating PV; design drought unmet 3.2%.
+• FIRE (wildland-urban interface): non-combustible roofs and walls, ember
+  screens, defensible ring 30 m of low-fuel planting (succulents, indigenous,
+  irrigated), ring-main hydrants plus ponds as fire water, wedge farms as fuel
+  breaks, regulated invasive trees excluded.
+• HEAT: shade 71% of walkable surface, canopy 31%, cool roofs, cooled refuge
+  hubs, drinking points every 200 m.
+• WIND + FORESTATION: shelterbelts, short regular building forms, tethered
+  street furniture, underground lines.
+
+8.4 FMEA (safety first: design out > guard > warn)
+
+id  │ item         │ failure mode   │ S/O/D │  RPN │ mitigation (design  │ RPN2
+    │              │                │       │      │ out > guard > warn) │
+────┼──────────────┼────────────────┼───────┼──────┼─────────────────────┼─────
+F01 │ Wildland-    │ ember ignition │ 9/5/4 │  180 │ non-combustible     │   54
+    │ urban        │ of buildings/l │       │      │ roofs/walls, ember  │
+    │ interface    │ andscape       │       │      │ screens, defensible │
+    │              │                │       │      │ ring with low-fuel  │
+    │              │                │       │      │ (succulent/indigeno │
+    │              │                │       │      │ us) planting, ring- │
+    │              │                │       │      │ main hydrants +     │
+    │              │                │       │      │ ponds, refuge hubs  │
+F02 │ Drainage /   │ overland flow  │ 8/5/3 │  120 │ sponge system,      │   48
+    │ flood routes │ beyond DV<=0.4 │       │      │ flood-route         │
+    │              │ m2/s           │       │      │ catchment limit,    │
+    │              │                │       │      │ basins, plinth >=   │
+    │              │                │       │      │ 1:100 + 0.5 m       │
+F03 │ Water supply │ multi-year     │ 8/4/3 │   96 │ potable reserve in  │   32
+    │              │ drought        │       │      │ MAR, restrictions   │
+    │              │ exhausts MAR   │       │      │ protocol, storage + │
+    │              │                │       │      │ diversification     │
+F04 │ Smart grid / │ grid-forming   │ 7/4/4 │  112 │ N+1 grid-forming    │   42
+    │ islanding    │ failure, cell  │       │      │ inverters, black-   │
+    │              │ blackout       │       │      │ start batteries,    │
+    │              │                │       │      │ adaptive protection │
+F05 │ Cell / home  │ battery        │ 9/3/4 │  108 │ benign chemistry    │   27
+    │ storage      │ thermal event  │       │      │ (NiFe / sodium-     │
+    │              │                │       │      │ ion), segmented     │
+    │              │                │       │      │ fire-rated rooms,   │
+    │              │                │       │      │ venting, BMS        │
+F06 │ Potable /    │ cross-         │ 9/3/5 │  135 │ colour-coded purple │   27
+    │ non-potable  │ connection     │       │      │ pipe, unique        │
+    │ pipes        │                │       │      │ fittings, backflow  │
+    │              │                │       │      │ prevention,         │
+    │              │                │       │      │ commissioning test  │
+F07 │ Digester /   │ H2S or methane │ 9/3/4 │  108 │ gas detection,      │   27
+    │ biogas       │ leak           │       │      │ ventilation, flare, │
+    │              │                │       │      │ 50 m siting from    │
+    │              │                │       │      │ dwellings           │
+F08 │ IoT / smart- │ cyber          │ 8/4/5 │  160 │ zero-trust          │   48
+    │ grid network │ intrusion      │       │      │ segmentation, open  │
+    │              │                │       │      │ auditable firmware, │
+    │              │                │       │      │ signed updates,     │
+    │              │                │       │      │ manual local        │
+    │              │                │       │      │ override            │
+F09 │ Streets      │ pedestrian-    │ 9/4/3 │  108 │ design speed 10-30  │   36
+    │              │ vehicle        │       │      │ km/h, 3-leg         │
+    │              │ collision      │       │      │ junctions, shared-  │
+    │              │                │       │      │ surface geometry,   │
+    │              │                │       │      │ lighting            │
+F10 │ Service      │ electric shock │ 9/3/4 │  108 │ LV only, IP-rated   │   27
+    │ trough       │ at lid opening │       │      │ lids, RCD,          │
+    │              │                │       │      │ segregation from    │
+    │              │                │       │      │ wet strip           │
+F11 │ Buildings +  │ seismic damage │ 10/3/ │  150 │ system selector by  │   30
+    │ utilities    │                │ 5     │      │ PGA, ties, flexible │
+    │              │                │       │      │ couplings, no heavy │
+    │              │                │       │      │ unreinforced earth  │
+    │              │                │       │      │ above threshold     │
+F12 │ Envelope +   │ windstorm /    │ 9/3/4 │  108 │ tie-down load path, │   27
+    │ street       │ tornado debris │       │      │ hardened shelters   │
+    │ furniture    │                │       │      │ <= 6 min walk,      │
+    │              │                │       │      │ secured furniture,  │
+    │              │                │       │      │ windbreak belts     │
+F13 │ Public realm │ heat wave      │ 7/5/3 │  105 │ shade >= 70% of     │   42
+    │              │                │       │      │ walkable surface,   │
+    │              │                │       │      │ canopy >= 30%, cool │
+    │              │                │       │      │ surfaces, cooled    │
+    │              │                │       │      │ refuge hubs         │
+F14 │ Greywater /  │ Legionella     │ 8/3/6 │  144 │ temperature         │   32
+    │ thermal      │ growth         │       │      │ control, treatment, │
+    │ loops        │                │       │      │ no aerosolising     │
+    │              │                │       │      │ reuse               │
+F15 │ Trees        │ limb / tree    │ 7/4/4 │  112 │ species selection,  │   42
+    │              │ failure        │       │      │ structural pruning, │
+    │              │                │       │      │ setbacks,           │
+    │              │                │       │      │ underground lines   │
+F16 │ Slopes       │ landslide /    │ 9/3/5 │  135 │ slope bands,        │   27
+    │              │ slope failure  │       │      │ terraces, deep-     │
+    │              │                │       │      │ rooted cover,       │
+    │              │                │       │      │ drainage            │
+F17 │ Landscape    │ invasive or    │ 6/5/4 │  120 │ indigenous palette, │   36
+    │ palette      │ high-fuel      │       │      │ exclusion list,     │
+    │              │ species        │       │      │ annual audit        │
+F18 │ Sewer /      │ blockage or    │ 7/4/4 │  112 │ accessible lines,   │   42
+    │ vacuum line  │ leakage        │       │      │ double containment, │
+    │              │                │       │      │ inspection regime   │
+
+Gate: every post-mitigation RPN <= 100 and every S >= 9 item has a recorded
+mitigation. Result: max RPN 180 before, 54 after.
+
+
+8.5 Risk register (non-technical)
+
+risk                     │ L │ I │ mitigation                    │ owner
+─────────────────────────┼───┼───┼───────────────────────────────┼─────────────
+pledge / funding         │ M │ H │ cell-by-cell phasing; each    │ treasury
+shortfall delays cells   │   │   │ cell self-contained; growth   │ steward
+                         │   │   │ triggers                      │
+planning approval + code │ M │ H │ early authority engagement;   │ planning
+conformity               │   │   │ profile adapter; pilot cell   │ lead
+PV / battery / paver     │ M │ M │ dual sourcing; local          │ supply lead
+supply interruptions     │   │   │ assembly; internalization     │
+                         │   │   │ priority I-1                  │
+skills shortage for      │ M │ M │ open manuals; apprenticeship  │ skills lead
+trough / wet-strip +     │   │   │ per cell; common tools only   │
+microgrid work           │   │   │                               │
+community acceptance of  │ M │ H │ co-design; transparent        │ community
+reclaimed water + new    │   │   │ monitoring; opt-in pilots     │ steward
+forms                    │   │   │                               │
+governance capture /     │ L │ H │ equidistribution indices      │ governance
+unequal access in        │   │   │ published; ledger audit       │
+practice                 │   │   │                               │
+cyber attack on IoT /    │ M │ H │ zero-trust, local override,   │ network lead
+grid                     │   │   │ signed updates                │
+climate drift beyond     │ M │ M │ annual re-run of model with   │ engineering
+design profile           │   │   │ new data; adapter             │
+data quality (indicative │ H │ M │ replace with site data before │ engineering
+climate / hazard inputs) │   │   │ detailed design               │
+unvalidated T2 / T3      │ M │ L │ baseline never depends on     │ materials
+materials                │   │   │ them; upgrade only after      │ lead
+                         │   │   │ tests                         │
+
+8.6 Stress tests (adversarial envelope)
+
+Each row perturbs one assumption and re-runs all 18 gates. Failures define the
+OPERATING ENVELOPE of the reference design, not hidden defects: outside it, the
+site adapter or a design lever (pond size, density, storage) must be applied.
+
+stress test                   │ score  │ gates failed     │ potable  │ energy
+──────────────────────────────┼────────┼──────────────────┼──────────┼─────────
+rain -20%                     │ 0.935  │ G18              │ 100%     │ 100%
+solar -10%                    │ 0.944  │ none             │ 100%     │ 99%
+energy demand +20%            │ 0.937  │ none             │ 100%     │ 99%
+potable use +30% (72 L/p/d)   │ 0.937  │ none             │ 99%      │ 100%
+density +20% (108 p/ha)       │ 0.933  │ G05,G09,G10,G18  │ 100%     │ 100%
+density -20% (72 p/ha)        │ 0.945  │ none             │ 100%     │ 100%
+cloud variability +50%        │ 0.931  │ none             │ 100%     │ 97%
+storage -33% (6.3 kWh/p)      │ 0.942  │ none             │ 100%     │ 99%
+slope 8% (walk speed penalty) │ 0.946  │ none             │ 100%     │ 100%
+hazard: cyclone coast         │ 0.930  │ none             │ 100%     │ 100%
+hazard: tornado plains        │ 0.935  │ none             │ 100%     │ 100%
+hazard: high seismicity       │ 0.939  │ none             │ 100%     │ 100%
+
+
+───────────────────────────────────────────────────────────────────────────────
+9. EFE ECONOMICS LAYER (ILLUSTRATIVE MODEL; NOT FINANCIAL ADVICE)
+───────────────────────────────────────────────────────────────────────────────
+
+STRUCTURE. External cost per member per year is the sum of what the city cannot
+yet make or supply itself: imported food, outer-grid and bulk-water top-ups,
+maintenance parts, compliance + IT, and the annualised share of imported
+capital goods. Enterprise contribution (bounded 0-5% of enterprise revenue)
+must cover it. The design objective is therefore to MINIMISE external cost per
+member and to raise revenue per member through local value-added enterprise.
+
+capex line                │ USD / person │     %
+──────────────────────────┼──────────────┼──────
+buildings                 │       28,200 │  62.3
+surfaces                  │        2,484 │   5.5
+corridors + utilities     │        1,109 │   2.5
+solar                     │        3,178 │   7.0
+storage                   │        2,090 │   4.6
+water systems             │          892 │   2.0
+agriculture               │          358 │   0.8
+mobility                  │          694 │   1.5
+digital + waste machinery │          330 │   0.7
+contingency               │        5,900 │  13.0
+TOTAL                     │       45,235 │ 100.0
+
+external cost line     │ USD / p / yr │     %
+───────────────────────┼──────────────┼──────
+food imports           │          240 │  20.5
+energy imports         │            1 │   0.1
+bulk water             │           14 │   1.2
+maintenance parts      │          226 │  19.2
+compliance + IT        │           60 │   5.1
+imported capital goods │          633 │  53.9
+TOTAL                  │        1,175 │ 100.0
+
+enterprise revenue USD/p/yr │ contribution rate needed │ vs 5% cap
+────────────────────────────┼──────────────────────────┼──────────────
+                      6,000 │                      20% │ exceeds cap
+                     12,000 │                      10% │ exceeds cap
+                     25,000 │                       5% │ within 5% cap
+                    144,000 │                       1% │ within 5% cap
+
+rank  │ internalization priority (largest external cost    │ USD/p/yr
+      │ first)                                             │
+──────┼────────────────────────────────────────────────────┼───────────
+I-1   │ imported capital goods                             │ 633
+I-2   │ food imports                                       │ 240
+I-3   │ maintenance parts                                  │ 226
+I-4   │ compliance + IT                                    │ 60
+I-5   │ bulk water                                         │ 14
+I-6   │ energy imports                                     │ 1
+
+capex envelope (city)              : USD 6,219 M (planning-grade +-40%)
+vs EVER module claim               : 0.17x of USD 260,000 per resident
+revenue for 5% cap                 : USD 23,506 per member per year
+
+READING THE RESULT. At planning-grade inputs the city needs about USD 23,506 of
+enterprise revenue per member per year to stay inside the 5% cap. The largest
+external cost is imported capital goods: internalising PV, storage, paving and
+steel production (the ALL-PURPOSE MANUFACTORY + material loops) is the first
+economic task, followed by the bioregional staple supply chain. A site with far
+lower revenue per member exceeds the cap unless capital goods are produced
+locally; this is a design finding, not an assumption. Capex is 0.17 x the EVER
+per-resident figure; the gap is mainly that soil / tunnel agriculture and
+shared manufacturing are priced instead of vertical-farm and electronics halls
+(not like-for-like; unit costs are planning-grade, L-03).
+
+┌─ APPLICATION LAYER (AequChain / AequApp) - what is on-chain ─────────────────
+│
+│  ON-CHAIN: member registry (pseudonymous), per-member equal shares of canopy
+│  energy and water allowances, meter attestations (energy + water + waste),
+│  enterprise contributions, pledges, internalization-priority ledger. OFF-
+│  CHAIN (local-first): all control loops, sensor data, personal data, repair
+│  logs. Every actuator keeps a manual override; the ledger never gates safety
+│  functions.
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+
+───────────────────────────────────────────────────────────────────────────────
+10. SUPPLY, CONSTRUCTION, DISTRIBUTION, IMPLEMENTATION
+───────────────────────────────────────────────────────────────────────────────
+
+• SUPPLY (local-first, Tier order 1.1 grown > 1.2 waste streams > 1.3 recycled
+  > 1.4 certified natural): earth blocks from site cut + stabiliser; geopolymer
+  from fly-ash and slag; reclaimed stone and recycled aggregate; certified
+  timber and bamboo; recycled steel and aluminium; glass cullet for beads; PV,
+  batteries and pavers start imported (priority I-1) and move to the
+  manufactory at T2.
+• CONSTRUCTION SEQUENCE per cell: (1) survey + levels; (2) ponds, swales, MAR
+  first (water before buildings); (3) seam trough + wet strip + sleeves; (4)
+  base courses + paving; (5) node hub + hygiene hub; (6) courts + dwellings by
+  hand-erectable bolted kits; (7) PV + HEN commissioning; (8) planting +
+  irrigation; (9) pilot acceptance tests.
+• DISTRIBUTION: e-cargo trikes + shuttles on the seam loop; node markets; cold
+  chain (AEQUCHILL); freight corridor reserved on the colonnade line for pole-
+  rail (MRCCS, T2).
+• QUALITY POINTS: compaction + infiltration test of every base; pressure +
+  disinfection test of water; air test of vacuum sewer; insulation resistance
+  of power; OTDR on fibre; flood-route level survey; PTV pendulum test;
+  islanding test; commissioning audit signed by two crew.
+
+10.1 Phasing
+
+STAGE 0 GROUND      : site data, geotech, community co-design, approvals
+                      [O-01..O-08]
+STAGE 1 SPINE+NODE  : seam corridor trunk, ponds/MAR, first node, first 1/3
+                      cell
+STAGE 2 CELL 1      : full cell (2806 p) commissioned as PILOT: water quality,
+                      islanding, acoustics
+STAGE 3 WARD        : cells 2-7 (ring order), ward node, digester + wetland,
+                      clinic
+STAGE 4 CITY        : wards 2-7; shuttle loops; manufactory campus; wedge farms
+GROWTH TRIGGER      : add next cell when current cell >= 85% occupied AND self-
+                      supply gates hold
+EACH CELL           : self-contained for water, power, waste: a pledge
+                      shortfall delays, never strands, cells
+
+
+───────────────────────────────────────────────────────────────────────────────
+11. LIFECYCLE
+───────────────────────────────────────────────────────────────────────────────
+
+• REPAIR: lift-out pavers and lids; common tools only; spare-part library; open
+  repair manuals per component. UPGRADE: same interfaces from T1 to T3, ducts
+  spare, bolted frames. RECYCLING at end of life: pavers re-laid or crushed to
+  base; steel/aluminium re-melted; timber re-used or composted; batteries by
+  take-back; earth blocks re-slaked. Residual 6.4 kg/p/yr.
+• MAINTENANCE: see 7.8: the total is about 2806-person-cell crews of a few FTE.
+
+
+───────────────────────────────────────────────────────────────────────────────
+12. SCALING, GLOBAL COMPATIBILITY, FUTURE-PROOFING
+───────────────────────────────────────────────────────────────────────────────
+
+
+12.1 Scaling
+
+Growth step is one cell (2,806 people); every cell is self-contained for water,
+power and waste, so per-capita performance does not degrade as wards are added.
+Sweep of density and cell size around the adopted design:
+
+apothem  │ 70          │ 80          │ 90          │ 100         │ 110
+\        │             │             │             │             │
+density  │             │             │             │             │
+p/ha     │             │             │             │             │
+─────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────
+260 m    │ 0.940       │ 0.941       │ 0.941       │ x G10,G18   │ x G05,G09,G1
+         │             │             │             │             │ 0,G18
+280 m    │ 0.943       │ 0.944       │ 0.944       │ x G10,G18   │ x G05,G09,G1
+         │             │             │             │             │ 0,G18
+300 m    │ 0.945       │ 0.945       │ 0.946       │ x G18       │ x G05,G09,G1
+         │             │             │             │             │ 0,G18
+320 m    │ x G01       │ x G01       │ x G01       │ x G01,G18   │ x G01,G05,G0
+         │             │             │             │             │ 9,G10,G18
+340 m    │ x G01,G02   │ x G01,G02   │ x G01,G02   │ x           │ x G01,G02,G0
+         │             │             │             │ G01,G02,G18 │ 5,G09,G10,G1
+         │             │             │             │             │ 8
+x = a gate fails (ids shown); numbers = composite score where all gates pass
+
+The adopted point (apothem 300 m, 90 p/ha) lies on the plateau and at the edge
+of feasibility: cells above 300 m break the 400 m access gate; density above
+~100 p/ha breaks canopy, fresh-food, drought and conflict gates.
+
+
+12.2 Global compatibility: site adapter (5 climates x matching hazard profiles)
+
+site          │ lat    │ score  │ gates failed │ tuned  │ failed after │ tilt
+──────────────┼────────┼────────┼──────────────┼────────┼──────────────┼─────
+cape_town     │ -33.9  │ 0.946  │ -            │ 0.947  │ -            │ 25
+johannesburg  │ -26.2  │ 0.955  │ -            │ 0.957  │ -            │ 25
+durban        │ -29.9  │ 0.954  │ -            │ 0.955  │ -            │ 30
+lisbon        │ 38.7   │ 0.962  │ G16          │ 0.965  │ G16          │ 30
+nairobi       │ -1.3   │ 0.957  │ -            │ 0.958  │ -            │ 0
+
+cape_town: gross_density_p_ha=82.0, cell_apothem_m=307.0, tank_m3_pp=1.0,
+pond_m3_pp=4.25, storage_kwh_pp=10.1, canopy_width_m=3.4, roof_usable=0.6,
+agri_pv_fraction=0.07, plot_productive_fraction=0.7, tree_cover_green=0.55
+johannesburg: gross_density_p_ha=90.0, cell_apothem_m=307.0, tank_m3_pp=1.0,
+pond_m3_pp=3.5, storage_kwh_pp=10.7, canopy_width_m=3.8, roof_usable=0.6,
+agri_pv_fraction=0.06, plot_productive_fraction=0.7, tree_cover_green=0.55
+durban: gross_density_p_ha=90.0, cell_apothem_m=307.0, tank_m3_pp=1.0,
+pond_m3_pp=3.5, storage_kwh_pp=9.5, canopy_width_m=4.6, roof_usable=0.6,
+agri_pv_fraction=0.07, plot_productive_fraction=0.7, tree_cover_green=0.55
+lisbon: gross_density_p_ha=94.0, cell_apothem_m=307.0, tank_m3_pp=1.0,
+pond_m3_pp=5.0, storage_kwh_pp=10.7, canopy_width_m=5.8, roof_usable=0.66,
+agri_pv_fraction=0.06, plot_productive_fraction=0.7, tree_cover_green=0.55
+nairobi: gross_density_p_ha=90.0, cell_apothem_m=307.0, tank_m3_pp=1.0,
+pond_m3_pp=3.5, storage_kwh_pp=9.5, canopy_width_m=3.8, roof_usable=0.6,
+agri_pv_fraction=0.06, plot_productive_fraction=0.7, tree_cover_green=0.55
+
+Lisbon fails G16 at both baseline and tuned: at latitude 38.7 deg winter sun is
+low, so lanes must be 2 storeys or wider (L-15). Other sites pass after
+automatic lever tuning, showing the design is parametric, not site-bound.
+Hemisphere and latitude flip sun side, PV tilt and winter-sun spacing
+automatically.
+
+
+12.3 Future-proofing
+
+• 100% spare microducts and a spare wet-strip bay (thermal loop, hydrogen-ready
+  is NOT assumed); DC bus option; colonnade line reserved for pole-rail
+  freight; 8 m x 8 m landing reservations at ward nodes (T3, zero dependency);
+  cell battery interface = AequPack; open standards at every interface; annual
+  re-run of the model with fresh climate data.
+
+
+───────────────────────────────────────────────────────────────────────────────
+13. OPTIBEST VERIFICATION REPORT
+───────────────────────────────────────────────────────────────────────────────
+
+
+13.1 Iteration ladder (cumulative; every row re-runs all gates)
+
+id  │ design state (cumulative)                    │  score │   delta │ gates
+────┼──────────────────────────────────────────────┼────────┼─────────┼──────
+I0  │ AequCity v1.0 concept, re-evaluated under    │  0.325 │         │  9/18
+    │ this model (no perpetual-motion source)      │        │         │
+I1  │ + hex cellular layout (Cell / Ward / City)   │  0.556 │  +0.230 │ 12/18
+I2  │ + prosumer energy: home nodes, canopies,     │  0.588 │  +0.032 │ 14/18
+    │ agri-PV, storage, biogas CHP                 │        │         │
+I3  │ + sponge drainage: tanks, ponds, MAR,        │  0.713 │  +0.125 │ 16/18
+    │ greywater + effluent reuse                   │        │         │
+I4  │ + AEQUSPINE unified corridors (trough + wet  │  0.874 │  +0.161 │ 16/18
+    │ strip), no deep tunnels                      │        │         │
+I5  │ + agriculture integrated into the public     │  0.889 │  +0.015 │ 17/18
+    │ realm                                        │        │         │
+I6  │ + multi-hazard resilience layer (hardened    │  0.934 │  +0.044 │ 18/18
+    │ shelters, flood routes)                      │        │         │
+I7  │ + parameter optimisation (search over        │  0.946 │  +0.012 │ 18/18
+    │ density, cell size, storage, ponds, canopy)  │        │         │
+
+id │ 400m │ potable │ irrig │ energy │ fresh │  capex │   ext │ exc m3
+───┼──────┼─────────┼───────┼────────┼───────┼────────┼───────┼───────
+I0 │  10% │     25% │    0% │    75% │   64% │ 56,197 │ 1,535 │   25.7
+I1 │  97% │     25% │    0% │    75% │   64% │ 56,197 │ 1,535 │   25.7
+I2 │  97% │     25% │    0% │    98% │   64% │ 58,030 │ 1,502 │   25.7
+I3 │  97% │    100% │   77% │    98% │   64% │ 58,600 │ 1,459 │   25.7
+I4 │  97% │    100% │   77% │    98% │   64% │ 43,652 │ 1,175 │    7.6
+I5 │  97% │    100% │   62% │    98% │  100% │ 43,698 │ 1,152 │    7.6
+I6 │  97% │    100% │   62% │    98% │  100% │ 43,698 │ 1,152 │    7.6
+I7 │  97% │    100% │   62% │   100% │  100% │ 45,235 │ 1,175 │    7.6
+
+Result: composite 0.325 (I0, v1.0 re-evaluated) -> 0.946 (final); gates 9/18 ->
+18/18. Largest single gains: hex layout (+0.230), unified corridors (+0.161),
+sponge drainage (+0.125).
+
+
+13.2 Gaps found by adversarial passes and closed
+
+id   │ gap found by adversarial pass      │ enhancement applied
+─────┼────────────────────────────────────┼───────────────────────────────────
+G-1  │ irrigation self-supply 46%         │ reclaimed effluent loop + crop-
+     │ (winter-rain seasonality)          │ mode yields + potable reserve ->
+     │                                    │ 62%
+G-2  │ potable external 15% in dry season │ MAR potable reserve (3 months) ->
+     │                                    │ 100%
+G-3  │ canopy 20.6% < 30%                 │ tree cover 55% of green -> 31.5%
+G-4  │ apothem 310 m fails G01 (94% <     │ apothem capped at 300 m
+     │ 95%)                               │
+G-5  │ MCA chose shared power+water       │ safety hard constraint (score >=
+     │ trough (unsafe)                    │ 3) -> liftable wet strip
+G-6  │ tank size invisible to monthly     │ floor 1.5 m3/p by judgement (L-02)
+     │ model                              │
+G-7  │ search favoured unpriced levers    │ removed from search; documented as
+     │ (wedge, runoff coeff.)             │ upside levers
+G-8  │ v1.0 energy source violates        │ replaced by PV + storage + CHP;
+     │ physics                            │ converters only
+
+13.3 Dimension scorecard
+
+dimension       │ model score │ rubric   │ evidence KPIs
+                │             │ (model)  │
+────────────────┼─────────────┼──────────┼─────────────────────────────────────
+functional      │ 0.96        │ 4        │ access, water, energy, food self-
+                │             │          │ supply
+efficiency      │ 0.86        │ 4        │ corridor, excavation, capex,
+                │             │          │ external cost, recovery
+robustness      │ 0.98        │ 4        │ flood, shelter, conflicts, autonomy,
+                │             │          │ canopy
+scalability     │ 1.00        │ 4        │ growth step
+maintainability │ 1.00        │ 4        │ complexity, inspectability
+innovation      │ 0.93        │ 4        │ synergy pairs
+elegance        │ 0.93        │ 4        │ purpose / complexity
+
+Rubric 4 = EXCELLENT: no enhancement vector found in model space. Rubric 5
+(PREMIUM) is reserved for plateau-verified AND field-verified evidence and is
+therefore NOT claimed.
+
+13.4 Plateau verification (five methods)
+
+METHOD 1 - MULTI-ATTEMPT ENHANCEMENT SEEKING (4 distinct searches over 10
+priced levers; unpriced levers fixed and documented):
+
+M1 attempt               │ evaluations │ composite gain │ result
+─────────────────────────┼─────────────┼────────────────┼───────
+coordinate +-5/10% moves │         120 │        +0.0015 │ PASS
+global random search     │         160 │        +0.0000 │ PASS
+local search sigma 6%    │         160 │        +0.0009 │ PASS
+local search sigma 15%   │         160 │        +0.0006 │ PASS
+baseline composite 0.9455; pass threshold gain <= 0.005
+
+┌─ METHOD 2 - INDEPENDENT PERSPECTIVES ────────────────────────────────────────
+│
+│  EXPERT (civil/urban): layout, SuDS, microgrid, corridor logic sound; wants
+│  event-scale hydrology + hourly energy study (L-02, L-05). RESIDENT: 5-minute
+│  walks, shade, hygiene hubs; reclaimed-water acceptance needs co-design (risk
+│  register). MANUFACTURER: materials local except PV/batteries (priority I-1).
+│  MAINTAINER: troughs + liftable pavers + common tools; crews computed (7.8).
+│  ADVERSARY: stress table defines the envelope; cyber and wildfire have
+│  mitigations. PLANET: P-loop, recovery, nature, canopy pass; carbon-negative
+│  NOT verified (O-05). RESULT: PASS WITH CONDITIONS (documented).
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+┌─ METHOD 3 - ALTERNATIVE ARCHITECTURE ────────────────────────────────────────
+│
+│  Concentric-radial vs hex (4.1), piped vs sponge (I3), separate vs unified
+│  corridors (I4), deep tunnels vs trough (I4): the adopted architecture is
+│  superior on every computed KPI. RESULT: PASS.
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+METHOD 4 - THEORETICAL LIMIT COMPARISON (gaps explained):
+
+parameter          │ theoretical optimum │ design value        │ gap class
+───────────────────┼─────────────────────┼─────────────────────┼───────────────
+edge length per    │ hexagon (honeycomb  │ 1039 m              │ design =
+cell               │ bound)              │                     │ optimum
+walk speed on      │ Tobler physics      │ 5.01 km/h at 3.0%   │ immutable
+slope              │                     │                     │
+irrigation self-   │ 100% if rain were   │ 62%                 │ immutable
+supply             │ evenly timed        │                     │ (rain timing)
+                   │                     │                     │ + pond size
+energy conversion  │ PV on 100% of roofs │ 100% self-supply,   │ surplus;
+                   │                     │ export 3,317 kWh/p  │ storage-
+                   │                     │                     │ limited
+in-city staples    │ all kcal in-city    │ 13%                 │ immutable
+                   │                     │                     │ (land/kcal)
+material recovery  │ 100% (energy-       │ 96%                 │ practical
+                   │ bounded)            │                     │ (sorting,
+                   │                     │                     │ energy)
+mass balances      │ exact closure       │ water 2e-16, energy │ numerical zero
+                   │                     │ -3e-12              │
+
+┌─ METHOD 5 - FRESH RE-EVALUATION ─────────────────────────────────────────────
+│
+│  Re-run in a clean process: python -m efe_city check gives 18/18; this
+│  document regenerates with identical numbers; adversarial review of every
+│  claim against model output found no further model-space enhancement. RESULT:
+│  PASS (model space); field items remain open.
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+13.5 Anti-gaming (4.6)
+
+(a) The first gap pass found gaps, so the second-angle pass was mandatory and
+run (13.2). (b) Every certification field cites a computed value or test;
+assertions are void. (c) Plateau is not claimed for schedule reasons: field
+gates stay open (13.7).
+
+
+13.6 Known limitations (honest)
+
+id    │ known limitation                                            │ class
+──────┼─────────────────────────────────────────────────────────────┼──────────
+L-01  │ climate and hazard inputs are indicative (+-15%); replace   │ Practical
+      │ with site data                                              │
+L-02  │ water model is monthly: intra-month storage, storm peaks    │ Practical
+      │ and tank buffering need event modelling                     │
+L-03  │ unit costs planning-grade (+-40%); land value and financing │ Practical
+      │ excluded; not financial advice                              │
+L-04  │ solar: monthly isotropic transposition, PR 0.80; soiling    │ Practical
+      │ and shading detail needs hourly study                       │
+L-05  │ energy: daily resolution with stochastic cloud; islanding   │ Practical
+      │ dynamics and protection need study                          │
+L-06  │ delivery-means scores are expert judgement; stability       │ Assumed
+      │ tested (+-1 score, +-50% weight) not measured               │
+L-07  │ hazard and structural thresholds planning-grade; engineers  │ Regulator
+      │ of record + local codes govern                              │ y
+L-08  │ in-city staples limited by land per kcal; foodshed radius   │ Immutable
+      │ assumes uniform yields                                      │
+L-09  │ carbon-negative status NOT verified: no LCA performed       │ Scope
+L-10  │ T2/T3 horizons are projections; baseline does not depend on │ Scope
+      │ them                                                        │
+L-11  │ social, governance and behavioural performance not modelled │ Scope
+L-12  │ AEQUCONE wind/seismic behaviour not evaluated here; needs   │ Scope
+      │ CFD / wind-tunnel + shake tests                             │
+L-13  │ perpetual-motion sources excluded; net-gain claims are      │ Immutable
+      │ classed as converters (eta < 1)                             │
+L-14  │ recovery >= 95% is a design target verified by              │ Immutable
+      │ commissioning audits; energy cost of recycling not modelled │
+L-15  │ high latitudes (e.g. Lisbon 38.7 deg) fail G16: lanes need  │ Immutable
+      │ 2 storeys or wider spacing                                  │
+L-16  │ irrigation is the binding water load in winter-rain         │ Immutable
+      │ climates; ext. top-up remains Dec-Mar                       │
+
+13.7 Open field-verification items
+
+id    │ open field-verification item
+──────┼───────────────────────────────────────────────────────────────────────
+O-01  │ site climate + hydrology data replace indicative profiles
+O-02  │ geotechnical survey: soil class, groundwater, expansive clay, slope
+      │ stability
+O-03  │ local code review: structural, fire, electrical, water, planning
+O-04  │ pilot cell: water quality, islanding, protection and acoustic
+      │ commissioning tests
+O-05  │ LCA + carbon ledger (verify carbon-negative claim)
+O-06  │ wind/seismic tests for chosen building archetypes
+O-07  │ community co-design + accessibility audit
+O-08  │ unit-cost quotes replace planning-grade rates
+O-09  │ study of github.com/aequchain-dev
+O-10  │ deep-dive of freetransport.md, Free Water Enterprise, arid > grove
+      │ framework
+
+
+───────────────────────────────────────────────────────────────────────────────
+14. DEV POLICY AND MODEL MANUAL
+───────────────────────────────────────────────────────────────────────────────
+
+┌─ PACKAGE efe_city_model/  (stdlib Python 3.12, no dependencies) ─────────────
+│
+│  efe_city/core.py site.py urban.py resources.py resilience.py synergy.py
+│  economics.py evaluate.py analysis.py drawings.py report.py tables.py
+│  content.py cli.py | configs/*.json | data/*.json | templates/*.odf |
+│  tests/test_model.py
+│  COMMANDS: python -m efe_city run|check|analyze|draw|build [--config F]
+│  [--set key=json] [--out DIR]
+│  EXAMPLES: --set geometry.gross_density_p_ha=80 ; --set
+│  site.climate=\"lisbon\" --set site.hazard_profile=\"lisbon\"
+│  TESTS: python -m unittest discover -s tests   (mass + energy closure,
+│  geometry, hazards, report)
+│
+└──────────────────────────────────────────────────────────────────────────────
+
+• EXTENSIBLE: add a subsystem with @subsystem(name, needs=...); add a KPI to
+  SPEC; add a table with @table_fn; add a site by adding JSON.
+• MODULAR + SCRIPTABLE + AUTOMATABLE: every module is a pure function of
+  config; CLI exit codes (check returns 1 on any failed gate) fit CI. HUMAN +
+  AGENT FRIENDLY: JSON in/out, dotted-path overrides, deterministic seeds, loud
+  errors. REPLICABLE: one command regenerates numbers, drawings, blueprint and
+  photo prompt.
+
+
+───────────────────────────────────────────────────────────────────────────────
+15. CERTIFICATION
+───────────────────────────────────────────────────────────────────────────────
+
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                EFE OPTIBEST ENGINEER - DELIVERY CERTIFICATION               ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║ Design: AEQUCITY v2.0 | Purpose: synergetic EFE city, any site              ║
+║ Magnitude MACRO | Scale GLOBAL/INFRASTRUCTURE | Rigor ULTRA | Iterations 8  ║
+║ Final delta: last full gap cycle gain <= 0.0015 composite (threshold 0.005) ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║ EFE FILTER (evidenced): Sustainable, Renewable, Accessible, Open, Local-    ║
+║ First, Circular, Durable = 7/7                                              ║
+║ DIMENSIONS (model score): functional 0.96, efficiency 0.86, robustness 0.98,║
+║ scalability 1.00, maintainability 1.00, innovation 0.93, elegance 0.93      ║
+║ GATES 18/18 | FMEA max RPN 54 | PLATEAU: M1 pass, M2 pass with conditions,  ║
+║ M3 pass, M4 gaps explained, M5 pass (model space)                           ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║ STATUS: OPTIBEST PLATEAU - DESIGN BASIS (model-verified)                    ║
+║ NOT CLAIMED: rubric-5 PREMIUM and carbon-negative status (need field        ║
+║ verification + LCA; 10 open items, section 13.7)                            ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+
+
+───────────────────────────────────────────────────────────────────────────────
+16. HAND-OFF PHOTO PROMPT (100% ACCORD WITH SCHEMATIC S-01 AND THIS PLAN)
+───────────────────────────────────────────────────────────────────────────────
+
+Ultra-detailed professional aerial architectural photograph of AEQUCITY v2.0, a
+seven-cell hexagonal ward of a regenerative Mediterranean-climate city at
+golden hour, north at the top of the frame to match the ward plan schematic:
+seven flat-top hexagonal cells, each 600 m flat-to-flat (31.2 ha, about 2,806
+residents), tiled edge to edge into a flower of 1 centre cell and 6 neighbours,
+every shared edge a 28 m AEQUSPINE seam corridor whose central 8 m median holds
+a planted bio-swale with a thin blue water line, a smooth grey stone cycle-
+track ribbon and a slim cantilevered blue-black solar colonnade 5 m wide
+carrying warm amber luminaires, flanked by two 5 m slow streets of terracotta-
+ochre interlocking permeable pavers with liftable service bands, 2.5 m walkways
+with yellow tactile guidance strips, and 2.5 m forest-garden verges of olive,
+fig, wild olive and silver-green spekboom; inside each cell six radial 12 m
+kerbless shared-surface lanes run from a 1.5 ha circular market plaza (market
+hall, hardened resilience hub, hygiene hub, school) to the cell edges, with 31
+short court lanes branching off, planted verge swales and fynbos courtyard
+gardens; 3-storey stabilised-earth buildings in warm sand and ochre with north-
+facing mono-pitch roofs carrying dark PV arrays, cool pale roofs, rainwater
+tanks and productive roof gardens; tadpole e-trikes with swappable battery
+packs, cargo trikes and 12-seat e-shuttles moving slowly among pedestrians,
+children and wheelchair users; a larger ward-node plaza at the centre; at the
+outer edge of the circular agri-commons wedge six reed-fringed ponds with
+floating solar panels, orchards, strip farms, agri-PV rows and tunnel houses
+fading into fynbos-covered hills and distant mountains; late-winter afternoon
+golden hour with the sun low in the north-west (azimuth about 300 deg, 12 deg
+above the horizon), long soft shadows raking across the plan, clear post-rain
+air, no text, no logos, photorealistic, architecturally exact to the schematic,
+calm, human, abundant.
+
+Camera             : Phase One XF IQ4 150MP (or Hasselblad H6D-400c MS) on a
+                     heavy-lift drone (DJI Matrice 350 RTK), gimbal-stabilised
+Lens               : Schneider 80 mm LS f/2.8 (about 35 mm eq. wide aerial), no
+                     distortion correction needed
+Exposure           : ISO 200 | f/8 | 1/500 s | -0.3 EV | RAW 16-bit
+Lighting           : golden hour, sun 12 deg above the north-western horizon,
+                     4200 K ambient fill, soft raking shadows
+Composition        : oblique aerial 55 deg down, centred on the ward node,
+                     rule-of-thirds horizon, hex cells fully inside frame,
+                     north up
+Equipment          : RTK GNSS, ND8 + circular polariser, tripod-equivalent
+                     hover lock, 3-frame bracket for HDR merge
+Setting / location : Mediterranean winter-rainfall hills, fynbos and orchard
+                     belt, shortly after rain (reference site: Cape Town
+                     region)
+Medium / stock     : digital medium format; colour emulation Kodak Portra 160 +
+                     Fujifilm Provia 100F blend, fine grain 5%
+Output             : 3:2, 150 MP, 300 DPI, 16-bit TIFF master + sRGB JPEG, 240
+                     MB
+
+HORIZON VARIANTS (swap in the prompt): T2 - mycelium-hemp insulated walls,
+basalt-fibre reinforced pavers, pole-rail freight line along the colonnade; T3
+- diamond-composite wear layers on pavers and signs, carbon-electrode storage;
+geometry, dimensions and layout unchanged.
+
+═══════════════════════════════════════════════════════════════════════════════
+END OF DOCUMENT
+AEQUCITY v2.0 | Synergetic EFE City Blueprint | DESIGN-BASIS PLATEAU
+═══════════════════════════════════════════════════════════════════════════════

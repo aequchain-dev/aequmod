@@ -1,0 +1,35 @@
+@DBL
+AEQUCITY v2.0 - SYNERGETIC EFE CITY BLUEPRINT
+Waterways | drainage | electricity | internet | agriculture as ONE system
+@SGL
+{{table:meta}}
+@DBL
+
+CONTENTS: 0 Summary | 1 Study | 2 Purpose | 3 Requirements | 4 Concept | 5 Plan
+6 AEQUSPINE | 7 Subsystems | 8 Resilience | 9 Economics | 10 Delivery
+11 Lifecycle | 12 Scale + global | 13 Verification | 14 Dev | 15 Certification
+16 Photo prompt
+SCHEMATICS: S-01 ward plan | S-02 corridor sections | S-03 cell metabolism
+@H1 0. EXECUTIVE SUMMARY
+@P PURPOSE. Design a city any community can build, repair and extend, in which roads, paving, signage, water, drainage, waterways, electricity, internet, lighting, thermals, sound, agriculture, fauna, waste, ablutions, public facilities, transport, bridges, machinery and maintenance work as ONE synergetic system; stays safe under quake, storm, flood, fire and drought; and passes the Equidistributed Free Economy (EFE) filter on every decision.
+@P METHOD. Receive > evaluate > study > absorb > conceptualise > ideate > evaluate > calculate > conclude > plan > exact > enhance > refine to plateau > generate. Every number here is computed by the accompanying scripted model (stdlib Python, unit-tested). Tables, schematics and the photo prompt are generated from one configuration file, so text, drawings and prompt agree by construction.
+{{table:headline}}
+@P CORE IDEA. The unit of the city is the AEQUCELL, a hexagon {{d.flat2flat|.0f}} m flat-to-flat. Cells meet along {{cfg.geometry.seam_width_m}} m AEQUSPINE seams: one shared corridor carrying the blue (swale, pond, flood route), green (forest verge, food forest), amber (power, storage, PV colonnade) and data (fibre, mesh, sensors) networks together with the slow streets and walks. Inside a cell, lanes and paths serve courts of about {{cfg.geometry.court_persons}} people. Every dwelling is a small power plant that feeds excess outward; every roof harvests water; every verge is a garden; every trench is shared and inspectable.
+@H2 EFE filter (7 principles; any NO means redesign)
+{{table:efe_filter}}
+@H2 7 verification pillars crosswalk
+{{table:pillars}}
+@H1 1. STUDY ABSORPTION (receive > evaluate > study > absorb)
+@H2 1.1 Source map
+{{table:sources}}
+@H2 1.2 EFE economics extracted (drives design constraints)
+@P EQUALITY INVARIANT: Member_Value = Total_Treasury / Total_Members. Design translation: per-capita service levels (access, water, energy share, public space) are gated, so no member's entitlement depends on location. P95 walk to a daily node is {{res.access.cell_node.p95_min|.1f}} min, maximum {{res.access.cell_node.max_min|.1f}} min, node-distance Gini {{res.access.cell_node.gini|.2f}}.
+@P ENTERPRISE CONTRIBUTION (0-5% bound) is the funding channel, PLEDGES fund capital, and the INTERNALIZATION PRIORITY ranks external costs so the largest dependency is internalised first. Section 9 computes external cost per member, the revenue per member needed to stay inside the 5% bound, and the ranking from this city's own flows.
+@P EVER MODULE (50 ha, 500 residents; vertical agriculture 10 ha, residential 15, manufacturing + research 15, energy 5, commons 5) is the EFE precedent for a self-contained site. AEQUCELL generalises it into a tileable hexagon of {{res.land.pop_cell|,.0f}} residents on {{res.land.hex.area_ha|.1f}} ha. Vertical farming costs about {{res.food.mode_kwh_kg|.1f}} kWh per kg blended here (aeroponics 12 kWh/kg), so soil, tunnel and agri-PV carry the load and aeroponic towers stay a 5% niche.
+@P PORTFOLIO BINDINGS (NextGen): AEQUBLOCK + AEQUBOND (earth walls, paving), FRAME CONSTRUCTIO (canopies, bridges), AEQUAQUA + AEQUAFLOW (house water, sanitation), AEQUIGROW + AEQUICROP + SALADIFRY (food), AEQUENERGY (community energy DAO), AEQUCHILL (cold chain), ALL-PURPOSE MANUFACTORY (fabrication node), AequMobi trikes + CARGO (mobility), MRCCS (freight, horizon T2), 3P-SRF fasteners, UNIVERSAL MAGNETIC CONNECT (charging). Personal-flight devices are NOT relied on; only landing reservations (T3).
+@P PHYSICS GUARD. Machines described as generators are modelled as motor/generator CONVERTERS with efficiency below 1. Energy sources are sun, wind, biomass and partnership with the outer grid only (L-13).
+@H2 1.3 AequCity v1.0 audit (the baseline)
+{{table:v1_audit}}
+@P RETAINED from v1.0: equidistribution as organising principle, civic commons at each node, three-horizon material logic, circular loops, local-first production, open documentation.
+@H2 1.4 SA resource documents -> design inputs
+@P SA Flora of Cleanse gives four Western Cape planting zones (fynbos garden, transition shrubland, succulent karoo garden, forest garden) and the rule to cultivate, never wild-harvest, threatened species: they map to wedge habitat strips, seam verges, court gardens and riparian ponds (6.6). The 12|12 NutriAir bioregional map supplies the Cape crop, fruit and herb palette; its pine and eucalyptus entries are excluded as regulated invasives and fire fuel. longevity sa.md is used only as an ingredient demand list (functional fungi, botanicals, proteins, minerals): the city provides growing capacity ({{res.food.mushroom_m2_city|,.0f}} m2 mushroom-house floor city-wide at {{cfg.food.mushroom_kg_pp}} kg per person per year). No efficacy claim is assessed.

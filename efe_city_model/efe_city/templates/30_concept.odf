@@ -1,0 +1,34 @@
+@H1 4. CONCEPT (phase 2)
+@H2 4.1 Alternatives compared (computed)
+{{table:layouts}}
+@H2 4.2 Selected concept: AEQUCELL + AEQUSPINE (schematic S-01)
+@BLOCK WARD FLOWER (flat-top cells, north up)
+                 ______
+                /      \
+         ______/   C2   \______        CELL  hexagon, apothem {{cfg.geometry.cell_apothem_m}} m
+        /      \        /      \       SEAM  {{cfg.geometry.seam_width_m}} m AEQUSPINE on every shared edge
+       /   C6   \______/   C3   \      NODE  {{cfg.geometry.node_area_ha}} ha: market, school, hygiene hub,
+       \        /      \        /            hardened shelter, workshop
+        \______/  WARD  \______/       WARD  7 cells, {{d.pop_ward|,.0f}} people
+        /      \  NODE  /      \       CITY  {{cfg.geometry.wards}} wards in a ring, wedges between
+       /   C5   \______/   C4   \      WEDGE agri-commons, ponds + PV,
+       \        /      \        /            habitat, shelterbelts
+        \______/   C7   \______/
+               \        /
+                \______/
+@END
+@H2 4.3 Hierarchy
+{{table:hierarchy}}
+@H2 4.4 Three material horizons (T1 baseline, T2/T3 upgrade paths)
+@P Every component is specified at three horizons with the same interface so a part can be upgraded in place. The baseline city depends ONLY on T1; T2 and T3 are unvalidated projections (L-10).
+{{table:horizons}}
+@H1 5. MASTER PLAN AND GEOMETRY (phase 3)
+@H2 5.1 Land budget (per cell and city)
+{{table:land_budget}}
+@H2 5.2 Terrain types, heights, angles
+@P TERRAIN. Walking speed follows Tobler's function; at the site slope of {{cfg.site.slope_pct}}% it is {{res.terrain.site_speed_kmh|.2f}} km/h ({{res.terrain.site_rel|.0%}} of flat). Cell apothem is scaled by the same ratio on steeper ground, streets follow contours, seams become keyline swales, and slopes above 12% carry agroforestry terraces, not cells.
+{{table:terrain}}
+@P HEIGHTS + SUN ANGLES. Equator-facing facades need winter noon sun. At latitude {{res.sungeo.lat|.1f}} deg the winter noon sun stands {{res.sungeo.winter_noon_elev|.1f}} deg high; lanes keep {{res.sungeo.rows.0.spacing_actual_m|.0f}} m between facades, which admits {{res.sungeo.max_storeys_on_lane}} storeys. Rule: <= 3 storeys on lanes; 4-5 storeys only at nodes or seams with stepped north faces; at higher latitudes widen lanes or drop to 2 storeys (L-15).
+{{table:sun}}
+@P ANGLES. Optimum PV tilt {{res.solar.opt_tilt}} deg equator-facing; roofs are mono-pitch, ridge east-west, high side to the equator. Junctions are 3-leg at 120 deg (hex) or 90 deg (lanes): {{res.streets.conflict_pts_ha_hex|.1f}} conflict points per ha against {{res.streets.conflict_pts_ha_grid|.1f}} for a 4-leg grid. Walk ramps <= 8.33%, walks <= 5%, roads <= 10%.
+@P ORIENTATION. The sun side, wind rose and hemisphere are inputs: the plan never hard-codes north. Swapping latitude flips the sun side, PV tilt and winter-sun spacing automatically (tested for hemisphere symmetry within 0.5%).

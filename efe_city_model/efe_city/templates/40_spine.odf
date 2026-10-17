@@ -1,0 +1,46 @@
+@H1 6. AEQUSPINE - ONE SYNERGETIC CORRIDOR SYSTEM
+@P DIRECTIVE. Waterways, drainage, electricity (smart grid; each home an independent generator feeding excess outward; interoperable and adaptable), internet (same model) and agriculture are designed together with every other surround. RULE OF SYNERGY: no network gets a private corridor if it can share one without breaking a separation rule, and every output of one network is checked as an input of another (6.7).
+@H2 6.1 Cross-sections (schematic S-02) and layer stack
+{{table:sections}}
+@P LAYER STACK, top to bottom: canopy (PV colonnade + luminaire, 4.5 m) | surface (permeable pavers, ribbons, swales) | TROUGH 0.9 m deep (LV power + fibre microducts, 100% spare ducts, lockable lids) | WET STRIP {{d.wet_depth}} m deep (potable, non-potable, sewer under liftable pavers) | storm water runs in the surface swale: no storm pipe.
+{{table:separation}}
+@H2 6.2 Waterways, drainage and water: the sponge system
+@L SLOW, SPREAD, SINK, STORE, CLEAN, REUSE. Street surfaces infiltrate 78-80% of rain; roofs feed tanks; kerbless edges shed the rest to verge swales and bioretention; wedge ponds store the surplus; infiltrated water is banked as managed aquifer recharge (MAR).
+@L POTABLE FIRST. Irrigation may never draw MAR below a reserve of 3 months of potable use. Result: potable self-supply {{k.potable_ssr|.0%}}, and a {{res.water.drought.years}}-year drought at {{res.water.drought.factor|.0%}} of normal rain with potable restricted to {{cfg.water.drought_restrict_lpd}} L/p/d leaves {{res.water.drought.unmet_pot_pct|.1f}}% unmet.
+@L RECLAIMED LOOP. Greywater ({{cfg.water.grey_lpd}} L/p/d, {{cfg.water.grey_treat_eff|.0%}} treated) serves toilets, laundry and then irrigation; blackwater (toilet + kitchen) goes to the ward digester, effluent is polished in constructed wetlands (reed, bulrush, palmiet) and applied by drip. Solids become compost / biochar / struvite.
+@L PONDS + FLOATING PV. Ponds hold {{cfg.water.pond_m3_pp}} m3 per person ({{d.ponds_ha_city|.0f}} ha city-wide); {{cfg.water.pond_pv_cover|.0%}} PV cover cuts open-water evaporation by about {{d.pond_evap_cut|.0f}}% and adds PV yield.
+@L WATERWAYS. Natural streams stay as the blue spine: no building in the 1:100 floodplain; >= 32 m buffer each side as a minimum (urban EIA trigger distance; verify local rule); wedge ponds sit on-line as flood storage; crossings clear-span (7.7).
+@L PUBLIC WATER. Drinking points every <= 200 m along seams, at every court and node ({{res.facilities.drinking_points|,.0f}} city-wide); hygiene hubs (7.5) discharge to the reclaimed loop.
+@L WINTER-RAIN TRUTH. Irrigation is the binding water load ({{res.water.irr_m3_pp|.0f}} m3/p/yr vs potable {{res.water.pot_m3_pp|.0f}}). {{k.irrigation_ssr|.0%}} is self-supplied; the Dec-Mar top-up ({{res.water.ext_m3_pp.irr|.1f}} m3/p/yr) is external until ponds grow or crops shift to the rain-fed winter calendar (L-16).
+{{table:water_balance}}
+{{table:flood}}
+@H2 6.3 Electricity: smart grid with every home a generator feeding outward
+@L HOME ENERGY NODE (HEN). Each dwelling: {{d.pv_kwp_dwelling|.1f}} kWp PV on a north-facing mono-pitch roof, {{res.energy.hen.battery_kwh|.1f}} kWh battery, {{res.energy.hen.inverter_kw|.1f}} kW grid-forming hybrid inverter, islanding switch, smart meter, local controller. It can run alone, and exports any excess to the cell.
+@L CELL MICROGRID. LV 400/230 V in the trough; {{res.energy.hen.cell_battery_mwh|.1f}} MWh cell battery (N+1 grid-forming, black start); adaptive protection (inverter fault currents are small). Ward ties and one outer-grid interconnect per ward let the city feed excess outward ({{res.energy.export_kwh_pp|,.0f}} kWh/p/yr surplus) and draw only {{res.energy.import_kwh_pp|.0f}} kWh/p/yr.
+@L EQUIDISTRIBUTION. Pooled canopy output is allocated per capita, so a flat-dweller and a house-dweller have equal shares; roofs alone cover demand up to 4 storeys (table below).
+@L ADAPTABLE + INTEROPERABLE. Only open standards at every interface (table); the controller is open firmware; a DC bus (T2) can be added without re-trenching because ducts are spare.
+@L SOLAR PLACEMENT, ranked: (1) roofs: optimum tilt {{res.solar.opt_tilt}} deg, no extra land, {{res.energy.placements.0.kwh_kwp|.0f}} kWh/kWp; (2) seam colonnade over the cycle track: shade + {{res.energy.placements.1.kwh_kwp|.0f}} kWh/kWp; (3) floating PV on ponds: +4% yield, less evaporation; (4) agri-PV on wedge farms: GCR 0.35, clearance 3.5 m, 78% yield, shade-tolerant crops; (5) vertical facades last: {{d.facade_ratio|.0%}} of optimum.
+@L SEASON. June PV is {{d.pv_jun_dec|.0%}} of December: storage covers nights and cloud runs; CHP biogas ({{res.energy.chp_kwh_e_pp|.0f}} kWh/p/yr) and outer-grid partnership cover rare long dull spells ({{res.energy.lold_days}} days/yr with any import, longest run {{res.energy.max_import_run_days}} d).
+{{table:energy_balance}}
+{{table:standards}}
+@H2 6.4 Internet and data (same outward-feeding, interoperable model)
+@L DIG ONCE. Fibre microducts share the trough with power: 100% spare ducts, one opening, one inspection.
+@L EVERY BUILDING A NODE. Fibre to each home (open-access, any provider) plus a community mesh access point per building that relays neighbours, so the network grows from the edges and survives a trunk cut.
+@L EDGE HUB PER CELL. Micro data room at the node, powered from the cell microgrid, waste heat to tunnel houses or hygiene-hub hot water; local-first routing keeps services working offline.
+@L SENSOR LAYER (LoRaWAN): pond and swale level, flow, soil moisture, air, PV, battery, structure, waste bins. Sensors feed irrigation, flood routing, dimming, maintenance.
+@L SECURITY. Zero-trust segmentation, open auditable firmware, signed updates, manual local override for every actuator. Ledger (AequChain) records energy/water accounting; personal data stays local.
+@H2 6.5 Agriculture and fauna integrated with every network
+@L WATER: reclaimed drip, pond + swale sources, sensor scheduling. NUTRIENTS: digestate, compost, biochar, struvite close the phosphorus loop to {{res.food.nutrient_closure_diet.1|.0%}} of the plant diet. ENERGY: agri-PV, pump timing to the solar peak (water is the cheapest battery), cold chain. HEAT: CHP + data heat to tunnel houses.
+@L PUBLIC REALM IS PRODUCTIVE: forest-garden verges, food-forest swales, court gardens, roof gardens, market hall. FAUNA: honeybees, black soldier fly (organics to protein), vermicompost, poultry, permitted freshwater fish, amphibian ponds, dark wildlife corridors.
+{{table:food_ladder}}
+{{table:nutrients}}
+{{table:palette}}
+@H2 6.6 Delivery means: above land, below land, maintenance, other
+@P Options for power, water and data were scored on 9 criteria (capex, wind, flood, fire, seismic, repair speed, inspectability, adaptability, safety). Safety is a hard constraint: options scoring below 3 are excluded. Weights follow the hazard profile; stability = share of 1000 random perturbations (+-50% weights, +-1 score) in which each option wins. Result for the reference site: POWER = {{res.means.current.power.best}}, WATER = {{res.means.current.water.best}}, DATA = {{res.means.current.data.best}}.
+{{table:means}}
+@P ABOVE LAND (overhead lines) loses on wind, fire and safety in every profile; it remains only as temporary restoration (surface_temporary). BELOW LAND buried direct is robust but slow to repair and impossible to inspect. UTILITY GALLERIES score best on maintenance but cost most and flood badly. The ACCESSIBLE TROUGH (dry, LV) plus LIFTABLE WET STRIP gives below-land protection with above-land maintainability. OTHER: in-structure routing through colonnade columns, wireless mesh for data, and hilltop reservoirs as gravity buffers.
+@H2 6.7 Interaction engine and co-location benefits
+@P 23 subsystems are encoded with zones, outputs, inputs and data links (efe_city/synergy.py). Pairs are classed automatically; extend the table to add a subsystem and the matrix, counts and conflicts update.
+{{table:colocation}}
+{{table:zones}}
+{{table:matrix}}

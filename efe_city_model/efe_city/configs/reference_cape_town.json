@@ -1,0 +1,720 @@
+{
+ "meta": {
+  "name": "AEQUCITY v2.0 reference build",
+  "version": "2.0.0",
+  "fx_zar_per_usd": 17.35,
+  "note": "All inputs planning-grade. Replace with site data. SI units unless stated."
+ },
+ "site": {
+  "climate": "cape_town",
+  "hazard_profile": "cape_town",
+  "slope_pct": 3.0,
+  "soil_class": "C",
+  "rain_factor": 1.0,
+  "ghi_factor": 1.0
+ },
+ "geometry": {
+  "layout": "hex_cellular",
+  "cell_apothem_m": 300,
+  "cells_per_ward": 7,
+  "wards": 7,
+  "gross_density_p_ha": 90,
+  "household_size": 3.2,
+  "storeys": 3,
+  "gfa_per_capita_m2": 65,
+  "detour_factor": 1.25,
+  "walk_speed_kmh": 4.8,
+  "seam_width_m": 28,
+  "lane_width_m": 12,
+  "path_width_m": 6,
+  "court_persons": 90,
+  "court_lane_m": 70,
+  "path_m_per_ha": 100,
+  "node_area_ha": 1.5,
+  "plaza_hard_fraction": 0.5,
+  "plot_hard_fraction": 0.15,
+  "plot_productive_fraction": 0.6,
+  "edible_verge_fraction": 0.4,
+  "wedge_fraction": 0.35,
+  "nature_fraction": 0.25,
+  "setback_m": 2.0,
+  "floor_height_m": 3.2,
+  "mc_samples": 4000,
+  "seed": 7,
+  "nonres_gfa_per_capita_m2": 25
+ },
+ "legacy": {
+  "ring_b_inner_m": 500,
+  "ring_b_outer_m": 1200,
+  "ring_c_outer_m": 2200,
+  "density_ratio_b_to_c": 2.0,
+  "neighbourhood_radius_m": 1000,
+  "district_radius_m": 2500,
+  "spokes": 6,
+  "block_m": 90,
+  "arterial_m_pp": 1.16,
+  "tunnel_km": 21.0,
+  "tunnel_bore_m": 8.0,
+  "pop": 100000,
+  "growth_step_pop": 12000
+ },
+ "sections": {
+  "seam": [
+   [
+    "forest_verge",
+    2.5,
+    "green"
+   ],
+   [
+    "walk",
+    2.5,
+    "permeable_walk"
+   ],
+   [
+    "slow_street",
+    5.0,
+    "permeable_street"
+   ],
+   [
+    "swale",
+    3.0,
+    "green"
+   ],
+   [
+    "cycle_track",
+    2.5,
+    "ribbon"
+   ],
+   [
+    "colonnade_zone",
+    2.5,
+    "green"
+   ],
+   [
+    "slow_street",
+    5.0,
+    "permeable_street"
+   ],
+   [
+    "walk",
+    2.5,
+    "permeable_walk"
+   ],
+   [
+    "forest_verge",
+    2.5,
+    "green"
+   ]
+  ],
+  "lane": [
+   [
+    "verge_swale",
+    2.5,
+    "green"
+   ],
+   [
+    "carriageway",
+    4.5,
+    "permeable_street"
+   ],
+   [
+    "verge_swale",
+    2.5,
+    "green"
+   ],
+   [
+    "footpath",
+    2.0,
+    "permeable_walk"
+   ],
+   [
+    "frontage",
+    0.5,
+    "green"
+   ]
+  ],
+  "path": [
+   [
+    "verge",
+    1.5,
+    "green"
+   ],
+   [
+    "path",
+    3.0,
+    "permeable_walk"
+   ],
+   [
+    "verge",
+    1.5,
+    "green"
+   ]
+  ]
+ },
+ "streets": {
+  "speed_kmh": {
+   "seam": 30,
+   "lane": 20,
+   "path": 10
+  },
+  "react_s": 2.5,
+  "decel_ms2": 3.4,
+  "clearance_m": 0.25,
+  "emergency_clear_m": 3.7,
+  "hose_reach_m": 45,
+  "max_grade_pct": {
+   "road": 10,
+   "walk": 5,
+   "ramp": 8.33
+  },
+  "leg3": 9,
+  "leg4": 32,
+  "grid_block_m": 90,
+  "design_vehicles": [
+   [
+    "DV1",
+    "trike / bike / wheelchair",
+    1.0,
+    2.5
+   ],
+   [
+    "DV2",
+    "cargo / utility",
+    1.6,
+    4.0
+   ],
+   [
+    "DV3",
+    "shuttle",
+    2.1,
+    7.0
+   ],
+   [
+    "DV4",
+    "fire / ambulance",
+    2.5,
+    10.0
+   ]
+  ]
+ },
+ "transport": {
+  "trips_pp_day": 3.2,
+  "modal_share": {
+   "walk": 0.5,
+   "cycle_trike": 0.3,
+   "shuttle": 0.15,
+   "other": 0.05
+  },
+  "avg_trip_km": {
+   "walk": 0.6,
+   "cycle_trike": 2.0,
+   "shuttle": 2.5
+  },
+  "peak_hour_fraction": 0.1,
+  "shuttle_seats": 12,
+  "load_factor": 0.5,
+  "shuttle_speed_kmh": 15,
+  "shuttle_kwh_km": 0.7,
+  "trike_kwh_km": 0.06,
+  "trike_occupancy": 1.2,
+  "spare_fraction": 0.15
+ },
+ "facilities": {
+  "water_point_spacing_m": 200,
+  "hub_peak_fraction": 0.08,
+  "persons_per_wc": 25,
+  "persons_per_shower": 60,
+  "persons_per_washer": 100,
+  "hub_use_fraction": 0.25,
+  "lpd_hub": 20,
+  "per_court": [
+   "water kiosk",
+   "compost point",
+   "play lot",
+   "tool library"
+  ],
+  "per_cell": [
+   [
+    "primary school",
+    1
+   ],
+   [
+    "creche",
+    2
+   ],
+   [
+    "market hall",
+    1
+   ],
+   [
+    "hygiene hub",
+    1
+   ],
+   [
+    "resilience hub / shelter",
+    1
+   ],
+   [
+    "workshop node (AEQUFAB)",
+    1
+   ],
+   [
+    "resource recovery point",
+    1
+   ],
+   [
+    "health post",
+    1
+   ],
+   [
+    "library / learning",
+    1
+   ],
+   [
+    "sports field",
+    1
+   ],
+   [
+    "shuttle stop pairs",
+    6
+   ]
+  ],
+  "per_ward": [
+   [
+    "secondary school",
+    1
+   ],
+   [
+    "primary health clinic",
+    1
+   ],
+   [
+    "fire & rescue station",
+    1
+   ],
+   [
+    "ward digester + wetland",
+    1
+   ],
+   [
+    "mushroom house",
+    1
+   ],
+   [
+    "community kitchen",
+    2
+   ],
+   [
+    "major hygiene hub",
+    1
+   ]
+  ],
+  "per_city": [
+   [
+    "hospital",
+    1
+   ],
+   [
+    "college",
+    1
+   ],
+   [
+    "manufactory campus",
+    1
+   ],
+   [
+    "regional transit interchange",
+    1
+   ],
+   [
+    "memorial forest",
+    1
+   ],
+   [
+    "flood-basin park",
+    1
+   ]
+  ]
+ },
+ "water": {
+  "drainage_mode": "sponge",
+  "grey_reuse": true,
+  "potable_lpd": 55,
+  "nonpotable_lpd": 25,
+  "grey_lpd": 55,
+  "black_lpd": 18,
+  "grey_treat_eff": 0.9,
+  "tank_m3_pp": 1.5,
+  "pond_m3_pp": 5.0,
+  "pond_depth_m": 2.5,
+  "pond_pv_cover": 0.8,
+  "pond_seep_frac": 0.1,
+  "swale_infil_frac": 0.75,
+  "mar_recovery": 0.75,
+  "wedge_runoff_coeff": 0.1,
+  "kc_veg": 0.65,
+  "kc_green": 0.5,
+  "irr_eff": 0.9,
+  "p_eff": 0.8,
+  "treat_kwh_m3": 0.6,
+  "pump_kwh_m3": 0.3,
+  "drought_restrict_lpd": 50,
+  "drought_irrigation_cut": 0.7,
+  "partition": {
+   "sponge": {
+    "roof": {
+     "evap": 0.05,
+     "tank": 0.765,
+     "infil": 0.0,
+     "runoff": 0.185
+    },
+    "green": {
+     "evap": 0.7,
+     "tank": 0.0,
+     "infil": 0.25,
+     "runoff": 0.05
+    },
+    "permeable_walk": {
+     "evap": 0.12,
+     "tank": 0.0,
+     "infil": 0.78,
+     "runoff": 0.1
+    },
+    "permeable_street": {
+     "evap": 0.1,
+     "tank": 0.0,
+     "infil": 0.8,
+     "runoff": 0.1
+    },
+    "ribbon": {
+     "evap": 0.08,
+     "tank": 0.0,
+     "infil": 0.0,
+     "runoff": 0.92
+    }
+   },
+   "piped": {
+    "roof": {
+     "evap": 0.05,
+     "tank": 0.0,
+     "infil": 0.0,
+     "runoff": 0.95
+    },
+    "green": {
+     "evap": 0.7,
+     "tank": 0.0,
+     "infil": 0.25,
+     "runoff": 0.05
+    },
+    "permeable_walk": {
+     "evap": 0.1,
+     "tank": 0.0,
+     "infil": 0.0,
+     "runoff": 0.9
+    },
+    "permeable_street": {
+     "evap": 0.1,
+     "tank": 0.0,
+     "infil": 0.0,
+     "runoff": 0.9
+    },
+    "ribbon": {
+     "evap": 0.1,
+     "tank": 0.0,
+     "infil": 0.0,
+     "runoff": 0.9
+    }
+   }
+  },
+  "effluent_reuse": true,
+  "black_treat_eff": 0.9,
+  "mar_reserve_months": 3
+ },
+ "energy": {
+  "demand_kwh_pp": {
+   "appliances_lighting": 600,
+   "cooking": 150,
+   "hot_water": 250,
+   "space_cond": 200,
+   "commerce_civic": 300,
+   "ict": 100,
+   "street_light": 40,
+   "manufacturing": 600
+  },
+  "heating_base_c": 18,
+  "heating_k": 0.02,
+  "module_kwp_m2": 0.21,
+  "performance_ratio": 0.8,
+  "roof_usable": 0.6,
+  "roof_tilt": 30,
+  "canopy_width_m": 5.0,
+  "canopy_tilt": 10,
+  "agri_pv_fraction": 0.07,
+  "agri_pv_gcr": 0.35,
+  "agri_pv_factor": 0.78,
+  "pond_pv": true,
+  "floating_factor": 1.04,
+  "storage_kwh_pp": 9.5,
+  "storage_home_fraction": 0.4,
+  "rt_eff": 0.9,
+  "day_load_fraction": 0.5,
+  "cloud_sigma": 0.35,
+  "cloud_rho": 0.6,
+  "seed": 11,
+  "chp": true,
+  "chp_eff": 0.35,
+  "biogas_kwh_per_m3": 6.0,
+  "demand_factor": 1.0
+ },
+ "food": {
+  "diet_kg_pp": {
+   "cereals": 85,
+   "tubers": 18,
+   "vegetables": 110,
+   "fruit": 73,
+   "legumes": 27,
+   "nuts": 18,
+   "dairy": 91,
+   "eggs": 4.7,
+   "poultry": 10.6,
+   "fish": 10,
+   "red_meat": 5,
+   "fats_sugar": 29
+  },
+  "yield_kg_ha": {
+   "cereals": 4000,
+   "tubers": 35000,
+   "vegetables": 35000,
+   "fruit": 30000,
+   "legumes": 2000,
+   "nuts": 3000,
+   "dairy": 6000,
+   "eggs": 4000,
+   "poultry": 1400,
+   "fish": 2000,
+   "red_meat": 400,
+   "fats_sugar": 2500
+  },
+  "kcal_per_kg": {
+   "cereals": 3400,
+   "tubers": 770,
+   "vegetables": 250,
+   "fruit": 500,
+   "legumes": 3400,
+   "nuts": 6000,
+   "dairy": 650,
+   "eggs": 1430,
+   "poultry": 1200,
+   "fish": 1000,
+   "red_meat": 2000,
+   "fats_sugar": 6900
+  },
+  "fresh_groups": [
+   "vegetables",
+   "fruit",
+   "eggs"
+  ],
+  "priority": [
+   "vegetables",
+   "fruit",
+   "eggs",
+   "tubers",
+   "legumes",
+   "nuts",
+   "cereals",
+   "poultry",
+   "fish",
+   "dairy",
+   "red_meat",
+   "fats_sugar"
+  ],
+  "wedge_agri_share": 0.8,
+  "wedge_fresh_share": 0.5,
+  "botanical_m2_pp": 3.0,
+  "modes": {
+   "open_field": {
+    "share": 0.7,
+    "kwh_kg": 0.08
+   },
+   "tunnel": {
+    "share": 0.25,
+    "kwh_kg": 0.6
+   },
+   "aeroponic": {
+    "share": 0.05,
+    "kwh_kg": 12.0
+   }
+  },
+  "cold_chain_kwh_kg": 0.1,
+  "nutrients_g_per_kg": {
+   "vegetables": [
+    3.0,
+    0.5,
+    4.0
+   ],
+   "fruit": [
+    1.5,
+    0.25,
+    2.0
+   ],
+   "tubers": [
+    3.0,
+    0.5,
+    5.0
+   ],
+   "cereals": [
+    20,
+    3.5,
+    4.5
+   ],
+   "legumes": [
+    35,
+    4.0,
+    12
+   ],
+   "nuts": [
+    25,
+    4.0,
+    7.0
+   ]
+  },
+  "excreta_kg_pp_yr": [
+   4.5,
+   0.6,
+   1.3
+  ],
+  "nutrient_recovery": 0.85,
+  "mushroom_kg_pp": 2.0,
+  "mushroom_kg_m2_yr": 40,
+  "yield_mode_kg_ha": {
+   "open_field": 35000,
+   "tunnel": 120000,
+   "aeroponic": 400000
+  }
+ },
+ "waste": {
+  "kg_pp_day": 0.45,
+  "composition": {
+   "organics": 0.42,
+   "paper": 0.12,
+   "plastics": 0.06,
+   "glass": 0.06,
+   "metals": 0.04,
+   "textiles": 0.04,
+   "hazardous": 0.01,
+   "inert": 0.25
+  },
+  "recovery": {
+   "organics": 0.98,
+   "paper": 0.95,
+   "plastics": 0.9,
+   "glass": 0.98,
+   "metals": 0.99,
+   "textiles": 0.9,
+   "hazardous": 0.95,
+   "inert": 0.95
+  },
+  "biogas_m3_per_t_org": 120,
+  "blackwater_biogas_m3_pp_day": 0.02,
+  "residual_density_kg_m3": 1000
+ },
+ "thermal": {
+  "tree_cover_green": 0.55,
+  "tree_shade_walk": 0.7,
+  "albedo_roof": 0.55,
+  "et_mm_day_green": 3.0
+ },
+ "acoustics": {
+  "lmax_7_5m": {
+   "trike": 50,
+   "shuttle": 58,
+   "cargo": 57
+  },
+  "veh_per_h": {
+   "seam": 120,
+   "lane": 20
+  },
+  "pass_s": 6,
+  "ground_db_per_doubling": 4.5,
+  "facade_dist_m": {
+   "seam": 14.0,
+   "lane": 8.0
+  }
+ },
+ "agri": {
+  "integrated": true
+ },
+ "corridors": {
+  "mode": "unified"
+ },
+ "underground": {
+  "mode": "trough"
+ },
+ "resilience": {
+  "shelters": true,
+  "node_nonres_share": 0.15,
+  "hardened_fraction": 0.4,
+  "shelter_m2_pp": 1.0,
+  "street_z": 30,
+  "street_n": 0.025,
+  "street_slope": 0.02,
+  "peak_attenuation_sponge": 0.5,
+  "c_peak": {
+   "roof": 0.9,
+   "green": 0.15,
+   "permeable_walk": 0.3,
+   "permeable_street": 0.35,
+   "ribbon": 0.85,
+   "impervious": 0.95
+  },
+  "crown_m2": 40,
+  "windbreak_height_m": 12
+ },
+ "economics": {
+  "revenue_scenarios_usd_pp": [
+   6000,
+   12000,
+   25000,
+   144000
+  ],
+  "contribution_cap": 0.05,
+  "excavation_usd_m3": 45,
+  "food_import_usd_kg": 0.9,
+  "grid_usd_kwh": 0.12,
+  "bulk_water_usd_m3": 1.2,
+  "parts_fraction_of_capex": 0.005,
+  "compliance_it_usd_pp": 60,
+  "imported_capital_share": 0.35,
+  "asset_life_yr": 25,
+  "usd_m2": {
+   "res": 380,
+   "nonres": 520,
+   "permeable_street": 60,
+   "permeable_walk": 50,
+   "ribbon": 70,
+   "green": 15
+  },
+  "usd_kwp": {
+   "roof": 750,
+   "canopy": 1100,
+   "agri": 1000,
+   "floating": 900
+  },
+  "usd_kwh_storage": 220,
+  "usd_m3": {
+   "tank": 120,
+   "pond": 25
+  },
+  "wetland_ad_usd_pp": 400,
+  "aequaqua_usd_dwelling": 600,
+  "greenhouse_usd_m2": 60,
+  "irrigation_usd_m2": 4,
+  "shuttle_usd": 45000,
+  "trike_usd": 2500,
+  "trikes_pp": 0.25,
+  "digital_usd_pp": 190,
+  "waste_machinery_usd_pp": 140,
+  "contingency": 0.15,
+  "evers_capex_usd_pp": 260000
+ }
+}

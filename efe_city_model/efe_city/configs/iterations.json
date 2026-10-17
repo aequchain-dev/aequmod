@@ -1,0 +1,128 @@
+[
+ {
+  "id": "I0",
+  "name": "AequCity v1.0 concept, re-evaluated under this model (no perpetual-motion source)",
+  "over": {
+   "geometry": {
+    "layout": "concentric_radial",
+    "plot_productive_fraction": 0.5
+   },
+   "water": {
+    "drainage_mode": "piped",
+    "tank_m3_pp": 0.0,
+    "pond_m3_pp": 0.0,
+    "grey_reuse": false,
+    "effluent_reuse": false
+   },
+   "energy": {
+    "canopy_width_m": 0.0,
+    "agri_pv_fraction": 0.0,
+    "pond_pv": false,
+    "storage_kwh_pp": 2.0,
+    "chp": false,
+    "roof_usable": 0.5
+   },
+   "corridors": {
+    "mode": "separate"
+   },
+   "underground": {
+    "mode": "deep"
+   },
+   "agri": {
+    "integrated": false
+   },
+   "resilience": {
+    "shelters": false
+   },
+   "thermal": {
+    "tree_cover_green": 0.55
+   }
+  }
+ },
+ {
+  "id": "I1",
+  "name": "+ hex cellular layout (Cell / Ward / City)",
+  "over": {
+   "geometry": {
+    "layout": "hex_cellular"
+   }
+  }
+ },
+ {
+  "id": "I2",
+  "name": "+ prosumer energy: home nodes, canopies, agri-PV, storage, biogas CHP",
+  "over": {
+   "energy": {
+    "canopy_width_m": 5.0,
+    "agri_pv_fraction": 0.05,
+    "pond_pv": true,
+    "storage_kwh_pp": 6.0,
+    "chp": true
+   }
+  }
+ },
+ {
+  "id": "I3",
+  "name": "+ sponge drainage: tanks, ponds, MAR, greywater + effluent reuse",
+  "over": {
+   "water": {
+    "drainage_mode": "sponge",
+    "tank_m3_pp": 2.0,
+    "pond_m3_pp": 3.0,
+    "grey_reuse": true,
+    "effluent_reuse": true
+   }
+  }
+ },
+ {
+  "id": "I4",
+  "name": "+ AEQUSPINE unified corridors (trough + wet strip), no deep tunnels",
+  "over": {
+   "corridors": {
+    "mode": "unified"
+   },
+   "underground": {
+    "mode": "trough"
+   }
+  }
+ },
+ {
+  "id": "I5",
+  "name": "+ agriculture integrated into the public realm",
+  "over": {
+   "agri": {
+    "integrated": true
+   }
+  }
+ },
+ {
+  "id": "I6",
+  "name": "+ multi-hazard resilience layer (hardened shelters, flood routes)",
+  "over": {
+   "resilience": {
+    "shelters": true
+   }
+  }
+ },
+ {
+  "id": "I7",
+  "name": "+ parameter optimisation (search over density, cell size, storage, ponds, canopy)",
+  "over": {
+   "geometry": {
+    "plot_productive_fraction": 0.6
+   },
+   "water": {
+    "tank_m3_pp": 1.5,
+    "pond_m3_pp": 5.0
+   },
+   "energy": {
+    "storage_kwh_pp": 9.5,
+    "roof_usable": 0.6,
+    "agri_pv_fraction": 0.07
+   },
+   "thermal": {
+    "tree_cover_green": 0.55
+   }
+  }
+ }
+]

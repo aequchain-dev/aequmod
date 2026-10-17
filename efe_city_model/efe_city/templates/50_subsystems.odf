@@ -1,0 +1,44 @@
+@H1 7. SUBSYSTEM SPECIFICATIONS
+@H2 7.1 Roadways, mobility and public transport
+@L HIERARCHY: S-class seam ({{cfg.streets.speed_kmh.seam}} km/h; two {{cfg.sections.seam.2.1}} m slow streets), L-class lane ({{cfg.streets.speed_kmh.lane}} km/h shared surface), P-class path. Priority: pedestrian > wheelchair/cycle > trike + cargo > shuttle > service > emergency (override).
+@L SURFACE: permeable pavers on structural open-graded base (no asphalt), smooth ribbons on the cycle track; kerbless, flush edges; traffic calming by geometry (3-leg junctions, short sight lines), not humps.
+@L EMERGENCY: >= 3.7 m clear on every drivable class (lanes give {{res.streets.rows.1.clear_m|.1f}} m); every dwelling within {{res.streets.max_reach_m|.0f}} m of a drivable street (hose reach {{cfg.streets.hose_reach_m}} m); fire and rescue station per ward, about 2-3 min by emergency vehicle from any dwelling in the ward.
+{{table:streets}}
+@L PUBLIC TRANSPORT: shuttle loops on seams, stops at junctions and mid-edge, regional interchange at city node. Walking to a stop is within {{res.transport.stop_dist_p95_m|.0f}} m for 95% of residents.
+{{table:transport}}
+@H2 7.2 Demarcation, signage and street code
+@L SELF-EXPLAINING STREETS: surface colour and texture encode class: terracotta-ochre pavers with continuous stone edge bands = seam street; sand-grey with a dark-sett centre line = lane; pale stone = path; grey smooth ribbons = cycle track; inlaid star pattern = shared plaza.
+@L MARKINGS: inlaid stone/aggregate (permanent) and mineral paint with recycled-glass beads; no thermoplastic (fossil). T2: photoluminescent inlays.
+@L SIGNS: recycled aluminium, glass-bead retroreflection, pictograms, tactile/Braille at nodes, max 1 sign per 25 m, mounted on colonnade columns and multi-function poles (light + sensor + mesh + sign).
+@BLOCK STREET CODE (10 rules, shown at every node)
+1 Walkers and wheelchairs first. 2 Seam 30 km/h, lane 20, path 10, plaza walking pace. 3 Give way to the right on lanes; seam streets have priority over lanes. 4 Cargo and shuttles use loading windows 06-10 and 15-18. 5 No private parking in seams; shared fleet bays at nodes. 6 Cyclists use ribbons; trikes may use ribbons when empty of pedestrians. 7 Emergency vehicles: everyone clears the centre. 8 Dim-sky: luminaires amber, shielded, dimmed by occupancy. 9 Wildlife crossings have priority at night. 10 Report faults on the node app or any QR tag: repair within the published time.
+@END
+{{table:jurisdictions}}
+@H2 7.3 Paving, walkways, traction and textures
+{{table:surfaces}}
+@L TRACTION targets (verify by pendulum test): wet PTV >= 50 streets, >= 55 walks, >= 60 on ramps; texture depth 0.6-1.0 mm. TACTILE: guidance strip + attention domes per ISO 23599; contrast 30 LRV points.
+@L RIBBONS: two smooth 0.9 m wheel tracks give low rolling resistance for e-trikes and wheelchairs; textured permeable infill gives grip and infiltration; ribbons drain to the swale.
+@L UPKEEP: vacuum-sweep permeable joints twice a year; liftable pavers allow repairs without cutting; mean albedo {{res.thermal.mean_albedo|.2f}}.
+@H2 7.4 Lighting, thermals and sound
+@L LIGHTING: EN 13201 classes seam P3 (7.5 lx), lane P4 (5 lx), path P5 (3 lx); amber <= 2200 K, full cut-off, dimming to 30% unoccupied; DC from canopy PV; street lighting {{cfg.energy.demand_kwh_pp.street_light}} kWh/p/yr; dark corridors along waterways and habitat.
+@L THERMALS: canopy cover {{res.thermal.canopy_cover|.0%}} (target 30%), {{res.thermal.shade_fraction|.0%}} of walkable surface shaded, green ET cooling about {{res.thermal.et_cooling_w_m2|.0f}} W/m2 of ground; envelopes use earth mass, insulation and night ventilation; solar thermal for hot water; greywater heat recovery; ambient thermal loop is a T2 option in the spare wet-strip capacity.
+@L SOUND: WHO targets L_den 53 dB / L_night 45 dB. Indicative facade levels: seam {{res.acoustics.seam.leq_facade|.0f}} dB (shuttle pass-bys), lane {{res.acoustics.lane.leq_facade|.0f}} dB (trikes); measures: <= 30 km/h, soft permeable surfaces, 14 m facade setback from seam centre line, planted buffers, water features as masking.
+@H2 7.5 Public facilities, ablutions, waste removal and disposal, cleaning
+{{table:facilities}}
+@L ABLUTIONS: universal-design hygiene hubs (step-free, baby change, accessible cubicle, CPTED sight lines, daylight, vandal-resistant open-source fittings); urine-diverting option for nutrient recovery; hand-wash + drinking water free at point of use.
+@L WASTE REMOVAL: source separation into 8 streams; e-cargo trikes collect to a resource recovery point (RRP) per cell; organics to ward digester + black soldier fly; dry streams to the manufactory; hazardous by take-back.
+@L DISPOSAL: material recovery {{res.waste.recovery|.1%}} (target); residual {{res.waste.residual_kg_pp|.1f}} kg/p/yr = {{res.waste.residual_t_city_yr|,.0f}} t/yr city-wide ({{res.waste.residual_m3_city_yr|,.0f}} m3), held in a sealed inert cell; biogas {{res.waste.biogas_m3_pp|.1f}} m3/p/yr.
+@L CLEANING: electric micro-sweepers, small vacuum units for paver joints, leaf litter to compost, daily hub cleaning, graffiti-tolerant stone and mineral paint.
+@H2 7.6 Structural integrity, value unto earth, foundations, forestation
+@L DOCTRINE: compact regular forms, continuous load path roof-wall-footing, redundancy, ductile joints, low centre of mass, light roofs on heavy walls only where seismic demand allows; bolted tool-free connections so parts can be replaced.
+@L SYSTEM SELECTOR (by design PGA): unreinforced earth <= 0.05 g; earth with ring beams + confinement <= 0.15 g; timber/bamboo frames <= 0.40 g; steel-timber hybrids above. Reference site: {{res.structure.current.system.1}}.
+@L FOUNDATIONS (soil class {{res.structure.soil}}): {{res.structure.foundation.1}}. Preference order: reversible (screw piles, stone trench) over concrete; expansive clay: stiffened raft with void formers; floodplain edge: raised plinth on piles.
+@L VALUE UNTO EARTH ledger: groundwater recharge above pre-development; soil carbon rising through compost + biochar; >= 25% nature and corridors; native planting >= 40% of green; nutrient return {{res.food.nutrient_closure_diet.1|.0%}} P; no wild-harvest of threatened species. Carbon-negative status is NOT claimed until an LCA is done (L-09, O-05).
+@L FORESTATION: about {{res.structure.trees_cell|,.0f}} trees per cell ({{res.structure.trees_pp|.2f}} per person); shelterbelts {{res.structure.windbreak_h_m}} m high along seams and wedge edges (wind speed cut ~50% at 5 h, ~20% at 20 h downwind); fire-smart species and spacing; deep-rooted cover on slopes. Indicative sequestration {{res.structure.co2_t_cell_yr.0|.0f}}-{{res.structure.co2_t_cell_yr.1|.0f}} t CO2 per cell per year (unverified).
+@H2 7.7 Bridges and crossings
+@BLOCK BRIDGE RULES
+Spans <= 6 m: box culvert or arch with a dry ledge for wildlife. 6-20 m: clear-span glulam / recycled-steel beam or truss, geopolymer abutments. 20-40 m: bowstring or truss on FRAME CONSTRUCTIO members. Deck clear of the 1:100 flood plus 0.5 m freeboard; abutments outside the floodway; NO in-stream piers; scour protection; design load 5 kN/m2 crowd + 3.5 t service + 20 t emergency (design assumption); tactile edges, lighting, dark corridor beneath.
+@END
+@H2 7.8 Machinery, maintenance and cleaning schedule
+@P Fleet per ward: electric micro-sweeper, small vacuum unit, tracked mini-excavator, PV-washing robot, inspection drones, hand-tool library; fabrication at the ALL-PURPOSE MANUFACTORY node; spare-part library keyed to common tools only.
+{{table:maintenance}}

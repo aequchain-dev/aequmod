@@ -1,0 +1,11 @@
+{
+ "_note": "Design-envelope hazard profiles (planning-grade). gust_ms = 50-yr 3-s gust; pga_g = 475-yr rock PGA; i*_15 = 15-min rainfall intensity mm/h. Local codes and site studies govern.",
+ "cape_town": {"label":"Cape Town (indicative)","gust_ms":42,"pga_g":0.10,"cyclone":false,"tornado_ef":1,"flood100_24h_mm":105,"i10_15_mm_h":65,"i100_15_mm_h":105,"surge_m":0.0,"fire":"high","drought_factor":0.65,"drought_years":3,"heat_days_35c":8},
+ "johannesburg": {"label":"Johannesburg (indicative)","gust_ms":38,"pga_g":0.10,"cyclone":false,"tornado_ef":2,"flood100_24h_mm":120,"i10_15_mm_h":95,"i100_15_mm_h":150,"surge_m":0.0,"fire":"medium","drought_factor":0.70,"drought_years":2,"heat_days_35c":2},
+ "durban": {"label":"Durban (indicative)","gust_ms":45,"pga_g":0.05,"cyclone":false,"tornado_ef":3,"flood100_24h_mm":220,"i10_15_mm_h":100,"i100_15_mm_h":160,"surge_m":1.0,"fire":"medium","drought_factor":0.75,"drought_years":2,"heat_days_35c":3},
+ "lisbon": {"label":"Lisbon (indicative)","gust_ms":38,"pga_g":0.15,"cyclone":false,"tornado_ef":1,"flood100_24h_mm":100,"i10_15_mm_h":70,"i100_15_mm_h":110,"surge_m":1.0,"fire":"high","drought_factor":0.70,"drought_years":3,"heat_days_35c":20},
+ "nairobi": {"label":"Nairobi (indicative)","gust_ms":30,"pga_g":0.10,"cyclone":false,"tornado_ef":0,"flood100_24h_mm":120,"i10_15_mm_h":90,"i100_15_mm_h":140,"surge_m":0.0,"fire":"low","drought_factor":0.60,"drought_years":2,"heat_days_35c":0},
+ "stress_cyclone": {"label":"STRESS: tropical cyclone coast (typhoon/hurricane)","gust_ms":70,"pga_g":0.15,"cyclone":true,"tornado_ef":3,"flood100_24h_mm":300,"i10_15_mm_h":130,"i100_15_mm_h":200,"surge_m":3.0,"fire":"low","drought_factor":0.80,"drought_years":1,"heat_days_35c":10},
+ "stress_tornado": {"label":"STRESS: tornado plains","gust_ms":50,"pga_g":0.05,"cyclone":false,"tornado_ef":4,"flood100_24h_mm":130,"i10_15_mm_h":100,"i100_15_mm_h":160,"surge_m":0.0,"fire":"medium","drought_factor":0.70,"drought_years":3,"heat_days_35c":15},
+ "stress_seismic": {"label":"STRESS: high-seismicity zone","gust_ms":45,"pga_g":0.40,"cyclone":false,"tornado_ef":1,"flood100_24h_mm":150,"i10_15_mm_h":90,"i100_15_mm_h":140,"surge_m":0.5,"fire":"medium","drought_factor":0.80,"drought_years":2,"heat_days_35c":5}
+}

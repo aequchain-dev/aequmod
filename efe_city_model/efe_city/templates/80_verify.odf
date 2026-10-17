@@ -1,0 +1,56 @@
+@H1 12. SCALING, GLOBAL COMPATIBILITY, FUTURE-PROOFING
+@H2 12.1 Scaling
+@P Growth step is one cell ({{res.synergy.growth_step_pop|,.0f}} people); every cell is self-contained for water, power and waste, so per-capita performance does not degrade as wards are added. Sweep of density and cell size around the adopted design:
+{{table:sweep}}
+@P The adopted point (apothem 300 m, 90 p/ha) lies on the plateau and at the edge of feasibility: cells above 300 m break the 400 m access gate; density above ~100 p/ha breaks canopy, fresh-food, drought and conflict gates.
+@H2 12.2 Global compatibility: site adapter (5 climates x matching hazard profiles)
+{{table:adapter}}
+@P Lisbon fails G16 at both baseline and tuned: at latitude 38.7 deg winter sun is low, so lanes must be 2 storeys or wider (L-15). Other sites pass after automatic lever tuning, showing the design is parametric, not site-bound. Hemisphere and latitude flip sun side, PV tilt and winter-sun spacing automatically.
+@H2 12.3 Future-proofing
+@L 100% spare microducts and a spare wet-strip bay (thermal loop, hydrogen-ready is NOT assumed); DC bus option; colonnade line reserved for pole-rail freight; 8 m x 8 m landing reservations at ward nodes (T3, zero dependency); cell battery interface = AequPack; open standards at every interface; annual re-run of the model with fresh climate data.
+@H1 13. OPTIBEST VERIFICATION REPORT
+@H2 13.1 Iteration ladder (cumulative; every row re-runs all gates)
+{{table:ladder}}
+@P Result: composite {{an.ladder.0.composite|.3f}} (I0, v1.0 re-evaluated) -> {{an.ladder.7.composite|.3f}} (final); gates {{an.ladder.0.gates_ok}}/{{an.ladder.0.gates_n}} -> {{an.ladder.7.gates_ok}}/{{an.ladder.7.gates_n}}. Largest single gains: hex layout (+{{an.ladder.1.delta|.3f}}), unified corridors (+{{an.ladder.4.delta|.3f}}), sponge drainage (+{{an.ladder.3.delta|.3f}}).
+@H2 13.2 Gaps found by adversarial passes and closed
+{{table:gaps_closed}}
+@H2 13.3 Dimension scorecard
+{{table:dims}}
+@H2 13.4 Plateau verification (five methods)
+@P METHOD 1 - MULTI-ATTEMPT ENHANCEMENT SEEKING (4 distinct searches over 10 priced levers; unpriced levers fixed and documented):
+{{table:plateau}}
+@BLOCK METHOD 2 - INDEPENDENT PERSPECTIVES
+EXPERT (civil/urban): layout, SuDS, microgrid, corridor logic sound; wants event-scale hydrology + hourly energy study (L-02, L-05). RESIDENT: 5-minute walks, shade, hygiene hubs; reclaimed-water acceptance needs co-design (risk register). MANUFACTURER: materials local except PV/batteries (priority I-1). MAINTAINER: troughs + liftable pavers + common tools; crews computed (7.8). ADVERSARY: stress table defines the envelope; cyber and wildfire have mitigations. PLANET: P-loop, recovery, nature, canopy pass; carbon-negative NOT verified (O-05). RESULT: PASS WITH CONDITIONS (documented).
+@END
+@BLOCK METHOD 3 - ALTERNATIVE ARCHITECTURE
+Concentric-radial vs hex (4.1), piped vs sponge (I3), separate vs unified corridors (I4), deep tunnels vs trough (I4): the adopted architecture is superior on every computed KPI. RESULT: PASS.
+@END
+@P METHOD 4 - THEORETICAL LIMIT COMPARISON (gaps explained):
+{{table:limits_theory}}
+@BLOCK METHOD 5 - FRESH RE-EVALUATION
+Re-run in a clean process: python -m efe_city check gives {{d.gates_ok}}/{{d.gates_n}}; this document regenerates with identical numbers; adversarial review of every claim against model output found no further model-space enhancement. RESULT: PASS (model space); field items remain open.
+@END
+@H2 13.5 Anti-gaming (4.6)
+@P (a) The first gap pass found gaps, so the second-angle pass was mandatory and run (13.2). (b) Every certification field cites a computed value or test; assertions are void. (c) Plateau is not claimed for schedule reasons: field gates stay open (13.7).
+@H2 13.6 Known limitations (honest)
+{{table:limits}}
+@H2 13.7 Open field-verification items
+{{table:open_items}}
+@H1 14. DEV POLICY AND MODEL MANUAL
+@BLOCK PACKAGE efe_city_model/  (stdlib Python 3.12, no dependencies)
+efe_city/core.py site.py urban.py resources.py resilience.py synergy.py economics.py evaluate.py analysis.py drawings.py report.py tables.py content.py cli.py | configs/*.json | data/*.json | templates/*.odf | tests/test_model.py
+COMMANDS: python -m efe_city run|check|analyze|draw|build [--config F] [--set key=json] [--out DIR]
+EXAMPLES: --set geometry.gross_density_p_ha=80 ; --set site.climate=\"lisbon\" --set site.hazard_profile=\"lisbon\"
+TESTS: python -m unittest discover -s tests   (mass + energy closure, geometry, hazards, report)
+@END
+@L EXTENSIBLE: add a subsystem with @subsystem(name, needs=...); add a KPI to SPEC; add a table with @table_fn; add a site by adding JSON.
+@L MODULAR + SCRIPTABLE + AUTOMATABLE: every module is a pure function of config; CLI exit codes (check returns 1 on any failed gate) fit CI. HUMAN + AGENT FRIENDLY: JSON in/out, dotted-path overrides, deterministic seeds, loud errors. REPLICABLE: one command regenerates numbers, drawings, blueprint and photo prompt.
+@H1 15. CERTIFICATION
+{{table:cert}}
+@H1 16. HAND-OFF PHOTO PROMPT (100% accord with schematic S-01 and this plan)
+{{table:photo}}
+@P HORIZON VARIANTS (swap in the prompt): T2 - mycelium-hemp insulated walls, basalt-fibre reinforced pavers, pole-rail freight line along the colonnade; T3 - diamond-composite wear layers on pavers and signs, carbon-electrode storage; geometry, dimensions and layout unchanged.
+@DBL
+END OF DOCUMENT
+AEQUCITY v2.0 | Synergetic EFE City Blueprint | DESIGN-BASIS PLATEAU
+@DBL

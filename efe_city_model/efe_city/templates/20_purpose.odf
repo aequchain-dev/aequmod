@@ -1,0 +1,27 @@
+@H1 2. CALIBRATION AND PURPOSE (phase 0-1)
+@H2 2.1 Purpose statement
+@BLOCK PURPOSE
+Deliver a buildable, repairable, extensible city design in which ALL physical networks and the productive landscape form one synergetic system, adaptable to any site by editing a configuration file, and meeting the {{d.gates_n}} binary gates below.
+@END
+@H2 2.2 Success criteria = binary gates (python -m efe_city check)
+{{table:gates}}
+@H2 2.3 Rigor calibration
+@P Task magnitude MACRO; deployment scale GLOBAL/INFRASTRUCTURE; rigor ULTRA: all nine phases, five-method plateau verification, adversarial stress, theoretical-limit analysis. Dimension weights follow purpose-relevance and set iteration priority only; they never lower the certification bar.
+@H2 2.4 KPI definitions and weights
+{{table:weights}}
+@H2 2.5 Constraint inventory (5-tier; assumed conventions challenged)
+{{table:constraints}}
+@H2 2.6 Interpretation log
+@BLOCK ASSUMPTIONS A-01..A-08
+A-01 'application' = the application layer (digital services via AequChain/AequApp) AND application of surfaces and materials.
+A-02 'value unto earth' = (a) load path to ground (foundations) and (b) net-positive return to the land: recharge, soil carbon, habitat, nutrient return (7.6).
+A-03 'ECT' = all further related items; handled by the interaction engine (6.8).
+A-04 'github.come/aequchain-dev' read as github.com/aequchain-dev; not accessible this session (O-09).
+A-05 'longevity sa.md' = ingredient demand list; cultivation capacity only.
+A-06 Reference site = Cape Town region (user context + SA resources); every value is a parameter.
+A-07 'public water' = drinking points, hygiene hubs, reclaimed-water network, shared water commons.
+A-08 tornado / typhoon / hurricane: hazard profiles + hardened shelters, not worst-case design of every building.
+@END
+@H1 3. REQUIREMENTS AND TRACEABILITY (phase 1)
+@P Every clause of the brief became a shall-statement with a verification route. All 45 are designed; those citing a gate or test are model-verified; field items are listed in 13.7.
+{{table:requirements}}
